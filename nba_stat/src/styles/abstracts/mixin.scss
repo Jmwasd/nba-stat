@@ -1,0 +1,48 @@
+@mixin cardContentsMixin {
+  display: flex;
+  .score {
+    font-size: 2.5rem;
+    margin: auto 10px;
+  }
+  .nickName {
+    text-align: center;
+  }
+}
+
+@mixin arrowMixin($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid #dadce0;
+  background: white;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover .arrow#{$direction} {
+    border-top: 3px solid rgb(69, 69, 69);
+    border-right: 3px solid rgb(69, 69, 69);
+  }
+  &:hover:not(.arrow#{$direction}) {
+    box-shadow: 0.5px 0.5px 4px 2px rgba(0, 0, 0, 0.22);
+  }
+
+  .arrow#{$direction} {
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid rgb(109, 109, 109);
+    border-right: 3px solid rgb(109, 109, 109);
+    border-radius: initial;
+    border-left: none;
+    border-bottom: none;
+    @if $direction == "Left" {
+      transform: rotate(225deg);
+      margin-left: 9px;
+    } @else {
+      transform: rotate(45deg);
+      margin-right: 5px;
+    }
+  }
+}
