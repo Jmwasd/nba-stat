@@ -1,7 +1,17 @@
-.rank_table {
+.rank_table_container {
   width: 50%;
   margin-top: 12px;
-  background: white;
   margin-right: 10px;
-  padding: 12px;
+
+  > table {
+    width: 100%;
+    background: white;
+    padding: 12px;
+    > tbody {
+      height: 150px;
+      :nth-child(2) {
+        height: 50px;
+      }
+    }
+  }
 }

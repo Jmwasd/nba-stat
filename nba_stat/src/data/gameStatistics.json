@@ -1,0 +1,88 @@
+{
+  "get": "games/statistics",
+  "parameters": {
+    "id": "11871"
+  },
+  "errors": [],
+  "results": 2,
+  "response": [
+    {
+      "team": {
+        "id": 7,
+        "name": "Cleveland Cavaliers",
+        "nickname": "Cavaliers",
+        "code": "CLE",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+      },
+      "statistics": [
+        {
+          "fastBreakPoints": null,
+          "pointsInPaint": null,
+          "biggestLead": null,
+          "secondChancePoints": null,
+          "pointsOffTurnovers": null,
+          "longestRun": null,
+          "points": 113,
+          "fgm": 43,
+          "fga": 87,
+          "fgp": "49.4",
+          "ftm": 21,
+          "fta": 25,
+          "ftp": "84.0",
+          "tpm": 6,
+          "tpa": 26,
+          "tpp": "23.1",
+          "offReb": 13,
+          "defReb": 37,
+          "totReb": 50,
+          "assists": 30,
+          "pFouls": 16,
+          "steals": 8,
+          "turnovers": 13,
+          "blocks": 4,
+          "plusMinus": "28",
+          "min": "240:00"
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": 10,
+        "name": "Detroit Pistons",
+        "nickname": "Pistons",
+        "code": "DET",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
+      },
+      "statistics": [
+        {
+          "fastBreakPoints": null,
+          "pointsInPaint": null,
+          "biggestLead": null,
+          "secondChancePoints": null,
+          "pointsOffTurnovers": null,
+          "longestRun": null,
+          "points": 85,
+          "fgm": 30,
+          "fga": 81,
+          "fgp": "84.0",
+          "ftm": 17,
+          "fta": 18,
+          "ftp": "94.4",
+          "tpm": 8,
+          "tpa": 32,
+          "tpp": "25.0",
+          "offReb": 9,
+          "defReb": 23,
+          "totReb": 32,
+          "assists": 19,
+          "pFouls": 21,
+          "steals": 8,
+          "turnovers": 14,
+          "blocks": 6,
+          "plusMinus": "-28",
+          "min": "240:00"
+        }
+      ]
+    }
+  ]
+}
