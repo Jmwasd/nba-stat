@@ -1,10 +1,10 @@
-import conferenceData from "../data/eastConference.json";
-import style from "../styles/conferenceStanding.module.scss";
+import Image from "next/image";
+import conferenceData from "../../data/eastConference.json";
 
 const ConferenceStanding = () => {
   return (
-    <div className={style.rank_table_container}>
-      <table>
+    <div className="flex-1">
+      <table className="w-full">
         <tbody>
           <tr>
             <td></td>
@@ -22,7 +22,12 @@ const ConferenceStanding = () => {
               <tr key={el.team.id}>
                 <td>{idx + 1}</td>
                 <td>
-                  <img src={el.team.logo} width={17} height={17} />
+                  <Image
+                    src={el.team.logo}
+                    width={17}
+                    height={17}
+                    alt="team-logo"
+                  />
                   <span style={{ marginLeft: "5px" }}>{el.team.name}</span>
                 </td>
                 <td>{el.conference.win}</td>

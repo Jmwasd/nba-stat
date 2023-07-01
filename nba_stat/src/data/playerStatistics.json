@@ -398,45 +398,6 @@
     },
     {
       "player": {
-        "id": 60,
-        "firstname": "Bojan",
-        "lastname": "Bogdanovic"
-      },
-      "team": {
-        "id": 10,
-        "name": "Detroit Pistons",
-        "nickname": "Pistons",
-        "code": "DET",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
-      },
-      "game": {
-        "id": 11871
-      },
-      "points": 15,
-      "pos": "SF",
-      "min": "32",
-      "fgm": 4,
-      "fga": 13,
-      "fgp": "30.8",
-      "ftm": 6,
-      "fta": 7,
-      "ftp": "85.7",
-      "tpm": 1,
-      "tpa": 5,
-      "tpp": "20.0",
-      "offReb": 0,
-      "defReb": 3,
-      "totReb": 3,
-      "assists": 3,
-      "pFouls": 1,
-      "steals": 0,
-      "turnovers": 3,
-      "blocks": 0,
-      "plusMinus": "-15",
-      "comment": null
-    },
-    {
-      "player": {
         "id": 2648,
         "firstname": "Isaiah",
         "lastname": "Stewart"
