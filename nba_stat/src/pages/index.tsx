@@ -1,23 +1,21 @@
-import ConferenceStanding from "@/components/conferenceStanding";
+import ConferenceStanding from "@/components/home/conferenceStanding";
 import Layout from "@/components/layout";
-import RecentMatch from "@/components/recentMatch";
+import RecentMatch from "../components/home/recentMatch";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Box, Container } from "@mui/material";
 
 export default function Home() {
   return (
-    <>
-      <Layout></Layout>
-      <div
-        style={{
-          margin: "2rem 2rem",
-          background: "#edecec",
-        }}
-      >
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Container maxWidth={false} sx={{ bgcolor: "#edecec" }} className="py-5">
+        <Layout />
         <RecentMatch></RecentMatch>
-        <div style={{ display: "flex" }}>
+        <Box className="flex">
           <ConferenceStanding></ConferenceStanding>
           <ConferenceStanding></ConferenceStanding>
-        </div>
-      </div>
-    </>
+        </Box>
+      </Container>
+    </LocalizationProvider>
   );
 }

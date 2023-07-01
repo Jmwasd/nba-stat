@@ -1,9 +1,11 @@
-import style from "../styles/layout.module.scss";
+import { Typography } from "@mui/material";
 
 const Layout = () => {
   return (
-    <div className={style.layout}>
-      <span className={style.logo}>NBA</span>
+    <div className="pb-5">
+      <Typography variant="h4" className="font-bold">
+        NBA STAT
+      </Typography>
     </div>
   );
 };

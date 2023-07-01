@@ -386,48 +386,7 @@
       "winStreak": false,
       "tieBreakerPoints": null
     },
-    {
-      "league": "standard",
-      "season": 2022,
-      "team": {
-        "id": 10,
-        "name": "Detroit Pistons",
-        "nickname": "Pistons",
-        "code": "DET",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
-      },
-      "conference": {
-        "name": "east",
-        "rank": 15,
-        "win": 14,
-        "loss": 42
-      },
-      "division": {
-        "name": "central",
-        "rank": 5,
-        "win": 14,
-        "loss": 42,
-        "gamesBehind": "24"
-      },
-      "win": {
-        "home": 7,
-        "away": 7,
-        "total": 14,
-        "percentage": "0.250",
-        "lastTen": 2
-      },
-      "loss": {
-        "home": 21,
-        "away": 21,
-        "total": 42,
-        "percentage": "0.750",
-        "lastTen": 8
-      },
-      "gamesBehind": "24",
-      "streak": 3,
-      "winStreak": false,
-      "tieBreakerPoints": null
-    },
+
     {
       "league": "standard",
       "season": 2022,

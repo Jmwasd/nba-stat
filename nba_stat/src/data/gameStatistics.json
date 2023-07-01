@@ -44,45 +44,6 @@
           "min": "240:00"
         }
       ]
-    },
-    {
-      "team": {
-        "id": 10,
-        "name": "Detroit Pistons",
-        "nickname": "Pistons",
-        "code": "DET",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
-      },
-      "statistics": [
-        {
-          "fastBreakPoints": null,
-          "pointsInPaint": null,
-          "biggestLead": null,
-          "secondChancePoints": null,
-          "pointsOffTurnovers": null,
-          "longestRun": null,
-          "points": 85,
-          "fgm": 30,
-          "fga": 81,
-          "fgp": "84.0",
-          "ftm": 17,
-          "fta": 18,
-          "ftp": "94.4",
-          "tpm": 8,
-          "tpa": 32,
-          "tpp": "25.0",
-          "offReb": 9,
-          "defReb": 23,
-          "totReb": 32,
-          "assists": 19,
-          "pFouls": 21,
-          "steals": 8,
-          "turnovers": 14,
-          "blocks": 6,
-          "plusMinus": "-28",
-          "min": "240:00"
-        }
-      ]
     }
   ]
 }
