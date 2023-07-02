@@ -138,90 +138,6 @@
       "league": "standard",
       "season": 2022,
       "team": {
-        "id": 40,
-        "name": "Utah Jazz",
-        "nickname": "Jazz",
-        "code": "UTA",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
-      },
-      "conference": {
-        "name": "west",
-        "rank": 11,
-        "win": 27,
-        "loss": 29
-      },
-      "division": {
-        "name": "northwest",
-        "rank": 4,
-        "win": 27,
-        "loss": 29,
-        "gamesBehind": "11.5"
-      },
-      "win": {
-        "home": 18,
-        "away": 9,
-        "total": 27,
-        "percentage": "0.482",
-        "lastTen": 5
-      },
-      "loss": {
-        "home": 12,
-        "away": 17,
-        "total": 29,
-        "percentage": "0.518",
-        "lastTen": 5
-      },
-      "gamesBehind": "11.5",
-      "streak": 3,
-      "winStreak": false,
-      "tieBreakerPoints": null
-    },
-    {
-      "league": "standard",
-      "season": 2022,
-      "team": {
-        "id": 25,
-        "name": "Oklahoma City Thunder",
-        "nickname": "Thunder",
-        "code": "OKC",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
-      },
-      "conference": {
-        "name": "west",
-        "rank": 12,
-        "win": 26,
-        "loss": 28
-      },
-      "division": {
-        "name": "northwest",
-        "rank": 5,
-        "win": 26,
-        "loss": 28,
-        "gamesBehind": "11.5"
-      },
-      "win": {
-        "home": 16,
-        "away": 10,
-        "total": 26,
-        "percentage": "0.481",
-        "lastTen": 5
-      },
-      "loss": {
-        "home": 11,
-        "away": 17,
-        "total": 28,
-        "percentage": "0.519",
-        "lastTen": 5
-      },
-      "gamesBehind": "11.5",
-      "streak": 1,
-      "winStreak": true,
-      "tieBreakerPoints": null
-    },
-    {
-      "league": "standard",
-      "season": 2022,
-      "team": {
         "id": 30,
         "name": "Sacramento Kings",
         "nickname": "Kings",
@@ -593,48 +509,6 @@
       },
       "gamesBehind": "19.5",
       "streak": 10,
-      "winStreak": false,
-      "tieBreakerPoints": null
-    },
-    {
-      "league": "standard",
-      "season": 2022,
-      "team": {
-        "id": 14,
-        "name": "Houston Rockets",
-        "nickname": "Rockets",
-        "code": "HOU",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
-      },
-      "conference": {
-        "name": "west",
-        "rank": 15,
-        "win": 13,
-        "loss": 42
-      },
-      "division": {
-        "name": "southwest",
-        "rank": 5,
-        "win": 13,
-        "loss": 42,
-        "gamesBehind": "20.5"
-      },
-      "win": {
-        "home": 8,
-        "away": 5,
-        "total": 13,
-        "percentage": "0.236",
-        "lastTen": 3
-      },
-      "loss": {
-        "home": 20,
-        "away": 22,
-        "total": 42,
-        "percentage": "0.764",
-        "lastTen": 7
-      },
-      "gamesBehind": "20.5",
-      "streak": 4,
       "winStreak": false,
       "tieBreakerPoints": null
     }

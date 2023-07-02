@@ -11,7 +11,7 @@ const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState(dayjs(today));
 
   return (
-    <Box className="pb-3">
+    <Box className="pb-7">
       <Box className="flex pb-3">
         <Typography
           variant="h5"
