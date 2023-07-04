@@ -1,18 +1,18 @@
 {
   "get": "games/statistics",
   "parameters": {
-    "id": "11871"
+    "id": "12475"
   },
   "errors": [],
   "results": 2,
   "response": [
     {
       "team": {
-        "id": 7,
-        "name": "Cleveland Cavaliers",
-        "nickname": "Cavaliers",
-        "code": "CLE",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+        "id": 9,
+        "name": "Denver Nuggets",
+        "nickname": "Nuggets",
+        "code": "DEN",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
       },
       "statistics": [
         {
@@ -22,25 +22,64 @@
           "secondChancePoints": null,
           "pointsOffTurnovers": null,
           "longestRun": null,
-          "points": 113,
-          "fgm": 43,
-          "fga": 87,
-          "fgp": "49.4",
-          "ftm": 21,
-          "fta": 25,
-          "ftp": "84.0",
-          "tpm": 6,
-          "tpa": 26,
-          "tpp": "23.1",
-          "offReb": 13,
-          "defReb": 37,
-          "totReb": 50,
-          "assists": 30,
-          "pFouls": 16,
-          "steals": 8,
-          "turnovers": 13,
-          "blocks": 4,
-          "plusMinus": "28",
+          "points": 94,
+          "fgm": 38,
+          "fga": 84,
+          "fgp": "45.2",
+          "ftm": 13,
+          "fta": 23,
+          "ftp": "56.5",
+          "tpm": 5,
+          "tpa": 28,
+          "tpp": "17.9",
+          "offReb": 11,
+          "defReb": 46,
+          "totReb": 57,
+          "assists": 21,
+          "pFouls": 13,
+          "steals": 6,
+          "turnovers": 15,
+          "blocks": 7,
+          "plusMinus": "5",
+          "min": "240:00"
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": 20,
+        "name": "Miami Heat",
+        "nickname": "Heat",
+        "code": "MIA",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+      },
+      "statistics": [
+        {
+          "fastBreakPoints": null,
+          "pointsInPaint": null,
+          "biggestLead": null,
+          "secondChancePoints": null,
+          "pointsOffTurnovers": null,
+          "longestRun": null,
+          "points": 89,
+          "fgm": 33,
+          "fga": 96,
+          "fgp": "56.5",
+          "ftm": 14,
+          "fta": 16,
+          "ftp": "87.5",
+          "tpm": 9,
+          "tpa": 35,
+          "tpp": "25.7",
+          "offReb": 11,
+          "defReb": 33,
+          "totReb": 44,
+          "assists": 18,
+          "pFouls": 21,
+          "steals": 9,
+          "turnovers": 8,
+          "blocks": 7,
+          "plusMinus": "-5",
           "min": "240:00"
         }
       ]
