@@ -4,6 +4,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import Image from "next/image";
 import { useState } from "react";
+import Title from "../Title";
 
 const today = new Date();
 
@@ -13,12 +14,10 @@ const RecentMatch = () => {
   return (
     <Box className="pb-7">
       <Box className="flex pb-3">
-        <Typography
-          variant="h5"
-          className="flex items-center font-bold w-full relative left-[47%]"
-        >
-          경기 결과
-        </Typography>
+        <Title
+          text="경기결과"
+          className="flex items-center relative left-[47.5%] pb-0"
+        />
         <DatePicker
           value={datePickerValue}
           onChange={(value) => setDatePickerValue(dayjs(value))}
