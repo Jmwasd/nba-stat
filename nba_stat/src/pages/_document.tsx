@@ -1,10 +1,9 @@
-import HeadMeta from "@/components/HeadMeta";
-import { Html, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
-      <HeadMeta />
+      <Head />
       <body>
         <Main />
         <NextScript />

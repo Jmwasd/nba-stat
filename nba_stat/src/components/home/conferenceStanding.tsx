@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ConferenceStandingTypes } from "@/types/teams";
+import Title from "../Title";
 
 interface PropsType {
   conferenceData: ConferenceStandingTypes;
@@ -26,9 +27,7 @@ const ConferenceStanding = ({ conferenceData, title }: PropsType) => {
 
   return (
     <Box className="w-[49.5%]">
-      <Typography variant="h5" align="center" className="font-bold pb-3">
-        {title}
-      </Typography>
+      <Title text={title} align="center" />
       <TableContainer component={Paper}>
         <Table className="w-full">
           <TableHead>

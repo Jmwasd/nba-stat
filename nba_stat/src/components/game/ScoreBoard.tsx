@@ -53,20 +53,20 @@ const ScoreBoard = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  {QUATER.map((el, idx) => (
-                    <TD value={el} key={idx} />
+                  {QUATER.map((el) => (
+                    <TD value={el} key={`head ${el}`} id={`head ${el}`} />
                   ))}
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
-                  {HOME_LINE_SCORE.map((el, idx) => (
-                    <TD value={el} key={idx} />
+                  {HOME_LINE_SCORE.map((el) => (
+                    <TD value={el} key={`visitor ${el}`} id={`visitor ${el}`} />
                   ))}
                 </TableRow>
                 <TableRow>
-                  {VISITOR_LINE_SCORE.map((el, idx) => (
-                    <TD value={el} key={idx} />
+                  {VISITOR_LINE_SCORE.map((el) => (
+                    <TD value={el} key={`home ${el}`} id={`home ${el}`} />
                   ))}
                 </TableRow>
               </TableBody>
@@ -98,13 +98,13 @@ export default ScoreBoard;
 
 interface TableCellType {
   value: string;
-  key: number;
+  id: string;
 }
 
 const VERIFY_TD = /http(s)/;
 
-const TD = ({ value, key }: TableCellType) => (
-  <TableCell key={key} align="center" size="small" className="p-3">
+const TD = ({ id, value }: TableCellType) => (
+  <TableCell key={id} align="center" size="small" className="p-3">
     {VERIFY_TD.test(value) ? (
       <Box className="w-[17px] h-[17px]">
         <Image
