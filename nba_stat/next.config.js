@@ -5,13 +5,8 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "upload.wikimedia.org",
-        port: "",
-        pathname: "/wikipedia/**",
-      },
-    ],
+    loader: "custom",
+    loaderFile: "/src/config/imageLoader.ts",
+    unoptimized: true,
   },
 };
