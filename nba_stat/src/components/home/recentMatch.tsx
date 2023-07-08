@@ -30,12 +30,12 @@ const RecentMatch = () => {
               <Box className="flex">
                 <Box className="flex min-w-full">
                   <Box className="w-1/4">
-                    <Box className="flex justify-center h-[70px]">
+                    <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
                       <Image
                         src={item.teams.home.logo}
-                        width={70}
-                        height={70}
-                        alt="home-team-logo"
+                        alt="team-logo"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </Box>
                     <Typography className="text-xl text-center">
@@ -51,12 +51,12 @@ const RecentMatch = () => {
                     </Typography>
                   </Box>
                   <Box className="w-1/4">
-                    <Box className="flex justify-center h-[70px]">
+                    <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
                       <Image
                         src={item.teams.visitors.logo}
-                        alt="visitor-team-logo"
-                        width={70}
-                        height={70}
+                        alt="team-logo"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </Box>
                     <Typography className="text-xl text-center">

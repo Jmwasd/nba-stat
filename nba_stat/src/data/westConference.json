@@ -21,33 +21,33 @@
       "conference": {
         "name": "west",
         "rank": 1,
-        "win": 38,
-        "loss": 17
+        "win": 52,
+        "loss": 29
       },
       "division": {
         "name": "northwest",
         "rank": 1,
-        "win": 38,
-        "loss": 17,
+        "win": 52,
+        "loss": 29,
         "gamesBehind": null
       },
       "win": {
-        "home": 26,
-        "away": 12,
-        "total": 38,
-        "percentage": "0.691",
-        "lastTen": 6
+        "home": 33,
+        "away": 19,
+        "total": 52,
+        "percentage": "0.642",
+        "lastTen": 5
       },
       "loss": {
-        "home": 4,
-        "away": 13,
-        "total": 17,
-        "percentage": "0.309",
-        "lastTen": 4
+        "home": 7,
+        "away": 22,
+        "total": 29,
+        "percentage": "0.358",
+        "lastTen": 5
       },
       "gamesBehind": null,
-      "streak": 1,
-      "winStreak": true,
+      "streak": 3,
+      "winStreak": false,
       "tieBreakerPoints": null
     },
     {
@@ -62,32 +62,116 @@
       },
       "conference": {
         "name": "west",
-        "rank": 8,
-        "win": 30,
-        "loss": 28
+        "rank": 9,
+        "win": 41,
+        "loss": 40
       },
       "division": {
         "name": "northwest",
         "rank": 2,
-        "win": 30,
-        "loss": 28,
-        "gamesBehind": "9.5"
+        "win": 41,
+        "loss": 40,
+        "gamesBehind": "11"
       },
       "win": {
-        "home": 20,
-        "away": 10,
-        "total": 30,
-        "percentage": "0.517",
-        "lastTen": 6
+        "home": 21,
+        "away": 20,
+        "total": 41,
+        "percentage": "0.506",
+        "lastTen": 5
       },
       "loss": {
-        "home": 12,
+        "home": 19,
+        "away": 21,
+        "total": 40,
+        "percentage": "0.494",
+        "lastTen": 5
+      },
+      "gamesBehind": "11",
+      "streak": 2,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 25,
+        "name": "Oklahoma City Thunder",
+        "nickname": "Thunder",
+        "code": "OKC",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+      },
+      "conference": {
+        "name": "west",
+        "rank": 10,
+        "win": 39,
+        "loss": 42
+      },
+      "division": {
+        "name": "northwest",
+        "rank": 3,
+        "win": 39,
+        "loss": 42,
+        "gamesBehind": "13"
+      },
+      "win": {
+        "home": 23,
         "away": 16,
-        "total": 28,
-        "percentage": "0.483",
+        "total": 39,
+        "percentage": "0.481",
         "lastTen": 4
       },
-      "gamesBehind": "9.5",
+      "loss": {
+        "home": 17,
+        "away": 25,
+        "total": 42,
+        "percentage": "0.519",
+        "lastTen": 6
+      },
+      "gamesBehind": "13",
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 40,
+        "name": "Utah Jazz",
+        "nickname": "Jazz",
+        "code": "UTA",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+      },
+      "conference": {
+        "name": "west",
+        "rank": 12,
+        "win": 37,
+        "loss": 44
+      },
+      "division": {
+        "name": "northwest",
+        "rank": 4,
+        "win": 37,
+        "loss": 44,
+        "gamesBehind": "15"
+      },
+      "win": {
+        "home": 23,
+        "away": 14,
+        "total": 37,
+        "percentage": "0.457",
+        "lastTen": 2
+      },
+      "loss": {
+        "home": 18,
+        "away": 26,
+        "total": 44,
+        "percentage": "0.543",
+        "lastTen": 8
+      },
+      "gamesBehind": "15",
       "streak": 1,
       "winStreak": true,
       "tieBreakerPoints": null
@@ -104,34 +188,34 @@
       },
       "conference": {
         "name": "west",
-        "rank": 10,
-        "win": 27,
-        "loss": 28
+        "rank": 13,
+        "win": 33,
+        "loss": 48
       },
       "division": {
         "name": "northwest",
-        "rank": 3,
-        "win": 27,
-        "loss": 28,
-        "gamesBehind": "11"
+        "rank": 5,
+        "win": 33,
+        "loss": 48,
+        "gamesBehind": "19"
       },
       "win": {
-        "home": 15,
-        "away": 12,
-        "total": 27,
-        "percentage": "0.491",
-        "lastTen": 6
+        "home": 17,
+        "away": 16,
+        "total": 33,
+        "percentage": "0.407",
+        "lastTen": 2
       },
       "loss": {
-        "home": 12,
-        "away": 16,
-        "total": 28,
-        "percentage": "0.509",
-        "lastTen": 4
+        "home": 23,
+        "away": 25,
+        "total": 48,
+        "percentage": "0.593",
+        "lastTen": 8
       },
-      "gamesBehind": "11",
-      "streak": 1,
-      "winStreak": true,
+      "gamesBehind": "19",
+      "streak": 3,
+      "winStreak": false,
       "tieBreakerPoints": null
     },
     {
@@ -147,33 +231,33 @@
       "conference": {
         "name": "west",
         "rank": 3,
-        "win": 31,
-        "loss": 23
+        "win": 48,
+        "loss": 33
       },
       "division": {
         "name": "pacific",
         "rank": 1,
-        "win": 31,
-        "loss": 23,
+        "win": 48,
+        "loss": 33,
         "gamesBehind": null
       },
       "win": {
-        "home": 16,
-        "away": 15,
-        "total": 31,
-        "percentage": "0.574",
+        "home": 23,
+        "away": 25,
+        "total": 48,
+        "percentage": "0.593",
         "lastTen": 5
       },
       "loss": {
-        "home": 11,
-        "away": 12,
-        "total": 23,
-        "percentage": "0.426",
+        "home": 18,
+        "away": 15,
+        "total": 33,
+        "percentage": "0.407",
         "lastTen": 5
       },
       "gamesBehind": null,
       "streak": 2,
-      "winStreak": true,
+      "winStreak": false,
       "tieBreakerPoints": null
     },
     {
@@ -189,33 +273,33 @@
       "conference": {
         "name": "west",
         "rank": 4,
-        "win": 30,
-        "loss": 26
+        "win": 45,
+        "loss": 36
       },
       "division": {
         "name": "pacific",
         "rank": 2,
-        "win": 30,
-        "loss": 26,
-        "gamesBehind": "2"
+        "win": 45,
+        "loss": 36,
+        "gamesBehind": "3"
       },
       "win": {
-        "home": 19,
-        "away": 11,
-        "total": 30,
-        "percentage": "0.536",
-        "lastTen": 8
+        "home": 28,
+        "away": 17,
+        "total": 45,
+        "percentage": "0.556",
+        "lastTen": 7
       },
       "loss": {
-        "home": 9,
-        "away": 17,
-        "total": 26,
-        "percentage": "0.464",
-        "lastTen": 2
+        "home": 12,
+        "away": 24,
+        "total": 36,
+        "percentage": "0.444",
+        "lastTen": 3
       },
-      "gamesBehind": "2",
-      "streak": 3,
-      "winStreak": true,
+      "gamesBehind": "3",
+      "streak": 1,
+      "winStreak": false,
       "tieBreakerPoints": null
     },
     {
@@ -231,33 +315,33 @@
       "conference": {
         "name": "west",
         "rank": 6,
-        "win": 31,
-        "loss": 27
+        "win": 43,
+        "loss": 38
       },
       "division": {
         "name": "pacific",
-        "rank": 3,
-        "win": 31,
-        "loss": 27,
-        "gamesBehind": "2"
+        "rank": 4,
+        "win": 43,
+        "loss": 38,
+        "gamesBehind": "5"
       },
       "win": {
-        "home": 14,
-        "away": 17,
-        "total": 31,
-        "percentage": "0.534",
-        "lastTen": 7
+        "home": 23,
+        "away": 20,
+        "total": 43,
+        "percentage": "0.531",
+        "lastTen": 6
       },
       "loss": {
-        "home": 12,
-        "away": 15,
-        "total": 27,
-        "percentage": "0.466",
-        "lastTen": 3
+        "home": 18,
+        "away": 20,
+        "total": 38,
+        "percentage": "0.469",
+        "lastTen": 4
       },
-      "gamesBehind": "2",
-      "streak": 1,
-      "winStreak": false,
+      "gamesBehind": "5",
+      "streak": 2,
+      "winStreak": true,
       "tieBreakerPoints": null
     },
     {
@@ -272,34 +356,34 @@
       },
       "conference": {
         "name": "west",
-        "rank": 9,
-        "win": 28,
-        "loss": 27
+        "rank": 5,
+        "win": 43,
+        "loss": 38
       },
       "division": {
         "name": "pacific",
-        "rank": 4,
-        "win": 28,
-        "loss": 27,
-        "gamesBehind": "3.5"
+        "rank": 3,
+        "win": 43,
+        "loss": 38,
+        "gamesBehind": "5"
       },
       "win": {
-        "home": 21,
-        "away": 7,
-        "total": 28,
-        "percentage": "0.509",
-        "lastTen": 6
+        "home": 33,
+        "away": 10,
+        "total": 43,
+        "percentage": "0.531",
+        "lastTen": 7
       },
       "loss": {
-        "home": 6,
-        "away": 21,
-        "total": 27,
-        "percentage": "0.491",
-        "lastTen": 4
+        "home": 8,
+        "away": 30,
+        "total": 38,
+        "percentage": "0.469",
+        "lastTen": 3
       },
-      "gamesBehind": "3.5",
-      "streak": 1,
-      "winStreak": false,
+      "gamesBehind": "5",
+      "streak": 2,
+      "winStreak": true,
       "tieBreakerPoints": null
     },
     {
@@ -314,34 +398,34 @@
       },
       "conference": {
         "name": "west",
-        "rank": 13,
-        "win": 25,
-        "loss": 30
+        "rank": 8,
+        "win": 42,
+        "loss": 39
       },
       "division": {
         "name": "pacific",
         "rank": 5,
-        "win": 25,
-        "loss": 30,
-        "gamesBehind": "6.5"
+        "win": 42,
+        "loss": 39,
+        "gamesBehind": "6"
       },
       "win": {
-        "home": 13,
-        "away": 12,
-        "total": 25,
-        "percentage": "0.455",
-        "lastTen": 5
+        "home": 22,
+        "away": 20,
+        "total": 42,
+        "percentage": "0.519",
+        "lastTen": 8
       },
       "loss": {
-        "home": 13,
-        "away": 17,
-        "total": 30,
-        "percentage": "0.545",
-        "lastTen": 5
+        "home": 18,
+        "away": 21,
+        "total": 39,
+        "percentage": "0.481",
+        "lastTen": 2
       },
-      "gamesBehind": "6.5",
-      "streak": 2,
-      "winStreak": false,
+      "gamesBehind": "6",
+      "streak": 1,
+      "winStreak": true,
       "tieBreakerPoints": null
     },
     {
@@ -357,74 +441,32 @@
       "conference": {
         "name": "west",
         "rank": 2,
-        "win": 33,
-        "loss": 21
+        "win": 51,
+        "loss": 30
       },
       "division": {
         "name": "southwest",
         "rank": 1,
-        "win": 33,
-        "loss": 21,
+        "win": 51,
+        "loss": 30,
         "gamesBehind": null
       },
       "win": {
-        "home": 22,
-        "away": 11,
-        "total": 33,
-        "percentage": "0.611",
-        "lastTen": 2
+        "home": 35,
+        "away": 16,
+        "total": 51,
+        "percentage": "0.630",
+        "lastTen": 7
       },
       "loss": {
-        "home": 5,
-        "away": 16,
-        "total": 21,
-        "percentage": "0.389",
-        "lastTen": 8
+        "home": 6,
+        "away": 24,
+        "total": 30,
+        "percentage": "0.370",
+        "lastTen": 3
       },
       "gamesBehind": null,
       "streak": 1,
-      "winStreak": true,
-      "tieBreakerPoints": null
-    },
-    {
-      "league": "standard",
-      "season": 2022,
-      "team": {
-        "id": 8,
-        "name": "Dallas Mavericks",
-        "nickname": "Mavericks",
-        "code": "DAL",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
-      },
-      "conference": {
-        "name": "west",
-        "rank": 5,
-        "win": 30,
-        "loss": 26
-      },
-      "division": {
-        "name": "southwest",
-        "rank": 2,
-        "win": 30,
-        "loss": 26,
-        "gamesBehind": "4"
-      },
-      "win": {
-        "home": 19,
-        "away": 11,
-        "total": 30,
-        "percentage": "0.536",
-        "lastTen": 6
-      },
-      "loss": {
-        "home": 9,
-        "away": 17,
-        "total": 26,
-        "percentage": "0.464",
-        "lastTen": 4
-      },
-      "gamesBehind": "4",
-      "streak": 2,
       "winStreak": true,
       "tieBreakerPoints": null
     },
@@ -441,32 +483,116 @@
       "conference": {
         "name": "west",
         "rank": 7,
-        "win": 29,
-        "loss": 27
+        "win": 42,
+        "loss": 39
+      },
+      "division": {
+        "name": "southwest",
+        "rank": 2,
+        "win": 42,
+        "loss": 39,
+        "gamesBehind": "9"
+      },
+      "win": {
+        "home": 27,
+        "away": 15,
+        "total": 42,
+        "percentage": "0.519",
+        "lastTen": 8
+      },
+      "loss": {
+        "home": 14,
+        "away": 25,
+        "total": 39,
+        "percentage": "0.481",
+        "lastTen": 2
+      },
+      "gamesBehind": "9",
+      "streak": 2,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 8,
+        "name": "Dallas Mavericks",
+        "nickname": "Mavericks",
+        "code": "DAL",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+      },
+      "conference": {
+        "name": "west",
+        "rank": 11,
+        "win": 38,
+        "loss": 43
       },
       "division": {
         "name": "southwest",
         "rank": 3,
-        "win": 29,
-        "loss": 27,
-        "gamesBehind": "5"
+        "win": 38,
+        "loss": 43,
+        "gamesBehind": "13"
       },
       "win": {
-        "home": 20,
-        "away": 9,
-        "total": 29,
-        "percentage": "0.518",
+        "home": 23,
+        "away": 15,
+        "total": 38,
+        "percentage": "0.469",
+        "lastTen": 2
+      },
+      "loss": {
+        "home": 17,
+        "away": 26,
+        "total": 43,
+        "percentage": "0.531",
+        "lastTen": 8
+      },
+      "gamesBehind": "13",
+      "streak": 1,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 14,
+        "name": "Houston Rockets",
+        "nickname": "Rockets",
+        "code": "HOU",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+      },
+      "conference": {
+        "name": "west",
+        "rank": 14,
+        "win": 21,
+        "loss": 60
+      },
+      "division": {
+        "name": "southwest",
+        "rank": 4,
+        "win": 21,
+        "loss": 60,
+        "gamesBehind": "30"
+      },
+      "win": {
+        "home": 14,
+        "away": 7,
+        "total": 21,
+        "percentage": "0.259",
         "lastTen": 3
       },
       "loss": {
-        "home": 9,
-        "away": 18,
-        "total": 27,
-        "percentage": "0.482",
+        "home": 27,
+        "away": 33,
+        "total": 60,
+        "percentage": "0.741",
         "lastTen": 7
       },
-      "gamesBehind": "5",
-      "streak": 3,
+      "gamesBehind": "30",
+      "streak": 2,
       "winStreak": true,
       "tieBreakerPoints": null
     },
@@ -482,33 +608,33 @@
       },
       "conference": {
         "name": "west",
-        "rank": 14,
-        "win": 14,
-        "loss": 41
+        "rank": 15,
+        "win": 21,
+        "loss": 60
       },
       "division": {
         "name": "southwest",
-        "rank": 4,
-        "win": 14,
-        "loss": 41,
-        "gamesBehind": "19.5"
+        "rank": 5,
+        "win": 21,
+        "loss": 60,
+        "gamesBehind": "30"
       },
       "win": {
-        "home": 9,
-        "away": 5,
-        "total": 14,
-        "percentage": "0.255",
-        "lastTen": 0
+        "home": 14,
+        "away": 7,
+        "total": 21,
+        "percentage": "0.259",
+        "lastTen": 3
       },
       "loss": {
-        "home": 21,
-        "away": 20,
-        "total": 41,
-        "percentage": "0.745",
-        "lastTen": 10
+        "home": 27,
+        "away": 33,
+        "total": 60,
+        "percentage": "0.741",
+        "lastTen": 7
       },
-      "gamesBehind": "19.5",
-      "streak": 10,
+      "gamesBehind": "30",
+      "streak": 1,
       "winStreak": false,
       "tieBreakerPoints": null
     }

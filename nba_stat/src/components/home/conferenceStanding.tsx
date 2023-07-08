@@ -8,19 +8,20 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
-import { ConferenceStandingTypes } from "@/types/teams";
+import { ConferenceStandingResponseType } from "@/types/teams";
 import Title from "../Title";
+import ApiResponseType from "@/types/api";
 
-interface PropsType {
-  conferenceData: ConferenceStandingTypes;
+const ConferenceStanding = ({
+  data,
+  title,
+}: {
+  data: ApiResponseType<ConferenceStandingResponseType[]>;
   title: string;
-}
-
-const ConferenceStanding = ({ conferenceData, title }: PropsType) => {
+}) => {
   const getRankSorted = () => {
-    return conferenceData.response.sort((a, b) => {
+    return data.response.sort((a, b) => {
       return a.conference.rank - b.conference.rank;
     });
   };
@@ -49,15 +50,13 @@ const ConferenceStanding = ({ conferenceData, title }: PropsType) => {
                 <TableRow key={el.team.id}>
                   <TableCell>{idx + 1}</TableCell>
                   <TableCell>
-                    <Box className="flex">
-                      <Box className="w-[17px] h-[17px]">
+                    <Box className="flex items-center">
+                      <Box className="relative w-[17px] h-[17px]">
                         <Image
                           src={el.team.logo}
-                          width="0"
-                          height="0"
+                          fill
                           alt="team-logo"
-                          sizes="100vw"
-                          className="w-full h-auto"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </Box>
                       <span style={{ marginLeft: "5px" }}>{el.team.name}</span>
