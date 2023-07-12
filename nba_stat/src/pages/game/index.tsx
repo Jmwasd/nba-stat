@@ -3,6 +3,7 @@ import recentMatchData from "@/data/recentMatch.json";
 
 import ScoreBoard from "@/components/game/ScoreBoard";
 import GameRecord from "@/components/game/GameRecord";
+import PlayerStat from "@/components/game/PlayerStat";
 
 const GameStatistics = () => {
   const gamePoint = {
@@ -13,6 +14,7 @@ const GameStatistics = () => {
     <Box>
       <ScoreBoard />
       <GameRecord point={gamePoint} />
+      <PlayerStat />
     </Box>
   );
 };
