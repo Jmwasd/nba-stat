@@ -12,18 +12,22 @@ import {
   Typography,
 } from "@mui/material";
 import Title from "../Title";
-
 import playerStat from "@/data/playerStatistics.json";
-
 import { useState } from "react";
 
-const HOME_TEAM = "Denver Nuggets";
-const VISITOR_TEAM = "Miami Heat";
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
 type TabType = "home" | "visitor";
 
-const PlayerStat = () => {
+interface Props {
+  player: typeof playerStat.response;
+  teamName: {
+    home: string;
+    visitor: string;
+  };
+}
+
+const PlayerStat = ({ player, teamName }: Props) => {
   const [tabValue, setTabValue] = useState<TabType>("home");
 
   const handleTab = (e: React.SyntheticEvent, newValue: TabType) => {
@@ -35,13 +39,13 @@ const PlayerStat = () => {
   ) => {
     let team: string;
     if (tabValue === "home") {
-      team = HOME_TEAM;
+      team = teamName.home;
     } else {
-      team = VISITOR_TEAM;
+      team = teamName.visitor;
     }
-    const player = playerStat.response.filter((el) => el.team.name === team);
-    const startLineUp = player.slice(0, 5);
-    const bench = player.slice(5, player.length);
+    const playerUnit = player.filter((el) => el.team.name === team);
+    const startLineUp = playerUnit.slice(0, 5);
+    const bench = playerUnit.slice(5, playerUnit.length);
     if (type === "start") {
       return startLineUp;
     } else {
@@ -54,8 +58,8 @@ const PlayerStat = () => {
       <Title text="선수 통계" />
       <Paper className="p-5">
         <Tabs value={tabValue} onChange={handleTab}>
-          <Tab label={HOME_TEAM} value="home" />
-          <Tab label={VISITOR_TEAM} value="visitor" />
+          <Tab label={teamName.home} value="home" />
+          <Tab label={teamName.visitor} value="visitor" />
         </Tabs>
         <TableContainer className="p-4">
           {TABLE_CELL.map((el) => {

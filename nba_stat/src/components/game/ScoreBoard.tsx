@@ -12,42 +12,41 @@ import {
 import gameStatistics from "@/data/gameStatistics.json";
 import Image from "next/image";
 
-const HOME_LINE_SCORE = [
-  gameStatistics.response[0].team.logo,
-  "27",
-  "28",
-  "24",
-  "20",
-];
-const VISITOR_LINE_SCORE = [
-  gameStatistics.response[1].team.logo,
-  "27",
-  "28",
-  "24",
-  "20",
-];
 const QUATER = ["팀", "1Q", "2Q", "3Q", "4Q"];
 
-const ScoreBoard = () => {
+interface Props {
+  home: {
+    lineScore: string[];
+    response: (typeof gameStatistics.response)[0];
+  };
+  visitor: {
+    lineScore: string[];
+    response: (typeof gameStatistics.response)[1];
+  };
+}
+
+const ScoreBoard = ({ home, visitor }: Props) => {
+  const homeTableRow = home.lineScore.concat(home.response.team.logo).reverse();
+  const visitorTableRow = visitor.lineScore
+    .concat(visitor.response.team.logo)
+    .reverse();
   return (
     <Paper className="flex items-center justify-center">
       <Box className="flex p-5">
         <Box className="flex items-center w-2/5">
           <Box className="flex justify-center pr-2">
             <Image
-              src={gameStatistics.response[0].team.logo}
+              src={home.response.team.logo}
               width={70}
               height={70}
               alt="home-team-logo"
             />
           </Box>
-          <Typography variant="h4">
-            {gameStatistics.response[0].team.name}
-          </Typography>
+          <Typography variant="h4">{home.response.team.name}</Typography>
         </Box>
         <Box className="flex items-center px-10 py-3">
           <Typography variant="h3">
-            {gameStatistics.response[0].statistics[0].points}
+            {home.response.statistics[0].points}
           </Typography>
           <TableContainer className="px-10">
             <Table>
@@ -60,29 +59,37 @@ const ScoreBoard = () => {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  {HOME_LINE_SCORE.map((el) => (
-                    <TD value={el} key={`visitor ${el}`} id={`visitor ${el}`} />
+                  {homeTableRow.map((el, idx) => (
+                    <TD
+                      value={el}
+                      key={`home ${QUATER[idx]}`}
+                      id={`home ${QUATER[idx]}`}
+                    />
                   ))}
                 </TableRow>
                 <TableRow>
-                  {VISITOR_LINE_SCORE.map((el) => (
-                    <TD value={el} key={`home ${el}`} id={`home ${el}`} />
+                  {visitorTableRow.map((el, idx) => (
+                    <TD
+                      value={el}
+                      key={`visitor ${QUATER[idx]}`}
+                      id={`visitor ${QUATER[idx]}`}
+                    />
                   ))}
                 </TableRow>
               </TableBody>
             </Table>
           </TableContainer>
           <Typography variant="h3">
-            {gameStatistics.response[1].statistics[0].points}
+            {visitor.response.statistics[0].points}
           </Typography>
         </Box>
         <Box className="flex items-center justify-end w-2/5">
           <Typography variant="h4" align="right">
-            {gameStatistics.response[1].team.name}
+            {visitor.response.team.name}
           </Typography>
           <Box className="flex justify-center">
             <Image
-              src={gameStatistics.response[1].team.logo}
+              src={visitor.response.team.logo}
               width={70}
               height={70}
               alt="home-team-logo"
