@@ -1,17 +1,5 @@
-import {
-  Box,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
-import teamStatistics from "@/data/teamStatistics.json";
+import { Box } from "@mui/material";
 import playerPerTeam from "@/data/playerPerTeam.json";
-import HawksLogo from "../../assets/teamLogo/Hawks.png";
 import TeamRank from "@/components/team/TeamRank";
 import TeamStats from "@/components/team/TeamStats";
 import TeamSchedule from "@/components/team/TeamSchedule";
@@ -23,7 +11,7 @@ const TeamStatistics = () => {
       <TeamRank />
       <Box className="flex pt-3">
         <TeamSchedule />
-        <Box>
+        <Box className="w-[80%]">
           <TeamStats />
           <TeamPlayer />
         </Box>
