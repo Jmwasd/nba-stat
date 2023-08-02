@@ -1,0 +1,39 @@
+{
+  "get": "teams/statistics",
+  "parameters": {
+    "id": "1",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "games": 83,
+      "fastBreakPoints": 0,
+      "pointsInPaint": 0,
+      "biggestLead": 0,
+      "secondChancePoints": 0,
+      "pointsOffTurnovers": 0,
+      "longestRun": 0,
+      "points": 9734,
+      "fgm": 3656,
+      "fga": 7682,
+      "fgp": "64.3",
+      "ftm": 1515,
+      "fta": 1863,
+      "ftp": "81.3",
+      "tpm": 907,
+      "tpa": 2593,
+      "tpp": "35.1",
+      "offReb": 943,
+      "defReb": 2794,
+      "totReb": 3737,
+      "assists": 2059,
+      "pFouls": 1556,
+      "steals": 583,
+      "turnovers": 1075,
+      "blocks": 411,
+      "plusMinus": -5
+    }
+  ]
+}
