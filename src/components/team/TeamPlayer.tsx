@@ -42,7 +42,7 @@ const TeamPlayer = () => {
             <TableBody>
               {filterPlayerData(playerPerTeamData.response).map((el) => {
                 return (
-                  <TableRow key={el.id}>
+                  <TableRow hover key={el.id} className="cursor-pointer">
                     <TableCell align="center">
                       {el.firstname + el.lastname}
                     </TableCell>

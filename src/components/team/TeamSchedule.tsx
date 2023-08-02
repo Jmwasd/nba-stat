@@ -4,8 +4,14 @@ import Image from "next/image";
 import Title from "../Title";
 
 import teamScheduleData from "@/data/teamSchedule.json";
+import { TeamScheduleType } from "@/types/games";
 import { useState } from "react";
-const TEAM_NAME = "Atlanta Hawks";
+import { useRouter } from "next/router";
+import { ParsedUrlQuery } from "querystring";
+
+interface PropsType {
+  teamSchedule: TeamScheduleType;
+}
 
 type teamScheduleType = (typeof teamScheduleData.response)[0];
 
@@ -14,22 +20,31 @@ interface CardCountType {
   max: number;
 }
 
+interface TeamQueryType extends ParsedUrlQuery {
+  conferenceName: string;
+  id: string;
+}
+
 const SLICE_COUNT = 12;
 
-const TeamSchedule = () => {
-  const [teamSchedule, setTeamSchedule] = useState<Array<teamScheduleType>>(
-    teamScheduleData.response.slice(0, SLICE_COUNT)
-  );
+const TeamSchedule = ({ teamSchedule }: PropsType) => {
+  const { query } = useRouter();
+  const queryUnit = query as TeamQueryType;
+
+  const [teamScheduleState, setTeamScheduleState] = useState<
+    Array<teamScheduleType>
+  >(teamSchedule.response.reverse().slice(0, SLICE_COUNT));
+
   const [cardCount, setCardCount] = useState<CardCountType>({
     current: SLICE_COUNT,
-    max: teamScheduleData.response.length,
+    max: teamSchedule.response.length,
   });
 
   const getCardInfo = (stats: teamScheduleType) => {
     const selectedTeam: "visitors" | "home" =
-      stats.teams.home.name === TEAM_NAME ? "home" : "visitors";
+      stats.teams.home.id === Number(queryUnit.id) ? "home" : "visitors";
     const opponentTeam: "visitors" | "home" =
-      stats.teams.home.name !== TEAM_NAME ? "home" : "visitors";
+      stats.teams.home.id !== Number(queryUnit.id) ? "home" : "visitors";
     const winOrLose =
       stats.scores[selectedTeam].points > stats.scores[opponentTeam].points
         ? "W"
@@ -63,8 +78,8 @@ const TeamSchedule = () => {
       ...prev,
       current: (prev.current += 5),
     }));
-    const moreData = teamScheduleData.response.slice(0, sliceCount);
-    setTeamSchedule(moreData);
+    const moreData = teamSchedule.response.slice(0, sliceCount);
+    setTeamScheduleState(moreData);
   };
 
   const hideMoreBtn = () => {
@@ -77,7 +92,7 @@ const TeamSchedule = () => {
   return (
     <Box className="mr-7">
       <Title text="팀 일정" />
-      {teamSchedule.map((el) => {
+      {teamScheduleState.map((el) => {
         return (
           <Card className="p-4 mb-3" key={el.id}>
             <Typography className="text-sm mb-2">

@@ -7,11 +7,16 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { ConferenceStandingResponseType } from "@/types/teams";
 import { instance } from "@/config/api";
 import ApiResponseType from "@/types/api";
+import useConferenceStandingStore from "@/store/conferenceStanding";
 
 export default function Home({
   west,
   east,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const updateConference = useConferenceStandingStore(
+    (state) => state.updateConference
+  );
+  updateConference(west.response, east.response);
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <RecentMatch></RecentMatch>
@@ -42,5 +47,6 @@ export const getStaticProps: GetStaticProps<StaticProps> = async () => {
   >("/standings?season=2022&conference=east&league=standard");
   const westConference = westConferenceResponse.data;
   const eastConference = eastConferenceResponse.data;
+
   return { props: { west: westConference, east: eastConference } };
 };
