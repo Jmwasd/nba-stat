@@ -7,22 +7,29 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { instance } from "@/config/api";
 import ApiResponseType from "@/types/api";
 import { ConferenceStandingResponseType } from "@/types/teams";
-import { TeamScheduleType } from "@/types/games";
+import { TeamScheduleResponseType, TeamScheduleType } from "@/types/games";
+import { PlayerPerTeamResponseType, PlayerPerTeamType } from "@/types/players";
+import { TeamStatsResponseType, TeamStatsType } from "@/types/statistics";
+import { Suspense } from "react";
 
 const TeamStatistics = ({
-  teamStats,
+  conferenceStanding,
   teamSchedule,
+  playerPerTeam,
+  teamStats,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Box>
-      <TeamRank teamStats={teamStats} />
-      <Box className="flex pt-3">
-        <TeamSchedule teamSchedule={teamSchedule} />
-        <Box className="w-[80%]">
-          <TeamStats />
-          <TeamPlayer />
+      <Suspense fallback={<div>loading...</div>}>
+        <TeamRank conferenceStanding={conferenceStanding} />
+        <Box className="flex pt-3">
+          <TeamSchedule teamSchedule={teamSchedule} />
+          <Box className="w-[80%]">
+            <TeamStats teamStats={teamStats} />
+            <TeamPlayer playerPerTeam={playerPerTeam} />
+          </Box>
         </Box>
-      </Box>
+      </Suspense>
     </Box>
   );
 };
@@ -30,14 +37,16 @@ const TeamStatistics = ({
 export default TeamStatistics;
 
 interface StatisticsProps {
-  teamStats: ConferenceStandingResponseType;
-  teamSchedule: TeamScheduleType;
+  conferenceStanding: ConferenceStandingResponseType;
+  teamSchedule: TeamScheduleResponseType;
+  playerPerTeam: PlayerPerTeamResponseType;
+  teamStats: TeamStatsResponseType;
 }
 
 export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
   query,
 }) => {
-  const gameStatisticsResponse = await instance.get<
+  const conferenceStandingResponse = await instance.get<
     ApiResponseType<ConferenceStandingResponseType[]>
   >(
     `/standings?season=2022&conference=${query.conferenceName}&league=standard&team=${query.id}`
@@ -45,10 +54,18 @@ export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
   const gamePerTeamResponse = await instance.get<TeamScheduleType>(
     `/games?league=standard&season=2022&team=${query.id}`
   );
+  const playerPerTeamResponse = await instance.get<PlayerPerTeamType>(
+    `/players?team=${query.id}&season=2022`
+  );
+  const teamStatsResponse = await instance.get<TeamStatsType>(
+    `/teams/statistics?id=${query.id}&season=2022`
+  );
   return {
     props: {
-      teamStats: gameStatisticsResponse.data.response[0],
-      teamSchedule: gamePerTeamResponse.data,
+      conferenceStanding: conferenceStandingResponse.data.response[0],
+      teamSchedule: gamePerTeamResponse.data.response,
+      playerPerTeam: playerPerTeamResponse.data.response,
+      teamStats: teamStatsResponse.data.response,
     },
   };
 };

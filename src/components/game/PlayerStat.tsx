@@ -14,6 +14,7 @@ import {
 import Title from "../Title";
 import playerStat from "@/data/playerStatistics.json";
 import { useState } from "react";
+import { PLAYER_STATS } from "@/consts/table";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
@@ -70,16 +71,9 @@ const PlayerStat = ({ player, teamName }: Props) => {
                     <TableCell className="min-w-[220px]">
                       {changeKr(el)}
                     </TableCell>
-                    <TableCell align="center">점수</TableCell>
-                    <TableCell align="center">경기시간</TableCell>
-                    <TableCell align="center">필드골 비율(%)</TableCell>
-                    <TableCell align="center">자유투 확률(%)</TableCell>
-                    <TableCell align="center">리바운드</TableCell>
-                    <TableCell align="center">어시스트</TableCell>
-                    <TableCell align="center">파울</TableCell>
-                    <TableCell align="center">스틸</TableCell>
-                    <TableCell align="center">턴오버</TableCell>
-                    <TableCell align="center">블락</TableCell>
+                    {PLAYER_STATS.map((el) => (
+                      <TableCell align="center">{el}</TableCell>
+                    ))}
                   </TableRow>
                 </TableHead>
                 <TableBody>

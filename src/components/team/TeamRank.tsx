@@ -14,28 +14,39 @@ import Image from "next/image";
 import { ConferenceStandingResponseType } from "@/types/teams";
 
 interface PropsType {
-  teamStats: ConferenceStandingResponseType;
+  conferenceStanding: ConferenceStandingResponseType;
 }
 
-const TeamRank = ({ teamStats }: PropsType) => {
+const TeamRank = ({ conferenceStanding }: PropsType) => {
   const getTableInfo = () => {
     return [
-      { head: "랭킹", info: teamStats?.conference.rank },
+      { head: "랭킹", info: conferenceStanding?.conference.rank },
       {
         head: "승",
-        info: teamStats?.conference.win,
+        info: conferenceStanding?.conference.win,
       },
-      { head: "패", info: teamStats?.conference.loss },
-      { head: "승률", info: teamStats?.win.percentage },
-      { head: "홈", info: teamStats?.win.home + "-" + teamStats?.win.home },
-      { head: "원정", info: teamStats?.win.away + "-" + teamStats?.win.away },
+      { head: "패", info: conferenceStanding?.conference.loss },
+      { head: "승률", info: conferenceStanding?.win.percentage },
+      {
+        head: "홈",
+        info: conferenceStanding?.win.home + "-" + conferenceStanding?.win.home,
+      },
+      {
+        head: "원정",
+        info: conferenceStanding?.win.away + "-" + conferenceStanding?.win.away,
+      },
       {
         head: "최근 10경기",
-        info: teamStats?.streak + (teamStats?.winStreak ? "W" : "L"),
+        info:
+          conferenceStanding?.streak +
+          (conferenceStanding?.winStreak ? "W" : "L"),
       },
       {
         head: "연속",
-        info: teamStats?.win.lastTen + "-" + teamStats?.loss.lastTen,
+        info:
+          conferenceStanding?.win.lastTen +
+          "-" +
+          conferenceStanding?.loss.lastTen,
       },
     ];
   };
@@ -44,12 +55,12 @@ const TeamRank = ({ teamStats }: PropsType) => {
     <Paper className="p-5 flex items-center">
       <Image
         className="mr-5"
-        src={teamStats.team.logo}
+        src={conferenceStanding.team.logo}
         width={70}
         height={70}
         alt="tema-logo"
       />
-      <Typography variant="h4">{teamStats.team.name}</Typography>
+      <Typography variant="h4">{conferenceStanding.team.name}</Typography>
       <Box className="w-[70%] my-0 mx-auto">
         <TableContainer>
           <Table>
