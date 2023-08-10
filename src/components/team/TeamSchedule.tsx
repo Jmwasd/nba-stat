@@ -4,13 +4,13 @@ import Image from "next/image";
 import Title from "../Title";
 
 import teamScheduleData from "@/data/teamSchedule.json";
-import { TeamScheduleType } from "@/types/games";
+import { TeamScheduleResponseType } from "@/types/games";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
 
 interface PropsType {
-  teamSchedule: TeamScheduleType;
+  teamSchedule: TeamScheduleResponseType;
 }
 
 type teamScheduleType = (typeof teamScheduleData.response)[0];
@@ -33,11 +33,11 @@ const TeamSchedule = ({ teamSchedule }: PropsType) => {
 
   const [teamScheduleState, setTeamScheduleState] = useState<
     Array<teamScheduleType>
-  >(teamSchedule.response.reverse().slice(0, SLICE_COUNT));
+  >(teamSchedule.reverse().slice(0, SLICE_COUNT));
 
   const [cardCount, setCardCount] = useState<CardCountType>({
     current: SLICE_COUNT,
-    max: teamSchedule.response.length,
+    max: teamSchedule.length,
   });
 
   const getCardInfo = (stats: teamScheduleType) => {
@@ -78,7 +78,7 @@ const TeamSchedule = ({ teamSchedule }: PropsType) => {
       ...prev,
       current: (prev.current += 5),
     }));
-    const moreData = teamSchedule.response.slice(0, sliceCount);
+    const moreData = teamSchedule.slice(0, sliceCount);
     setTeamScheduleState(moreData);
   };
 

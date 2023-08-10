@@ -10,19 +10,21 @@ import {
 } from "@mui/material";
 import Title from "../Title";
 
-import playerPerTeamData from "@/data/playerPerTeam.json";
+import { TEAM_PLAYER } from "@/consts/table";
+import { PlayerPerTeamResponseType } from "@/types/players";
 
-const TABLE_HEAD = ["이름", "출생", "시작연도", "등번호"];
+interface Props {
+  playerPerTeam: PlayerPerTeamResponseType;
+}
 
-const TeamPlayer = () => {
-  const filterPlayerData = (data: typeof playerPerTeamData.response) => {
-    return data.filter((el) => {
+const TeamPlayer = ({ playerPerTeam }: Props) => {
+  const filterPlayerData = (data: typeof playerPerTeam) =>
+    data.filter((el) => {
       if (!el.birth.date || !el.nba.start || !el.leagues.standard.jersey) {
         return false;
       }
       return true;
     });
-  };
 
   return (
     <Box className="pt-3">
@@ -32,7 +34,7 @@ const TeamPlayer = () => {
           <Table>
             <TableHead>
               <TableRow>
-                {TABLE_HEAD.map((el) => (
+                {TEAM_PLAYER.map((el) => (
                   <TableCell align="center" key={el}>
                     {el}
                   </TableCell>
@@ -40,7 +42,7 @@ const TeamPlayer = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filterPlayerData(playerPerTeamData.response).map((el) => {
+              {filterPlayerData(playerPerTeam).map((el) => {
                 return (
                   <TableRow hover key={el.id} className="cursor-pointer">
                     <TableCell align="center">

@@ -12,21 +12,27 @@ import Title from "../Title";
 
 import teamStatsData from "@/data/teamStatistics.json";
 import { getStatsChangedKr } from "@/utils/formatter";
+import { StatsType } from "@/types/stats";
+import { TeamStatsResponseType } from "@/types/statistics";
 
-type teamStatsDataType = (typeof teamStatsData.response)[0];
+type teamStatsType = (typeof teamStatsData.response)[0];
 
-interface TableTypes extends teamStatsDataType {
+interface TableType extends teamStatsType {
   [key: string]: string | number;
 }
 
-const TeamStats = () => {
-  const getTableUnit = () => {
-    const data: TableTypes = teamStatsData.response[0];
+interface Props {
+  teamStats: TeamStatsResponseType;
+}
+
+const TeamStats = ({ teamStats }: Props) => {
+  const getTableHeadAndBody = () => {
+    const data: TableType = teamStats[0];
     return Object.keys(data)
-      .filter((el) => getStatsChangedKr(el) !== "error")
+      .filter((el) => (getStatsChangedKr(el as StatsType) ? true : false))
       .map((el) => {
         return {
-          tableHead: getStatsChangedKr(el),
+          tableHead: getStatsChangedKr(el as StatsType),
           tableBody: data[el],
         };
       });
@@ -39,7 +45,7 @@ const TeamStats = () => {
           <Table>
             <TableHead>
               <TableRow>
-                {getTableUnit().map((el) => {
+                {getTableHeadAndBody().map((el) => {
                   return (
                     <TableCell align="center" key={el.tableBody}>
                       {el.tableHead}
@@ -50,7 +56,7 @@ const TeamStats = () => {
             </TableHead>
             <TableBody>
               <TableRow>
-                {getTableUnit().map((el) => {
+                {getTableHeadAndBody().map((el) => {
                   return (
                     <TableCell align="center" key={el.tableBody}>
                       {el.tableBody}
