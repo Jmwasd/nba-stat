@@ -3,6 +3,7 @@ import {
   Box,
   Card,
   CardActionArea,
+  CircularProgress,
   Grid,
   Paper,
   Typography,
@@ -10,37 +11,47 @@ import {
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Title from "../Title";
-import { instance } from "@/config/api";
 import Link from "next/link";
+import { APIv2 } from "@/consts/api";
+import useSWR from "swr";
 
 const today = new Date();
 
+type recentMatchType = typeof recentMatchData.response;
+
 const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState(dayjs(today));
-  const [gameData, setGameData] = useState<
-    typeof recentMatchData.response | []
-  >([]);
-  const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
+  const parsingDate = () => {
     const year = datePickerValue.year();
     let month = "" + (datePickerValue.month() + 1);
     let day = "" + datePickerValue.date();
     if (month.length < 2) month = "0" + month;
     if (day.length < 2) day = "0" + day;
 
-    const date = year + "-" + month + "-" + day;
+    return year + "-" + month + "-" + day;
+  };
 
-    instance.get<typeof recentMatchData>(`/games?date=${date}`).then((data) => {
-      setGameData(data.data.response);
-      setLoading(false);
-    });
-  }, [datePickerValue]);
+  const {
+    data: recentMatchResponse,
+    isLoading,
+    mutate,
+  } = useSWR<recentMatchType>(() => `${APIv2.game}&date=${parsingDate()}`);
 
-  if (isLoading) return <Box>Loading...</Box>;
+  const changeDate = (value: dayjs.Dayjs | null) => {
+    if (value) setDatePickerValue(value);
+    mutate();
+  };
+
+  if (isLoading) {
+    return (
+      <Box className="flex justify-center items-center h-[150px] pb-7">
+        <CircularProgress />
+      </Box>
+    );
+  }
 
   return (
     <Box className="pb-7">
@@ -51,10 +62,10 @@ const RecentMatch = () => {
         />
         <DatePicker
           value={datePickerValue}
-          onChange={(value) => setDatePickerValue(dayjs(value))}
+          onChange={(value) => changeDate(value)}
         />
       </Box>
-      {gameData.length === 0 ? (
+      {!recentMatchResponse ? (
         <Paper className="p-3 flex h-20 items-center justify-center">
           <Typography>
             일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요.
@@ -62,7 +73,7 @@ const RecentMatch = () => {
         </Paper>
       ) : (
         <Grid container spacing={2}>
-          {gameData.map((item, idx) => (
+          {recentMatchResponse.map((item, idx) => (
             <Grid item xs={3} key={item.id + idx}>
               <Link
                 href={{

@@ -1,3 +1,4 @@
+import ApiResponseType from "@/types/api";
 import axios from "axios";
 
 export const instance = axios.create({
@@ -7,3 +8,15 @@ export const instance = axios.create({
     "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
   },
 });
+
+export const fetcher = async <T>(url: string): Promise<T[] | null> => {
+  const res = await instance
+    .get<ApiResponseType<T>>(url)
+    .then((res) => res.data);
+
+  if (res.response.length === 0) {
+    return null;
+  }
+
+  return res.response;
+};

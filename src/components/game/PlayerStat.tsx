@@ -35,7 +35,7 @@ const PlayerStat = ({ player, teamName }: Props) => {
     setTabValue(newValue);
   };
 
-  const getPlayers = (
+  const getDividedLineUp = (
     type: (typeof TABLE_CELL)[0] | (typeof TABLE_CELL)[1]
   ) => {
     let team: string;
@@ -44,9 +44,9 @@ const PlayerStat = ({ player, teamName }: Props) => {
     } else {
       team = teamName.visitor;
     }
-    const playerUnit = player.filter((el) => el.team.name === team);
-    const startLineUp = playerUnit.slice(0, 5);
-    const bench = playerUnit.slice(5, playerUnit.length);
+    const isPlayerInTeam = player.filter((el) => el.team.name === team);
+    const startLineUp = isPlayerInTeam.slice(0, 5);
+    const bench = isPlayerInTeam.slice(5, isPlayerInTeam.length);
     if (type === "start") {
       return startLineUp;
     } else {
@@ -72,12 +72,14 @@ const PlayerStat = ({ player, teamName }: Props) => {
                       {changeKr(el)}
                     </TableCell>
                     {PLAYER_STATS.map((el) => (
-                      <TableCell align="center">{el}</TableCell>
+                      <TableCell key={el} align="center">
+                        {el}
+                      </TableCell>
                     ))}
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {getPlayers(el).map((el) => {
+                  {getDividedLineUp(el).map((el) => {
                     return (
                       <TableRow hover key={el.player.id}>
                         <TableCell className="flex">
