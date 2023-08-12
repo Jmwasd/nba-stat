@@ -11,6 +11,7 @@ import { instance } from "@/config/api";
 
 import gameStatistics from "@/data/gameStatistics.json";
 import playerStatisctics from "@/data/playerStatistics.json";
+import { APIv2 } from "@/consts/api";
 
 interface GameQueryType extends ParsedUrlQuery {
   homeLineScore: string[];
@@ -60,10 +61,10 @@ export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
   query,
 }) => {
   const gameStatisticsResponse = await instance.get<typeof gameStatistics>(
-    `/games/statistics?id=${query.id}`
+    `${APIv2.gameStats}?id=${query.id}`
   );
   const playerStatisticsReponse = await instance.get<typeof playerStatisctics>(
-    `/players/statistics?game=${query.id}`
+    `${APIv2.playerStats}?game=${query.id}`
   );
   return {
     props: {

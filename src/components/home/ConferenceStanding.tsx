@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {
   Box,
+  CircularProgress,
   Paper,
   Table,
   TableBody,
@@ -11,21 +12,26 @@ import {
 } from "@mui/material";
 import { ConferenceStandingResponseType } from "@/types/teams";
 import Title from "../Title";
-import ApiResponseType from "@/types/api";
 import { CONFERENCE_STANDING } from "@/consts/table";
 import { useRouter } from "next/router";
 import { MouseEvent } from "react";
+import useSWR from "swr";
+import { APIv2 } from "@/consts/api";
 
-const ConferenceStanding = ({
-  data,
-  title,
-}: {
-  data: ApiResponseType<ConferenceStandingResponseType[]>;
+interface Props {
+  conferenceName: string;
   title: string;
-}) => {
+}
+
+const ConferenceStanding = ({ conferenceName, title }: Props) => {
+  const { data: conferenceStandingResponse, isLoading } = useSWR<
+    ConferenceStandingResponseType[]
+  >(`${APIv2.standing}&conference=${conferenceName}`);
+
   const router = useRouter();
-  const getRankSorted = () => {
-    return data.response.sort((a, b) => {
+
+  const getSortedRank = (param: ConferenceStandingResponseType[]) => {
+    return param.sort((a, b) => {
       return a.conference.rank - b.conference.rank;
     });
   };
@@ -42,6 +48,15 @@ const ConferenceStanding = ({
     });
   };
 
+  if (isLoading)
+    return (
+      <Box className="flex justify-center w-[49.5%] items-center h-[70vh]">
+        <CircularProgress />
+      </Box>
+    );
+
+  if (!conferenceStandingResponse) return <Box>데이터가 없습니다.</Box>;
+
   return (
     <Box className="w-[49.5%]">
       <Title text={title} align="center" />
@@ -56,7 +71,7 @@ const ConferenceStanding = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {getRankSorted().map((el, idx) => {
+            {getSortedRank(conferenceStandingResponse).map((el, idx) => {
               return (
                 <TableRow
                   hover

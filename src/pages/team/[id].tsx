@@ -10,7 +10,7 @@ import { ConferenceStandingResponseType } from "@/types/teams";
 import { TeamScheduleResponseType, TeamScheduleType } from "@/types/games";
 import { PlayerPerTeamResponseType, PlayerPerTeamType } from "@/types/players";
 import { TeamStatsResponseType, TeamStatsType } from "@/types/statistics";
-import { Suspense } from "react";
+import { APIv2 } from "@/consts/api";
 
 const TeamStatistics = ({
   conferenceStanding,
@@ -20,16 +20,14 @@ const TeamStatistics = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Box>
-      <Suspense fallback={<div>loading...</div>}>
-        <TeamRank conferenceStanding={conferenceStanding} />
-        <Box className="flex pt-3">
-          <TeamSchedule teamSchedule={teamSchedule} />
-          <Box className="w-[80%]">
-            <TeamStats teamStats={teamStats} />
-            <TeamPlayer playerPerTeam={playerPerTeam} />
-          </Box>
+      <TeamRank conferenceStanding={conferenceStanding} />
+      <Box className="flex pt-3">
+        <TeamSchedule teamSchedule={teamSchedule} />
+        <Box className="w-[80%]">
+          <TeamStats teamStats={teamStats} />
+          <TeamPlayer playerPerTeam={playerPerTeam} />
         </Box>
-      </Suspense>
+      </Box>
     </Box>
   );
 };
@@ -47,18 +45,17 @@ export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
   query,
 }) => {
   const conferenceStandingResponse = await instance.get<
-    ApiResponseType<ConferenceStandingResponseType[]>
-  >(
-    `/standings?season=2022&conference=${query.conferenceName}&league=standard&team=${query.id}`
-  );
+    ApiResponseType<ConferenceStandingResponseType>
+  >(`${APIv2.standing}&conference=${query.conferenceName}&team=${query.id}`);
+
   const gamePerTeamResponse = await instance.get<TeamScheduleType>(
-    `/games?league=standard&season=2022&team=${query.id}`
+    `${APIv2.game}&team=${query.id}`
   );
   const playerPerTeamResponse = await instance.get<PlayerPerTeamType>(
-    `/players?team=${query.id}&season=2022`
+    `${APIv2.player}&team=${query.id}`
   );
   const teamStatsResponse = await instance.get<TeamStatsType>(
-    `/teams/statistics?id=${query.id}&season=2022`
+    `${APIv2.teamsStats}&id=${query.id}`
   );
   return {
     props: {
