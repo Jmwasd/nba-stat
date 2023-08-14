@@ -1,7 +1,7 @@
-import { StatsType } from "@/types/stats";
+import { StatsKeyType } from "@/types/stats";
 
 export const STATS: {
-  [key in StatsType]: string;
+  [key in StatsKeyType]: string;
 } = {
   game: "게임",
   fgm: "필드골 성공 개수",
@@ -21,9 +21,10 @@ export const STATS: {
   steals: "스틸",
   turnovers: "턴오버",
   blocks: "블락",
+  points: "점수",
 };
 
-export const DETAIL_STATS: Array<StatsType> = [
+export const DETAIL_STATS: Array<StatsKeyType> = [
   "fgm",
   "fga",
   "ftm",

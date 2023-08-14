@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <SWRConfig
         value={{
-          refreshInterval: 3000,
+          refreshInterval: 0,
           fetcher: (url: string) => fetcher(url),
         }}
       >

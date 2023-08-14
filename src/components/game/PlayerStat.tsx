@@ -10,41 +10,54 @@ import {
   TableHead,
   TableRow,
   Typography,
+  CircularProgress,
 } from "@mui/material";
 import Title from "../Title";
-import playerStat from "@/data/playerStatistics.json";
 import { useState } from "react";
 import { PLAYER_STATS } from "@/consts/table";
+import { useRouter } from "next/router";
+import { setPlayerStats } from "@/hooks/stats";
+import { GamePageType } from "@/types/rotuerQuery";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
 type TabType = "home" | "visitor";
 
-interface Props {
-  player: typeof playerStat.response;
-  teamName: {
-    home: string;
-    visitor: string;
-  };
-}
+const PlayerStat = () => {
+  const { query } = useRouter();
+  const { homeTeamName, visitorTeamName, id } = query as GamePageType;
 
-const PlayerStat = ({ player, teamName }: Props) => {
   const [tabValue, setTabValue] = useState<TabType>("home");
+
+  const { data: playerStats, isLoading } = setPlayerStats(id);
 
   const handleTab = (e: React.SyntheticEvent, newValue: TabType) => {
     setTabValue(newValue);
   };
+
+  if (isLoading) {
+    return (
+      <Box className="flex justify-center items-center h-[150px] pb-7">
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!playerStats) {
+    return <Box>go to 404 page</Box>;
+  }
 
   const getDividedLineUp = (
     type: (typeof TABLE_CELL)[0] | (typeof TABLE_CELL)[1]
   ) => {
     let team: string;
     if (tabValue === "home") {
-      team = teamName.home;
+      team = homeTeamName;
     } else {
-      team = teamName.visitor;
+      team = visitorTeamName;
     }
-    const isPlayerInTeam = player.filter((el) => el.team.name === team);
+
+    const isPlayerInTeam = playerStats.filter((el) => el.team.name === team);
     const startLineUp = isPlayerInTeam.slice(0, 5);
     const bench = isPlayerInTeam.slice(5, isPlayerInTeam.length);
     if (type === "start") {
@@ -59,8 +72,8 @@ const PlayerStat = ({ player, teamName }: Props) => {
       <Title text="선수 통계" />
       <Paper className="p-5">
         <Tabs value={tabValue} onChange={handleTab}>
-          <Tab label={teamName.home} value="home" />
-          <Tab label={teamName.visitor} value="visitor" />
+          <Tab label={homeTeamName} value="home" />
+          <Tab label={visitorTeamName} value="visitor" />
         </Tabs>
         <TableContainer className="p-4">
           {TABLE_CELL.map((el) => {
