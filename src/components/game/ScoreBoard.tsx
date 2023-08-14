@@ -1,5 +1,6 @@
 import {
   Box,
+  CircularProgress,
   Paper,
   Table,
   TableBody,
@@ -9,44 +10,73 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import gameStatistics from "@/data/gameStatistics.json";
 import Image from "next/image";
+import { QUATER } from "@/consts/table";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
+import { setGameStats } from "@/hooks/stats";
+import { GamePageType } from "@/types/rotuerQuery";
 
-const QUATER = ["팀", "1Q", "2Q", "3Q", "4Q"];
+const ScoreBoard = () => {
+  const { query } = useRouter();
+  const queryUnit = query as GamePageType;
 
-interface Props {
-  home: {
-    lineScore: string[];
-    response: (typeof gameStatistics.response)[0];
+  const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
+
+  const getLineScore = () => {
+    if (gameStats) {
+      const homeLineScore = queryUnit.homeLineScore
+        .concat(gameStats[0].team.logo)
+        .reverse();
+      const visitorLineScore = queryUnit.visitorLineScore
+        .concat(gameStats[1].team.logo)
+        .reverse();
+
+      return {
+        home: homeLineScore,
+        visitor: visitorLineScore,
+      };
+    }
   };
-  visitor: {
-    lineScore: string[];
-    response: (typeof gameStatistics.response)[1];
-  };
-}
 
-const ScoreBoard = ({ home, visitor }: Props) => {
-  const homeTableRow = home.lineScore.concat(home.response.team.logo).reverse();
-  const visitorTableRow = visitor.lineScore
-    .concat(visitor.response.team.logo)
-    .reverse();
+  const gameStatsResponse = useMemo(() => {
+    if (!gameStats) return null;
+    return {
+      home: gameStats[0],
+      visitor: gameStats[1],
+    };
+  }, [gameStats]);
+
+  if (isLoading) {
+    return (
+      <Box className="flex justify-center items-center h-[150px] pb-7">
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!gameStatsResponse) {
+    return <Box>데이터가 없습니다.</Box>;
+  }
   return (
     <Paper className="flex items-center justify-center">
       <Box className="flex p-5">
         <Box className="flex items-center w-2/5">
           <Box className="flex justify-center pr-2">
             <Image
-              src={home.response.team.logo}
+              src={gameStatsResponse?.home.team.logo}
               width={70}
               height={70}
               alt="home-team-logo"
             />
           </Box>
-          <Typography variant="h4">{home.response.team.name}</Typography>
+          <Typography variant="h4">
+            {gameStatsResponse?.home.team.name}
+          </Typography>
         </Box>
         <Box className="flex items-center px-10 py-3">
           <Typography variant="h3">
-            {home.response.statistics[0].points}
+            {gameStatsResponse?.home.statistics[0].points}
           </Typography>
           <TableContainer className="px-10">
             <Table>
@@ -59,7 +89,7 @@ const ScoreBoard = ({ home, visitor }: Props) => {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  {homeTableRow.map((el, idx) => (
+                  {getLineScore()?.home.map((el, idx) => (
                     <TD
                       value={el}
                       key={`home ${QUATER[idx]}`}
@@ -68,7 +98,7 @@ const ScoreBoard = ({ home, visitor }: Props) => {
                   ))}
                 </TableRow>
                 <TableRow>
-                  {visitorTableRow.map((el, idx) => (
+                  {getLineScore()?.visitor.map((el, idx) => (
                     <TD
                       value={el}
                       key={`visitor ${QUATER[idx]}`}
@@ -80,16 +110,16 @@ const ScoreBoard = ({ home, visitor }: Props) => {
             </Table>
           </TableContainer>
           <Typography variant="h3">
-            {visitor.response.statistics[0].points}
+            {gameStatsResponse.visitor.statistics[0].points}
           </Typography>
         </Box>
         <Box className="flex items-center justify-end w-2/5">
           <Typography variant="h4" align="right">
-            {visitor.response.team.name}
+            {gameStatsResponse.visitor.team.name}
           </Typography>
           <Box className="flex justify-center">
             <Image
-              src={visitor.response.team.logo}
+              src={gameStatsResponse.visitor.team.logo}
               width={70}
               height={70}
               alt="home-team-logo"

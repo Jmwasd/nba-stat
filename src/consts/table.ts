@@ -23,3 +23,5 @@ export const PLAYER_STATS = [
 ];
 
 export const TEAM_PLAYER = ["이름", "출생", "시작연도", "등번호"];
+
+export const QUATER = ["팀", "1Q", "2Q", "3Q", "4Q"];

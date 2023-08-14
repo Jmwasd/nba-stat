@@ -1,59 +1,73 @@
-import { Box, List, Paper, Typography } from "@mui/material";
-import gameStatistics from "@/data/gameStatistics.json";
+import { Box, CircularProgress, List, Paper, Typography } from "@mui/material";
 import Title from "../Title";
 import Image from "next/image";
+import { setGameStats } from "@/hooks/stats";
+import { useRouter } from "next/router";
+import { GamePageType } from "@/types/rotuerQuery";
 
-interface Props {
-  home: (typeof gameStatistics.response)[0];
-  visitor: (typeof gameStatistics.response)[1];
-}
+const GameRecord = () => {
+  const { query } = useRouter();
+  const queryUnit = query as GamePageType;
 
-const GameRecord = ({ home, visitor }: Props) => {
+  const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
+
+  if (isLoading) {
+    return (
+      <Box className="flex justify-center items-center h-[550px] pb-7">
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!gameStats) {
+    return <Box>go to 404 page</Box>;
+  }
+
   const gameRecordBar = [
     {
       title: "점수",
-      home: home.statistics[0].points,
-      visitor: visitor.statistics[0].points,
+      home: gameStats[0].statistics[0].points,
+      visitor: gameStats[1].statistics[0].points,
     },
     {
       title: "필드골 비율(%)",
-      home: home.statistics[0].fgp,
-      visitor: visitor.statistics[0].fgp,
+      home: gameStats[0].statistics[0].fgp,
+      visitor: gameStats[1].statistics[0].fgp,
     },
     {
       title: "자유튜 확률(%)",
-      home: home.statistics[0].ftp,
-      visitor: visitor.statistics[0].ftp,
+      home: gameStats[0].statistics[0].ftp,
+      visitor: gameStats[1].statistics[0].ftp,
     },
     {
       title: "3점슛 확률(%)",
-      home: home.statistics[0].tpp,
-      visitor: visitor.statistics[0].tpp,
+      home: gameStats[0].statistics[0].tpp,
+      visitor: gameStats[1].statistics[0].tpp,
     },
     {
       title: "어시스트",
-      home: home.statistics[0].assists,
-      visitor: visitor.statistics[0].assists,
+      home: gameStats[0].statistics[0].assists,
+      visitor: gameStats[1].statistics[0].assists,
     },
     {
       title: "파울",
-      home: home.statistics[0].pFouls,
-      visitor: visitor.statistics[0].pFouls,
+      home: gameStats[0].statistics[0].pFouls,
+      visitor: gameStats[1].statistics[0].pFouls,
     },
     {
       title: "스틸",
-      home: home.statistics[0].steals,
-      visitor: visitor.statistics[0].steals,
+      home: gameStats[0].statistics[0].steals,
+      visitor: gameStats[1].statistics[0].steals,
     },
     {
       title: "턴오버",
-      home: home.statistics[0].turnovers,
-      visitor: visitor.statistics[0].turnovers,
+      home: gameStats[0].statistics[0].turnovers,
+      visitor: gameStats[1].statistics[0].turnovers,
     },
     {
       title: "블락",
-      home: home.statistics[0].blocks,
-      visitor: visitor.statistics[0].blocks,
+      home: gameStats[0].statistics[0].blocks,
+      visitor: gameStats[1].statistics[0].blocks,
     },
   ];
 
@@ -64,21 +78,21 @@ const GameRecord = ({ home, visitor }: Props) => {
         <Box className="flex justify-between">
           <Box className="flex items-center">
             <Image
-              src={home.team.logo}
+              src={gameStats[0].team.logo}
               width={30}
               height={30}
               alt="team-logo"
             />
             <Typography variant="h5" className="pl-3 font-bold">
-              {home.team.name}
+              {queryUnit.homeTeamName}
             </Typography>
           </Box>
           <Box className="flex items-center">
             <Typography variant="h5" className="pr-3 font-bold">
-              {visitor.team.name}
+              {queryUnit.visitorTeamName}
             </Typography>
             <Image
-              src={visitor.team.logo}
+              src={gameStats[1].team.logo}
               width={30}
               height={30}
               alt="team-logo"

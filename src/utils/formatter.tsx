@@ -1,5 +1,5 @@
 import { DETAIL_STATS, STATS } from "@/consts/stats";
-import { StatsType } from "@/types/stats";
+import { StatsKeyType } from "@/types/stats";
 
 export const getDate = (date: string) => {
   const newDate = new Date(date);
@@ -19,7 +19,7 @@ export const getDatePicker = () => {
   return `${year}-${month}-${day}`;
 };
 
-export const getStatsChangedKr = (stats: StatsType, type?: "detail") => {
+export const getStatsChangedKr = (stats: StatsKeyType, type?: "detail") => {
   if (type !== "detail" && DETAIL_STATS.includes(stats)) {
     return null;
   }

@@ -81,6 +81,8 @@ const RecentMatch = () => {
                   query: {
                     homeLineScore: item.scores.home.linescore,
                     visitorLineScore: item.scores.visitors.linescore,
+                    homeTeamName: item.teams.home.name,
+                    visitorTeamName: item.teams.visitors.name,
                   },
                 }}
               >

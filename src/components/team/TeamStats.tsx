@@ -12,7 +12,7 @@ import Title from "../Title";
 
 import teamStatsData from "@/data/teamStatistics.json";
 import { getStatsChangedKr } from "@/utils/formatter";
-import { StatsType } from "@/types/stats";
+import { StatsKeyType } from "@/types/stats";
 import { TeamStatsResponseType } from "@/types/statistics";
 
 type teamStatsType = (typeof teamStatsData.response)[0];
@@ -29,10 +29,10 @@ const TeamStats = ({ teamStats }: Props) => {
   const getTableHeadAndBody = () => {
     const data: TableType = teamStats[0];
     return Object.keys(data)
-      .filter((el) => (getStatsChangedKr(el as StatsType) ? true : false))
+      .filter((el) => (getStatsChangedKr(el as StatsKeyType) ? true : false))
       .map((el) => {
         return {
-          tableHead: getStatsChangedKr(el as StatsType),
+          tableHead: getStatsChangedKr(el as StatsKeyType),
           tableBody: data[el],
         };
       });
