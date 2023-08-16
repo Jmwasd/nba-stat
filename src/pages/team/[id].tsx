@@ -20,21 +20,3 @@ const TeamStatistics = () => {
 };
 
 export default TeamStatistics;
-
-// interface StatisticsProps {
-//   conferenceStanding: ConferenceStandingResponseType;
-// }
-
-// export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
-//   query,
-// }) => {
-//   const conferenceStandingResponse = await instance.get<
-//     ApiResponseType<ConferenceStandingResponseType>
-//   >(`${APIv2.standing}&conference=${query.conferenceName}&team=${query.id}`);
-
-//   return {
-//     props: {
-//       conferenceStanding: conferenceStandingResponse.data.response[0],
-//     },
-//   };
-// };
