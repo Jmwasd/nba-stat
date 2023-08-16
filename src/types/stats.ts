@@ -1,48 +1,14 @@
-export type StatsKeyType =
-  | "game"
-  | "fgp"
-  | "ftp"
-  | "tpp"
-  | "totReb"
-  | "assists"
-  | "pFouls"
-  | "steals"
-  | "turnovers"
-  | "blocks"
-  | "fgm"
-  | "fga"
-  | "ftm"
-  | "fta"
-  | "tpm"
-  | "tpa"
-  | "offReb"
-  | "defReb"
-  | "points"
-  | "pos"
-  | "min";
+import { PlayerNameType, StatsKeyType, TeamType } from "./common";
 
 export type StatsType = {
   [key in StatsKeyType]: number | string;
 };
-
-export interface TeamType {
-  id: number;
-  name: string;
-  nickname: string;
-  code: string;
-  logo: string;
-}
 
 export interface GameStatsType {
   team: TeamType;
   statistics: Array<StatsType>;
 }
 
-export interface PlayerNameType {
-  id: number;
-  firstname: string;
-  lastname: string;
-}
 export interface PlayerType {
   player: PlayerNameType;
   team: TeamType;
@@ -52,3 +18,5 @@ export interface PlayerType {
 }
 
 export type PlayerStatsType = PlayerType & StatsType;
+
+export type TeamStatsType = { [key in StatsKeyType]: number | string };

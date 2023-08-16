@@ -3,11 +3,11 @@ import Title from "../Title";
 import Image from "next/image";
 import { setGameStats } from "@/hooks/stats";
 import { useRouter } from "next/router";
-import { GamePageType } from "@/types/rotuerQuery";
+import { GamePageQueryType } from "@/types/rotuerQuery";
 
 const GameRecord = () => {
   const { query } = useRouter();
-  const queryUnit = query as GamePageType;
+  const queryUnit = query as GamePageQueryType;
 
   const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
 

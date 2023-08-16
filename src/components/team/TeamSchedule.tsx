@@ -3,44 +3,24 @@ import Image from "next/image";
 
 import Title from "../Title";
 
-import teamScheduleData from "@/data/teamSchedule.json";
-import { TeamScheduleResponseType } from "@/types/games";
+import { TeamScheduleType } from "@/types/games";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
+import { TeamPageQueryType } from "@/types/rotuerQuery";
+import { setTeamSchedule } from "@/hooks/teams";
+import Loading from "../Loading";
 
-interface PropsType {
-  teamSchedule: TeamScheduleResponseType;
-}
+const SLICE_COUNT = 10;
 
-type teamScheduleType = (typeof teamScheduleData.response)[0];
-
-interface CardCountType {
-  current: number;
-  max: number;
-}
-
-interface TeamQueryType extends ParsedUrlQuery {
-  conferenceName: string;
-  id: string;
-}
-
-const SLICE_COUNT = 12;
-
-const TeamSchedule = ({ teamSchedule }: PropsType) => {
+const TeamSchedule = () => {
   const { query } = useRouter();
-  const queryUnit = query as TeamQueryType;
+  const queryUnit = query as TeamPageQueryType;
 
-  const [teamScheduleState, setTeamScheduleState] = useState<
-    Array<teamScheduleType>
-  >(teamSchedule.reverse().slice(0, SLICE_COUNT));
+  const { data: teamSchedule, isLoading } = setTeamSchedule(queryUnit.id);
 
-  const [cardCount, setCardCount] = useState<CardCountType>({
-    current: SLICE_COUNT,
-    max: teamSchedule.length,
-  });
+  const [cardCount, setCardCount] = useState<number>(SLICE_COUNT);
 
-  const getCardInfo = (stats: teamScheduleType) => {
+  const getCardInfo = (stats: TeamScheduleType) => {
     const selectedTeam: "visitors" | "home" =
       stats.teams.home.id === Number(queryUnit.id) ? "home" : "visitors";
     const opponentTeam: "visitors" | "home" =
@@ -73,26 +53,21 @@ const TeamSchedule = ({ teamSchedule }: PropsType) => {
   };
 
   const LoadMore = () => {
-    const sliceCount = cardCount.current + 5;
-    setCardCount((prev) => ({
-      ...prev,
-      current: (prev.current += 5),
-    }));
-    const moreData = teamSchedule.slice(0, sliceCount);
-    setTeamScheduleState(moreData);
+    setCardCount((prev) => prev + 10);
   };
 
-  const hideMoreBtn = () => {
-    if (cardCount.current >= cardCount.max) {
-      return true;
-    }
-    return false;
-  };
+  if (isLoading) {
+    return <Loading height="h-[220px]" width="w-[250px]" />;
+  }
+
+  if (!teamSchedule) {
+    return <Box>go to 404 page</Box>;
+  }
 
   return (
     <Box className="mr-7">
       <Title text="팀 일정" />
-      {teamScheduleState.map((el) => {
+      {teamSchedule.slice(0, cardCount).map((el) => {
         return (
           <Card className="p-4 mb-3" key={el.id}>
             <Typography className="text-sm mb-2">
@@ -132,7 +107,7 @@ const TeamSchedule = ({ teamSchedule }: PropsType) => {
           </Card>
         );
       })}
-      {!hideMoreBtn() && (
+      {teamSchedule.length > cardCount && (
         <Card className="mb-3 min-w-[250px]">
           <CardActionArea className="p-4" onClick={() => LoadMore()}>
             <Typography align="center" className="text-sky-600">
