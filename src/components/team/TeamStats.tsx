@@ -10,22 +10,32 @@ import {
 } from "@mui/material";
 import Title from "../Title";
 
-import teamStatsData from "@/data/teamStatistics.json";
 import { getStatsChangedKr } from "@/utils/formatter";
-import { StatsKeyType } from "@/types/stats";
-import { TeamStatsResponseType } from "@/types/statistics";
+import { useRouter } from "next/router";
+import { TeamPageQueryType } from "@/types/rotuerQuery";
+import { setTeamStats } from "@/hooks/teams";
+import { StatsKeyType } from "@/types/common";
+import { TeamStatsType } from "@/types/stats";
+import Loading from "../Loading";
 
-type teamStatsType = (typeof teamStatsData.response)[0];
-
-interface TableType extends teamStatsType {
+interface TableType extends TeamStatsType {
   [key: string]: string | number;
 }
 
-interface Props {
-  teamStats: TeamStatsResponseType;
-}
+const TeamStats = () => {
+  const { query } = useRouter();
+  const queryUnit = query as TeamPageQueryType;
 
-const TeamStats = ({ teamStats }: Props) => {
+  const { data: teamStats, isLoading } = setTeamStats(queryUnit.id);
+
+  if (isLoading) {
+    return <Loading height="h-[220px]" />;
+  }
+
+  if (!teamStats) {
+    return <Box>go to 404 page</Box>;
+  }
+
   const getTableHeadAndBody = () => {
     const data: TableType = teamStats[0];
     return Object.keys(data)

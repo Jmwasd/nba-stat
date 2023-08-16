@@ -1,5 +1,5 @@
 import { DETAIL_STATS, STATS } from "@/consts/stats";
-import { StatsKeyType } from "@/types/stats";
+import { StatsKeyType } from "@/types/common";
 
 export const getDate = (date: string) => {
   const newDate = new Date(date);

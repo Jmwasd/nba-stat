@@ -17,7 +17,7 @@ import { useState } from "react";
 import { PLAYER_STATS } from "@/consts/table";
 import { useRouter } from "next/router";
 import { setPlayerStats } from "@/hooks/stats";
-import { GamePageType } from "@/types/rotuerQuery";
+import { GamePageQueryType } from "@/types/rotuerQuery";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
@@ -25,7 +25,7 @@ type TabType = "home" | "visitor";
 
 const PlayerStat = () => {
   const { query } = useRouter();
-  const { homeTeamName, visitorTeamName, id } = query as GamePageType;
+  const { homeTeamName, visitorTeamName, id } = query as GamePageQueryType;
 
   const [tabValue, setTabValue] = useState<TabType>("home");
 

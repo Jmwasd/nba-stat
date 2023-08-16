@@ -1,4 +1,4 @@
-import { StatsKeyType } from "@/types/stats";
+import { StatsKeyType } from "@/types/common";
 
 export const STATS: {
   [key in StatsKeyType]: string;
@@ -22,6 +22,8 @@ export const STATS: {
   turnovers: "턴오버",
   blocks: "블락",
   points: "점수",
+  min: "분",
+  pos: "포지션",
 };
 
 export const DETAIL_STATS: Array<StatsKeyType> = [

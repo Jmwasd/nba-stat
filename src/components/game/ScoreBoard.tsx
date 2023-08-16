@@ -15,11 +15,11 @@ import { QUATER } from "@/consts/table";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import { setGameStats } from "@/hooks/stats";
-import { GamePageType } from "@/types/rotuerQuery";
+import { GamePageQueryType } from "@/types/rotuerQuery";
 
 const ScoreBoard = () => {
   const { query } = useRouter();
-  const queryUnit = query as GamePageType;
+  const queryUnit = query as GamePageQueryType;
 
   const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
 

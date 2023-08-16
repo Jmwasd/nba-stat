@@ -15,18 +15,16 @@ import Title from "../Title";
 import { CONFERENCE_STANDING } from "@/consts/table";
 import { useRouter } from "next/router";
 import { MouseEvent } from "react";
-import useSWR from "swr";
-import { APIv2 } from "@/consts/api";
+import { setConferenceStanding } from "@/hooks/standing";
 
 interface Props {
-  conferenceName: string;
+  conferenceName: "west" | "east";
   title: string;
 }
 
 const ConferenceStanding = ({ conferenceName, title }: Props) => {
-  const { data: conferenceStandingResponse, isLoading } = useSWR<
-    ConferenceStandingResponseType[]
-  >(`${APIv2.standing}&conference=${conferenceName}`);
+  const { data: conferenceStandingResponse, isLoading } =
+    setConferenceStanding(conferenceName);
 
   const router = useRouter();
 

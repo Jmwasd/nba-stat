@@ -11,20 +11,24 @@ import {
 import Title from "../Title";
 
 import { TEAM_PLAYER } from "@/consts/table";
-import { PlayerPerTeamResponseType } from "@/types/players";
+import { setTeamPlayer } from "@/hooks/teams";
+import { useRouter } from "next/router";
+import { TeamPageQueryType } from "@/types/rotuerQuery";
+import Loading from "../Loading";
 
-interface Props {
-  playerPerTeam: PlayerPerTeamResponseType;
-}
+const TeamPlayer = () => {
+  const { query } = useRouter();
+  const queryUnit = query as TeamPageQueryType;
 
-const TeamPlayer = ({ playerPerTeam }: Props) => {
-  const filterPlayerData = (data: typeof playerPerTeam) =>
-    data.filter((el) => {
-      if (!el.birth.date || !el.nba.start || !el.leagues.standard.jersey) {
-        return false;
-      }
-      return true;
-    });
+  const { data: playerPerTeam, isLoading } = setTeamPlayer(queryUnit.id);
+
+  if (isLoading) {
+    return <Loading height="h-[500px]" />;
+  }
+
+  if (!playerPerTeam) {
+    return <Box>go to 404 page</Box>;
+  }
 
   return (
     <Box className="pt-3">
@@ -42,7 +46,7 @@ const TeamPlayer = ({ playerPerTeam }: Props) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filterPlayerData(playerPerTeam).map((el) => {
+              {playerPerTeam.map((el) => {
                 return (
                   <TableRow hover key={el.id} className="cursor-pointer">
                     <TableCell align="center">
