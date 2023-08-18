@@ -10,12 +10,14 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { ConferenceStandingResponseType } from "@/types/teams";
 import Title from "../Title";
 import { CONFERENCE_STANDING } from "@/consts/table";
 import { useRouter } from "next/router";
 import { MouseEvent } from "react";
-import { setConferenceStanding } from "@/hooks/standing";
+import { useConferenceStanding } from "@/hooks/standing";
+
+import TestImg from "@/assets/teamLogo/Rockets.webp";
+import { getWinPercentage } from "@/utils/getPercentage";
 
 interface Props {
   conferenceName: "west" | "east";
@@ -23,16 +25,10 @@ interface Props {
 }
 
 const ConferenceStanding = ({ conferenceName, title }: Props) => {
-  const { data: conferenceStandingResponse, isLoading } =
-    setConferenceStanding(conferenceName);
+  const { data: conferenceStanding, isLoading } =
+    useConferenceStanding(conferenceName);
 
   const router = useRouter();
-
-  const getSortedRank = (param: ConferenceStandingResponseType[]) => {
-    return param.sort((a, b) => {
-      return a.conference.rank - b.conference.rank;
-    });
-  };
 
   const handleTableRowClick = (
     e: MouseEvent<HTMLElement>,
@@ -53,7 +49,7 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
       </Box>
     );
 
-  if (!conferenceStandingResponse) return <Box>데이터가 없습니다.</Box>;
+  if (!conferenceStanding) return <Box>데이터가 없습니다.</Box>;
 
   return (
     <Box className="w-[49.5%]">
@@ -69,7 +65,7 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {getSortedRank(conferenceStandingResponse).map((el, idx) => {
+            {conferenceStanding.map((el, idx) => {
               return (
                 <TableRow
                   hover
@@ -82,9 +78,9 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                   <TableCell>{idx + 1}</TableCell>
                   <TableCell>
                     <Box className="flex items-center">
-                      <Box className="relative w-[17px] h-[17px]">
+                      <Box className="relative w-[17px] h-[10px]">
                         <Image
-                          src={el.team.logo}
+                          src={TestImg}
                           fill
                           alt="team-logo"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -93,9 +89,15 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                       <span style={{ marginLeft: "5px" }}>{el.team.name}</span>
                     </Box>
                   </TableCell>
-                  <TableCell>{el.conference.win}</TableCell>
-                  <TableCell>{el.conference.loss}</TableCell>
-                  <TableCell>{el.win.percentage}</TableCell>
+                  <TableCell>{el.win.away + el.win.home}</TableCell>
+                  <TableCell>{el.loss.away + el.loss.home}</TableCell>
+                  <TableCell>
+                    0.
+                    {getWinPercentage(
+                      el.win.away + el.win.home,
+                      el.loss.away + el.loss.home
+                    )}
+                  </TableCell>
                   <TableCell>
                     {el.win.home}-{el.loss.home}
                   </TableCell>

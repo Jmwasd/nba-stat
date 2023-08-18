@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import Image from "next/image";
-import { setConferenceStanding } from "@/hooks/standing";
+import { useConferenceStanding } from "@/hooks/standing";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
@@ -21,10 +21,11 @@ const TeamRank = () => {
   const { query } = useRouter();
   const queryUnit = query as TeamPageQueryType;
 
-  const { data: conferenceStanding, isLoading } = setConferenceStanding(
+  const { data: conferenceStanding, isLoading } = useConferenceStanding(
     queryUnit.conferenceName,
     queryUnit.id
   );
+  console.log(conferenceStanding);
 
   const getTableInfo = (data: ConferenceStandingResponseType) => {
     return [

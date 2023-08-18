@@ -16,8 +16,9 @@ import Title from "../Title";
 import { useState } from "react";
 import { PLAYER_STATS } from "@/consts/table";
 import { useRouter } from "next/router";
-import { setPlayerStats } from "@/hooks/stats";
+import { usePlayerStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
+import { PlayerStatsType } from "@/types/stats";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
@@ -29,10 +30,31 @@ const PlayerStat = () => {
 
   const [tabValue, setTabValue] = useState<TabType>("home");
 
-  const { data: playerStats, isLoading } = setPlayerStats(id);
+  const { data: playerStats, isLoading } = usePlayerStats(id);
 
   const handleTab = (e: React.SyntheticEvent, newValue: TabType) => {
     setTabValue(newValue);
+  };
+
+  const getDividedLineUp = (
+    player: PlayerStatsType[],
+    type: (typeof TABLE_CELL)[0] | (typeof TABLE_CELL)[1]
+  ) => {
+    let team: string;
+    if (tabValue === "home") {
+      team = homeTeamName;
+    } else {
+      team = visitorTeamName;
+    }
+
+    const isPlayerInTeam = player.filter((el) => el.team.name === team);
+    const startLineUp = isPlayerInTeam.slice(0, 5);
+    const bench = isPlayerInTeam.slice(5, isPlayerInTeam.length);
+    if (type === "start") {
+      return startLineUp;
+    } else {
+      return bench;
+    }
   };
 
   if (isLoading) {
@@ -46,26 +68,6 @@ const PlayerStat = () => {
   if (!playerStats) {
     return <Box>go to 404 page</Box>;
   }
-
-  const getDividedLineUp = (
-    type: (typeof TABLE_CELL)[0] | (typeof TABLE_CELL)[1]
-  ) => {
-    let team: string;
-    if (tabValue === "home") {
-      team = homeTeamName;
-    } else {
-      team = visitorTeamName;
-    }
-
-    const isPlayerInTeam = playerStats.filter((el) => el.team.name === team);
-    const startLineUp = isPlayerInTeam.slice(0, 5);
-    const bench = isPlayerInTeam.slice(5, isPlayerInTeam.length);
-    if (type === "start") {
-      return startLineUp;
-    } else {
-      return bench;
-    }
-  };
 
   return (
     <Box className="pt-3">
@@ -92,7 +94,7 @@ const PlayerStat = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {getDividedLineUp(el).map((el) => {
+                  {getDividedLineUp(playerStats, el).map((el) => {
                     return (
                       <TableRow hover key={el.player.id}>
                         <TableCell className="flex">

@@ -1,5 +1,3 @@
-import { StatsKeyType } from "./common";
-
 export interface ConferenceStandingResponseType {
   league: string;
   season: number;
@@ -54,5 +52,3 @@ export interface ConferenceStandingTypes {
   results: number;
   response: Array<ConferenceStandingResponseType>;
 }
-
-export type TeamStatsType = { [key in StatsKeyType]: number | string };

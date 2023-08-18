@@ -1,7 +1,6 @@
 import playerPerTeamData from "@/data/playerPerTeam.json";
 import { PlayerNameType } from "./common";
 
-// export type PlayerPerTeamType = typeof playerPerTeamData;
 export type PlayerPerTeamResponseType = typeof playerPerTeamData.response;
 
 export interface PlayerPerTeamType extends PlayerNameType {
