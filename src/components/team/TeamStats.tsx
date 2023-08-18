@@ -13,7 +13,7 @@ import Title from "../Title";
 import { getStatsChangedKr } from "@/utils/formatter";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
-import { setTeamStats } from "@/hooks/teams";
+import { useTeamStats } from "@/hooks/teams";
 import { StatsKeyType } from "@/types/common";
 import { TeamStatsType } from "@/types/stats";
 import Loading from "../Loading";
@@ -26,7 +26,7 @@ const TeamStats = () => {
   const { query } = useRouter();
   const queryUnit = query as TeamPageQueryType;
 
-  const { data: teamStats, isLoading } = setTeamStats(queryUnit.id);
+  const { data: teamStats, isLoading } = useTeamStats(queryUnit.id);
 
   if (isLoading) {
     return <Loading height="h-[220px]" />;

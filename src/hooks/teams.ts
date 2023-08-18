@@ -4,7 +4,7 @@ import { PlayerPerTeamType } from "@/types/players";
 import { TeamStatsType } from "@/types/stats";
 import useSWR from "swr";
 
-export const setTeamStats = (id: string) => {
+export const useTeamStats = (id: string) => {
   const { data, isLoading, error } = useSWR<TeamStatsType[]>(
     `${APIv2.teamsStats}&id=${id}`
   );
@@ -12,7 +12,7 @@ export const setTeamStats = (id: string) => {
   return { data, isLoading, error };
 };
 
-export const setTeamSchedule = (id: string) => {
+export const useTeamSchedule = (id: string) => {
   const { data, isLoading, error } = useSWR<TeamScheduleType[]>(
     `${APIv2.game}&team=${id}`
   );
@@ -20,7 +20,7 @@ export const setTeamSchedule = (id: string) => {
   return { data, isLoading, error };
 };
 
-export const setTeamPlayer = (id: string) => {
+export const useTeamPlayer = (id: string) => {
   const { data, isLoading, error } = useSWR<PlayerPerTeamType[]>(
     `${APIv2.player}&team=${id}`
   );

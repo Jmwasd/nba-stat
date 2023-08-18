@@ -1,7 +1,7 @@
 import { Box, CircularProgress, List, Paper, Typography } from "@mui/material";
 import Title from "../Title";
 import Image from "next/image";
-import { setGameStats } from "@/hooks/stats";
+import { useGameStats } from "@/hooks/stats";
 import { useRouter } from "next/router";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 
@@ -9,7 +9,7 @@ const GameRecord = () => {
   const { query } = useRouter();
   const queryUnit = query as GamePageQueryType;
 
-  const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
+  const { data: gameStats, isLoading } = useGameStats(queryUnit.id);
 
   if (isLoading) {
     return (

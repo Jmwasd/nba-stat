@@ -14,14 +14,14 @@ import Image from "next/image";
 import { QUATER } from "@/consts/table";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
-import { setGameStats } from "@/hooks/stats";
+import { useGameStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 
 const ScoreBoard = () => {
   const { query } = useRouter();
   const queryUnit = query as GamePageQueryType;
 
-  const { data: gameStats, isLoading } = setGameStats(queryUnit.id);
+  const { data: gameStats, isLoading } = useGameStats(queryUnit.id);
 
   const getLineScore = () => {
     if (gameStats) {

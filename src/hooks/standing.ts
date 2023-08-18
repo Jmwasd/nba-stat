@@ -1,9 +1,10 @@
 import { APIv2 } from "@/consts/api";
 import { ConferenceType } from "@/types/common";
 import { ConferenceStandingResponseType } from "@/types/teams";
+import { getWinPercentage } from "@/utils/getPercentage";
 import useSWR from "swr";
 
-export const setConferenceStanding = (
+export const useConferenceStanding = (
   conferenceName: ConferenceType,
   teamId?: string
 ) => {
@@ -14,5 +15,20 @@ export const setConferenceStanding = (
   const { data, isLoading, error } =
     useSWR<ConferenceStandingResponseType[]>(url);
 
-  return { data, isLoading, error };
+  const getSortedRank = () => {
+    return data?.sort((a, b) => {
+      const aPercentage = getWinPercentage(
+        a.win.away + a.win.home,
+        a.loss.away + a.loss.home
+      );
+      const bPercentage = getWinPercentage(
+        b.win.away + b.win.home,
+        b.loss.away + b.loss.home
+      );
+
+      return bPercentage - aPercentage;
+    });
+  };
+
+  return { data: getSortedRank(), isLoading, error };
 };

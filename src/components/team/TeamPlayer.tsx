@@ -11,7 +11,7 @@ import {
 import Title from "../Title";
 
 import { TEAM_PLAYER } from "@/consts/table";
-import { setTeamPlayer } from "@/hooks/teams";
+import { useTeamPlayer } from "@/hooks/teams";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
@@ -20,7 +20,7 @@ const TeamPlayer = () => {
   const { query } = useRouter();
   const queryUnit = query as TeamPageQueryType;
 
-  const { data: playerPerTeam, isLoading } = setTeamPlayer(queryUnit.id);
+  const { data: playerPerTeam, isLoading } = useTeamPlayer(queryUnit.id);
 
   if (isLoading) {
     return <Loading height="h-[500px]" />;

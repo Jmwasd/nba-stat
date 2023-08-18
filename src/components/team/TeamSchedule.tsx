@@ -4,10 +4,10 @@ import Image from "next/image";
 import Title from "../Title";
 
 import { TeamScheduleType } from "@/types/games";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
-import { setTeamSchedule } from "@/hooks/teams";
+import { useTeamSchedule } from "@/hooks/teams";
 import Loading from "../Loading";
 
 const SLICE_COUNT = 10;
@@ -16,7 +16,11 @@ const TeamSchedule = () => {
   const { query } = useRouter();
   const queryUnit = query as TeamPageQueryType;
 
-  const { data: teamSchedule, isLoading } = setTeamSchedule(queryUnit.id);
+  const { data, isLoading } = useTeamSchedule(queryUnit.id);
+
+  const teamSchedule = useMemo(() => {
+    return data?.reverse();
+  }, [data]);
 
   const [cardCount, setCardCount] = useState<number>(SLICE_COUNT);
 
@@ -47,7 +51,7 @@ const TeamSchedule = () => {
     const dates = new Date(date);
     const year = dates.getFullYear();
     const month = dates.getMonth() + 1;
-    const day = dates.getDay();
+    const day = dates.getDate() - 1;
 
     return year + "년 " + month + "월 " + day + "일";
   };
