@@ -15,12 +15,30 @@ import { useTeamPlayer } from "@/hooks/teams";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
+import usePlayerInfo from "@/store/playerDetailStats";
+import { PlayerPerTeamType } from "@/types/players";
 
 const TeamPlayer = () => {
   const { query } = useRouter();
   const queryUnit = query as TeamPageQueryType;
 
   const { data: playerPerTeam, isLoading } = useTeamPlayer(queryUnit.id);
+  const [setPlayerModal, setPlayerNumber] = usePlayerInfo((state) => [
+    state.openModal,
+    state.setPlayerNumber,
+  ]);
+
+  const handlePlayerModal = (player: PlayerPerTeamType) => {
+    const playerInfo = {
+      id: player.id,
+      weight: player.weight.kilograms,
+      height: player.height.meters,
+      pos: player.leagues.standard.pos,
+    };
+
+    setPlayerModal();
+    setPlayerNumber(playerInfo);
+  };
 
   if (isLoading) {
     return <Loading height="h-[500px]" />;
@@ -48,7 +66,12 @@ const TeamPlayer = () => {
             <TableBody>
               {playerPerTeam.map((el) => {
                 return (
-                  <TableRow hover key={el.id} className="cursor-pointer">
+                  <TableRow
+                    hover
+                    key={el.id}
+                    className="cursor-pointer"
+                    onClick={() => handlePlayerModal(el)}
+                  >
                     <TableCell align="center">
                       {el.firstname + el.lastname}
                     </TableCell>

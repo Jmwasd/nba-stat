@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
 import { ConferenceStandingResponseType } from "@/types/teams";
+import { getWinPercentage } from "@/utils/getPercentage";
 
 const TeamRank = () => {
   const { query } = useRouter();
@@ -25,17 +26,20 @@ const TeamRank = () => {
     queryUnit.conferenceName,
     queryUnit.id
   );
-  console.log(conferenceStanding);
 
   const getTableInfo = (data: ConferenceStandingResponseType) => {
+    const win = data.win.home + data.win.away;
+    const loss = data.loss.home + data.loss.away;
+    const winPercentage = getWinPercentage(win, loss);
+
     return [
       { head: "랭킹", info: data.conference.rank },
       {
         head: "승",
-        info: data.conference.win,
+        info: win,
       },
-      { head: "패", info: data.conference.loss },
-      { head: "승률", info: data.win.percentage },
+      { head: "패", info: loss },
+      { head: "승률", info: winPercentage },
       {
         head: "홈",
         info: data.win.home + "-" + data.win.home,
