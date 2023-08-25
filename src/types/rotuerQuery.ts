@@ -1,5 +1,4 @@
 import { ParsedUrlQuery } from "querystring";
-import { ConferenceType } from "./common";
 
 export interface GamePageQueryType extends ParsedUrlQuery {
   homeLineScore: string[];
@@ -10,6 +9,5 @@ export interface GamePageQueryType extends ParsedUrlQuery {
 }
 
 export interface TeamPageQueryType extends ParsedUrlQuery {
-  conferenceName: ConferenceType;
   id: string;
 }

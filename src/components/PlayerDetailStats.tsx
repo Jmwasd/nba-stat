@@ -144,6 +144,8 @@ const SubTitle = ({
 }) => (
   <Box className="flex items-center">
     <Typography className="text-gray-600">{text}</Typography>
-    {lastIdx ? null : <Box className="h-[11px] w-[2px] bg-gray-400 mx-[5px]" />}
+    {lastIdx ? null : (
+      <Box className="h-[11px] w-[2px] bg-gray-400 mx-[5px] mb-[1px]" />
+    )}
   </Box>
 );

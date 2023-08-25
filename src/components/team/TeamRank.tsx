@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import Image from "next/image";
-import { useConferenceStanding } from "@/hooks/standing";
+import { useTeamRank } from "@/hooks/standing";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
@@ -20,12 +20,9 @@ import { getWinPercentage } from "@/utils/getPercentage";
 
 const TeamRank = () => {
   const { query } = useRouter();
-  const queryUnit = query as TeamPageQueryType;
+  const teamPageQuery = query as TeamPageQueryType;
 
-  const { data: conferenceStanding, isLoading } = useConferenceStanding(
-    queryUnit.conferenceName,
-    queryUnit.id
-  );
+  const { data: conferenceStanding, isLoading } = useTeamRank(teamPageQuery.id);
 
   const getTableInfo = (data: ConferenceStandingResponseType) => {
     const win = data.win.home + data.win.away;
@@ -33,28 +30,28 @@ const TeamRank = () => {
     const winPercentage = getWinPercentage(win, loss);
 
     return [
-      { head: "랭킹", info: data.conference.rank },
+      { head: "랭킹", body: data.conference.rank },
       {
         head: "승",
-        info: win,
+        body: win,
       },
-      { head: "패", info: loss },
-      { head: "승률", info: winPercentage },
+      { head: "패", body: loss },
+      { head: "승률", body: winPercentage },
       {
         head: "홈",
-        info: data.win.home + "-" + data.win.home,
+        body: data.win.home + "-" + data.win.home,
       },
       {
         head: "원정",
-        info: data.win.away + "-" + data.win.away,
+        body: data.win.away + "-" + data.win.away,
       },
       {
         head: "최근 10경기",
-        info: data.streak + (data.winStreak ? "W" : "L"),
+        body: data.streak + (data.winStreak ? "W" : "L"),
       },
       {
         head: "연속",
-        info: data.win.lastTen + "-" + data.loss.lastTen,
+        body: data.win.lastTen + "-" + data.loss.lastTen,
       },
     ];
   };
@@ -95,8 +92,8 @@ const TeamRank = () => {
               <TableRow>
                 {getTableInfo(conferenceStanding[0]).map((el, idx) => {
                   return (
-                    <TableCell key={el.head + el.info} align="center">
-                      {el.info}
+                    <TableCell key={el.head + el.body} align="center">
+                      {el.body}
                     </TableCell>
                   );
                 })}

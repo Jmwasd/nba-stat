@@ -4,16 +4,10 @@ import { ConferenceStandingResponseType } from "@/types/teams";
 import { getWinPercentage } from "@/utils/getPercentage";
 import useSWR from "swr";
 
-export const useConferenceStanding = (
-  conferenceName: ConferenceType,
-  teamId?: string
-) => {
-  const url = teamId
-    ? `${APIv2.standing}&conference=${conferenceName}&team=${teamId}`
-    : `${APIv2.standing}&conference=${conferenceName}`;
-
-  const { data, isLoading, error } =
-    useSWR<ConferenceStandingResponseType[]>(url);
+export const useConferenceStanding = (conference: ConferenceType) => {
+  const { data, isLoading, error } = useSWR<ConferenceStandingResponseType[]>(
+    `${APIv2.standing}&conference=${conference}`
+  );
 
   const getSortedRank = () => {
     return data?.sort((a, b) => {
@@ -31,4 +25,12 @@ export const useConferenceStanding = (
   };
 
   return { data: getSortedRank(), isLoading, error };
+};
+
+export const useTeamRank = (teamId: string) => {
+  const { data, isLoading, error } = useSWR<ConferenceStandingResponseType[]>(
+    `${APIv2.standing}&team=${teamId}`
+  );
+
+  return { data, isLoading, error };
 };
