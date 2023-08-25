@@ -18,9 +18,10 @@ import { useConferenceStanding } from "@/hooks/standing";
 
 import TestImg from "@/assets/teamLogo/Rockets.webp";
 import { getWinPercentage } from "@/utils/getPercentage";
+import { ConferenceType } from "@/types/common";
 
 interface Props {
-  conferenceName: "west" | "east";
+  conferenceName: ConferenceType;
   title: string;
 }
 
@@ -30,15 +31,10 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
 
   const router = useRouter();
 
-  const handleTableRowClick = (
-    e: MouseEvent<HTMLElement>,
-    teamId: number,
-    conferenceName: string
-  ) => {
+  const clickTableRow = (e: MouseEvent<HTMLElement>, teamId: number) => {
     e.preventDefault();
     router.push({
       pathname: `/team/${teamId}`,
-      query: { conferenceName },
     });
   };
 
@@ -70,9 +66,7 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                 <TableRow
                   hover
                   className="cursor-pointer"
-                  onClick={(e) =>
-                    handleTableRowClick(e, el.team.id, el.conference.name)
-                  }
+                  onClick={(e) => clickTableRow(e, el.team.id)}
                   key={el.team.id}
                 >
                   <TableCell>{idx + 1}</TableCell>

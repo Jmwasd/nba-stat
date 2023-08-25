@@ -5,4 +5,5 @@ export enum APIv2 {
   gameStats = "/games/statistics",
   game = "/games?season=2022&league=standard",
   teamsStats = "/teams/statistics?season=2022",
+  searchPlayer = "/players",
 }

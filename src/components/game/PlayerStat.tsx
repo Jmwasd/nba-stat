@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import { usePlayerStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 import { PlayerStatsType } from "@/types/stats";
+import usePlayerInfo from "@/store/playerDetailStats";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
@@ -31,6 +32,20 @@ const PlayerStat = () => {
   const [tabValue, setTabValue] = useState<TabType>("home");
 
   const { data: playerStats, isLoading } = usePlayerStats(id);
+  const [setPlayerModal, setPlayerInfo] = usePlayerInfo((state) => [
+    state.openModal,
+    state.setPlayerInfo,
+  ]);
+
+  const handlePlayerModal = (player: PlayerStatsType) => {
+    const playerInfo = {
+      id: player.player.id,
+      pos: player.pos as string,
+    };
+
+    setPlayerModal();
+    setPlayerInfo(playerInfo);
+  };
 
   const handleTab = (e: React.SyntheticEvent, newValue: TabType) => {
     setTabValue(newValue);
@@ -96,7 +111,12 @@ const PlayerStat = () => {
                 <TableBody>
                   {getDividedLineUp(playerStats, el).map((el) => {
                     return (
-                      <TableRow hover key={el.player.id}>
+                      <TableRow
+                        hover
+                        key={el.player.id}
+                        className="cursor-pointer"
+                        onClick={() => handlePlayerModal(el)}
+                      >
                         <TableCell className="flex">
                           {el.player.firstname + el.player.lastname} &nbsp;
                           <Typography variant="caption" align="center">

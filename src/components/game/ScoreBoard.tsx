@@ -13,13 +13,13 @@ import {
 import Image from "next/image";
 import { QUATER } from "@/consts/table";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { MouseEvent, useMemo } from "react";
 import { useGameStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 
 const ScoreBoard = () => {
-  const { query } = useRouter();
-  const queryUnit = query as GamePageQueryType;
+  const router = useRouter();
+  const queryUnit = router.query as GamePageQueryType;
 
   const { data: gameStats, isLoading } = useGameStats(queryUnit.id);
 
@@ -47,6 +47,13 @@ const ScoreBoard = () => {
     };
   }, [gameStats]);
 
+  const clickTableRow = (e: MouseEvent<HTMLElement>, teamId: number) => {
+    e.preventDefault();
+    router.push({
+      pathname: `/team/${teamId}`,
+    });
+  };
+
   if (isLoading) {
     return (
       <Box className="flex justify-center items-center h-[150px] pb-7">
@@ -70,7 +77,11 @@ const ScoreBoard = () => {
               alt="home-team-logo"
             />
           </Box>
-          <Typography variant="h4">
+          <Typography
+            variant="h4"
+            className="hover:text-sky-800 cursor-pointer"
+            onClick={(e) => clickTableRow(e, gameStatsResponse.home.team.id)}
+          >
             {gameStatsResponse?.home.team.name}
           </Typography>
         </Box>
@@ -114,7 +125,12 @@ const ScoreBoard = () => {
           </Typography>
         </Box>
         <Box className="flex items-center justify-end w-2/5">
-          <Typography variant="h4" align="right">
+          <Typography
+            variant="h4"
+            align="right"
+            className="hover:text-sky-800 cursor-pointer"
+            onClick={(e) => clickTableRow(e, gameStatsResponse.visitor.team.id)}
+          >
             {gameStatsResponse.visitor.team.name}
           </Typography>
           <Box className="flex justify-center">
