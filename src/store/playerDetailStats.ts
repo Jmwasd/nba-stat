@@ -2,8 +2,6 @@ import { create } from "zustand";
 
 export interface PlayerInfoType {
   id: number;
-  weight: string;
-  height: string;
   pos: string;
 }
 
@@ -14,14 +12,12 @@ export type PlayerInfoState = {
 
 export type PlayerInfoAction = {
   openModal: () => void;
-  setPlayerNumber: (playerInfo: PlayerInfoType) => void;
+  setPlayerInfo: (playerInfo: PlayerInfoType) => void;
 };
 
 const usePlayerInfo = create<PlayerInfoState & PlayerInfoAction>((set) => ({
   playerInfo: {
     id: 0,
-    weight: "",
-    height: "",
     pos: "",
   },
   open: false,
@@ -29,7 +25,7 @@ const usePlayerInfo = create<PlayerInfoState & PlayerInfoAction>((set) => ({
     set((state) => ({
       open: !state.open,
     })),
-  setPlayerNumber: (player) =>
+  setPlayerInfo: (player) =>
     set((state) => ({
       ...state,
       playerInfo: player,

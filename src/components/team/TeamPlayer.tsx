@@ -23,21 +23,19 @@ const TeamPlayer = () => {
   const queryUnit = query as TeamPageQueryType;
 
   const { data: playerPerTeam, isLoading } = useTeamPlayer(queryUnit.id);
-  const [setPlayerModal, setPlayerNumber] = usePlayerInfo((state) => [
+  const [setPlayerModal, setPlayerInfo] = usePlayerInfo((state) => [
     state.openModal,
-    state.setPlayerNumber,
+    state.setPlayerInfo,
   ]);
 
   const handlePlayerModal = (player: PlayerPerTeamType) => {
     const playerInfo = {
       id: player.id,
-      weight: player.weight.kilograms,
-      height: player.height.meters,
       pos: player.leagues.standard.pos,
     };
 
     setPlayerModal();
-    setPlayerNumber(playerInfo);
+    setPlayerInfo(playerInfo);
   };
 
   if (isLoading) {
