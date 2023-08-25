@@ -4,7 +4,7 @@ import Image from "next/image";
 import Title from "../Title";
 
 import { TeamScheduleType } from "@/types/games";
-import { useMemo, useState } from "react";
+import { MouseEvent, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import { useTeamSchedule } from "@/hooks/teams";
@@ -13,22 +13,22 @@ import Loading from "../Loading";
 const SLICE_COUNT = 10;
 
 const TeamSchedule = () => {
-  const { query } = useRouter();
-  const queryUnit = query as TeamPageQueryType;
+  const router = useRouter();
+  const teamPageQuery = router.query as TeamPageQueryType;
 
-  const { data, isLoading } = useTeamSchedule(queryUnit.id);
+  const { data, isLoading } = useTeamSchedule(teamPageQuery.id);
+
+  const [cardCount, setCardCount] = useState<number>(SLICE_COUNT);
 
   const teamSchedule = useMemo(() => {
     return data?.reverse();
   }, [data]);
 
-  const [cardCount, setCardCount] = useState<number>(SLICE_COUNT);
-
   const getCardInfo = (stats: TeamScheduleType) => {
     const selectedTeam: "visitors" | "home" =
-      stats.teams.home.id === Number(queryUnit.id) ? "home" : "visitors";
+      stats.teams.home.id === Number(teamPageQuery.id) ? "home" : "visitors";
     const opponentTeam: "visitors" | "home" =
-      stats.teams.home.id !== Number(queryUnit.id) ? "home" : "visitors";
+      stats.teams.home.id !== Number(teamPageQuery.id) ? "home" : "visitors";
     const winOrLose =
       stats.scores[selectedTeam].points > stats.scores[opponentTeam].points
         ? "W"
@@ -56,6 +56,22 @@ const TeamSchedule = () => {
     return year + "년 " + month + "월 " + day + "일";
   };
 
+  const clickCard = (
+    e: MouseEvent<HTMLElement>,
+    teamSchedule: TeamScheduleType
+  ) => {
+    e.preventDefault();
+    router.push({
+      pathname: `/game/${teamSchedule.id}`,
+      query: {
+        homeLineScore: teamSchedule.scores.home.linescore,
+        visitorLineScore: teamSchedule.scores.visitors.linescore,
+        homeTeamName: teamSchedule.teams.home.name,
+        visitorTeamName: teamSchedule.teams.visitors.name,
+      },
+    });
+  };
+
   const LoadMore = () => {
     setCardCount((prev) => prev + 10);
   };
@@ -73,41 +89,46 @@ const TeamSchedule = () => {
       <Title text="팀 일정" />
       {teamSchedule.slice(0, cardCount).map((el) => {
         return (
-          <Card className="p-4 mb-3" key={el.id}>
-            <Typography className="text-sm mb-2">
-              {getDateKr(el.date.start)}
-            </Typography>
-            <Box className="flex justify-between min-w-[250px]">
-              <Box className="flex items-center mr-4">
-                <Typography className="mr-4">vs</Typography>
-                <Box className="relative w-[25px] h-[25px] mr-2">
-                  <Image
-                    src={getCardInfo(el).opponentTeamLogo}
-                    alt="team-logo"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+          <Card key={el.id} className="mb-3">
+            <CardActionArea
+              className="p-4 cursor-pointer"
+              onClick={(e) => clickCard(e, el)}
+            >
+              <Typography className="text-sm mb-2">
+                {getDateKr(el.date.start)}
+              </Typography>
+              <Box className="flex justify-between min-w-[250px]">
+                <Box className="flex items-center mr-4">
+                  <Typography className="mr-4">vs</Typography>
+                  <Box className="relative w-[25px] h-[25px] mr-2">
+                    <Image
+                      src={getCardInfo(el).opponentTeamLogo}
+                      alt="team-logo"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </Box>
+                  <Typography align="center" className="inline">
+                    {getCardInfo(el).opponentTeamName}
+                  </Typography>
                 </Box>
-                <Typography align="center" className="inline">
-                  {getCardInfo(el).opponentTeamName}
-                </Typography>
+                <Box className="flex items-center">
+                  <Typography
+                    variant="h6"
+                    className={
+                      getCardInfo(el).winOrLose === "W"
+                        ? getWinOrLoseColor.win
+                        : getWinOrLoseColor.lose
+                    }
+                  >
+                    {getCardInfo(el).winOrLose}
+                  </Typography>
+                  <Typography align="center" className="ml-2 w-[60px]">
+                    {getCardInfo(el).point}
+                  </Typography>
+                </Box>
               </Box>
-              <Box className="flex items-center">
-                <Typography
-                  variant="h6"
-                  className={
-                    getCardInfo(el).winOrLose === "W"
-                      ? getWinOrLoseColor.win
-                      : getWinOrLoseColor.lose
-                  }
-                >
-                  {getCardInfo(el).winOrLose}
-                </Typography>
-                <Typography align="center" className="ml-2 w-[60px]">
-                  {getCardInfo(el).point}
-                </Typography>
-              </Box>
-            </Box>
+            </CardActionArea>
           </Card>
         );
       })}
