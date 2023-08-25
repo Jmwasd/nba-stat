@@ -1,7 +1,4 @@
-import teamScheduleData from "@/data/teamSchedule.json";
 import { DateType, ScoresType, TeamType } from "./common";
-
-export type TeamScheduleResponseType = typeof teamScheduleData.response;
 
 export interface TeamScheduleType {
   id: number;
@@ -16,5 +13,23 @@ export interface TeamScheduleType {
   scores: {
     visitors: ScoresType;
     home: ScoresType;
+  };
+}
+
+export interface RecentMatchType {
+  id: number;
+  teams: {
+    visitors: TeamType;
+    home: TeamType;
+  };
+  scores: {
+    visitors: {
+      linescore: string[];
+      points: number;
+    };
+    home: {
+      linescore: string[];
+      points: number;
+    };
   };
 }

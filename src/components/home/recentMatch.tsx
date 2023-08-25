@@ -1,4 +1,3 @@
-import recentMatchData from "@/data/recentMatch.json";
 import {
   Box,
   Card,
@@ -14,12 +13,9 @@ import Image from "next/image";
 import { useState } from "react";
 import Title from "../Title";
 import Link from "next/link";
-import { APIv2 } from "@/consts/api";
-import useSWR from "swr";
+import { useRecentMatch } from "@/hooks/game";
 
 const today = new Date();
-
-type recentMatchType = typeof recentMatchData.response;
 
 const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState(dayjs(today));
@@ -38,7 +34,7 @@ const RecentMatch = () => {
     data: recentMatchResponse,
     isLoading,
     mutate,
-  } = useSWR<recentMatchType>(() => `${APIv2.game}&date=${parsingDate()}`);
+  } = useRecentMatch(parsingDate());
 
   const changeDate = (value: dayjs.Dayjs | null) => {
     if (value) setDatePickerValue(value);

@@ -1,7 +1,4 @@
-import playerPerTeamData from "@/data/playerPerTeam.json";
 import { PlayerNameType } from "./common";
-
-export type PlayerPerTeamResponseType = typeof playerPerTeamData.response;
 
 export interface PlayerPerTeamType extends PlayerNameType {
   birth: {
@@ -20,5 +17,12 @@ export interface PlayerPerTeamType extends PlayerNameType {
       active: boolean; // 활동 여부
       pos: string;
     };
+  };
+  weight: {
+    pounds: string;
+    kilograms: string;
+  };
+  height: {
+    meters: string;
   };
 }
