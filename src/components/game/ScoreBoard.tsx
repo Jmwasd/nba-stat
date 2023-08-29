@@ -10,12 +10,13 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import Image from "next/image";
 import { QUATER } from "@/consts/table";
 import { useRouter } from "next/router";
 import { MouseEvent, useMemo } from "react";
 import { useGameStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
+import TeamLogo from "../TeamLogo";
+import Image from "next/image";
 
 const ScoreBoard = () => {
   const router = useRouter();
@@ -70,8 +71,8 @@ const ScoreBoard = () => {
       <Box className="flex p-5">
         <Box className="flex items-center w-2/5">
           <Box className="flex justify-center pr-2">
-            <Image
-              src={gameStatsResponse?.home.team.logo}
+            <TeamLogo
+              code={gameStatsResponse.home.team.code}
               width={70}
               height={70}
               alt="home-team-logo"
@@ -134,8 +135,8 @@ const ScoreBoard = () => {
             {gameStatsResponse.visitor.team.name}
           </Typography>
           <Box className="flex justify-center">
-            <Image
-              src={gameStatsResponse.visitor.team.logo}
+            <TeamLogo
+              code={gameStatsResponse.visitor.team.code}
               width={70}
               height={70}
               alt="home-team-logo"

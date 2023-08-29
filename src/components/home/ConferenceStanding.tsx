@@ -16,9 +16,9 @@ import { useRouter } from "next/router";
 import { MouseEvent } from "react";
 import { useConferenceStanding } from "@/hooks/standing";
 
-import TestImg from "@/assets/teamLogo/Rockets.webp";
 import { getWinPercentage } from "@/utils/getPercentage";
 import { ConferenceType } from "@/types/common";
+import TeamLogo from "../TeamLogo";
 
 interface Props {
   conferenceName: ConferenceType;
@@ -72,14 +72,12 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                   <TableCell>{idx + 1}</TableCell>
                   <TableCell>
                     <Box className="flex items-center">
-                      <Box className="relative w-[17px] h-[10px]">
-                        <Image
-                          src={TestImg}
-                          fill
-                          alt="team-logo"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </Box>
+                      <TeamLogo
+                        code={el.team.code}
+                        alt="team-logo"
+                        width={20}
+                        height={20}
+                      />
                       <span style={{ marginLeft: "5px" }}>{el.team.name}</span>
                     </Box>
                   </TableCell>

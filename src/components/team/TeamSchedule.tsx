@@ -1,5 +1,4 @@
 import { Box, Card, CardActionArea, Typography } from "@mui/material";
-import Image from "next/image";
 
 import Title from "../Title";
 
@@ -9,6 +8,8 @@ import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import { useTeamSchedule } from "@/hooks/teams";
 import Loading from "../Loading";
+import { getDateKr } from "@/utils/formatter";
+import TeamLogo from "../TeamLogo";
 
 const SLICE_COUNT = 10;
 
@@ -41,19 +42,10 @@ const TeamSchedule = () => {
 
     return {
       opponentTeamName: stats.teams[opponentTeam].nickname,
-      opponentTeamLogo: stats.teams[opponentTeam].logo,
+      opponentTeamLogo: stats.teams[opponentTeam].code,
       point,
       winOrLose,
     };
-  };
-
-  const getDateKr = (date: string) => {
-    const dates = new Date(date);
-    const year = dates.getFullYear();
-    const month = dates.getMonth() + 1;
-    const day = dates.getDate() - 1;
-
-    return year + "년 " + month + "월 " + day + "일";
   };
 
   const clickCard = (
@@ -101,8 +93,8 @@ const TeamSchedule = () => {
                 <Box className="flex items-center mr-4">
                   <Typography className="mr-4">vs</Typography>
                   <Box className="relative w-[25px] h-[25px] mr-2">
-                    <Image
-                      src={getCardInfo(el).opponentTeamLogo}
+                    <TeamLogo
+                      code={getCardInfo(el).opponentTeamLogo}
                       alt="team-logo"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

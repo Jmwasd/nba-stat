@@ -1,9 +1,9 @@
 import { Box, CircularProgress, List, Paper, Typography } from "@mui/material";
 import Title from "../Title";
-import Image from "next/image";
 import { useGameStats } from "@/hooks/stats";
 import { useRouter } from "next/router";
 import { GamePageQueryType } from "@/types/rotuerQuery";
+import TeamLogo from "../TeamLogo";
 
 const GameRecord = () => {
   const { query } = useRouter();
@@ -77,11 +77,11 @@ const GameRecord = () => {
       <Paper className="p-5">
         <Box className="flex justify-between">
           <Box className="flex items-center">
-            <Image
-              src={gameStats[0].team.logo}
+            <TeamLogo
+              code={gameStats[0].team.code}
+              alt="team-logo"
               width={30}
               height={30}
-              alt="team-logo"
             />
             <Typography variant="h5" className="pl-3 font-bold">
               {queryUnit.homeTeamName}
@@ -91,8 +91,8 @@ const GameRecord = () => {
             <Typography variant="h5" className="pr-3 font-bold">
               {queryUnit.visitorTeamName}
             </Typography>
-            <Image
-              src={gameStats[1].team.logo}
+            <TeamLogo
+              code={gameStats[1].team.code}
               width={30}
               height={30}
               alt="team-logo"

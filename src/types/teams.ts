@@ -1,13 +1,9 @@
+import { TeamType } from "./common";
+
 export interface ConferenceStandingResponseType {
   league: string;
   season: number;
-  team: {
-    id: number;
-    name: string;
-    nickname: string;
-    code: string;
-    logo: string;
-  };
+  team: TeamType;
   conference: {
     name: string;
     rank: number;

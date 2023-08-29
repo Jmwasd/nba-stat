@@ -32,4 +32,5 @@ export interface RecentMatchType {
       points: number;
     };
   };
+  date: DateType;
 }

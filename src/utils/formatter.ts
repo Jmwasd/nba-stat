@@ -1,22 +1,13 @@
 import { DETAIL_STATS, STATS } from "@/consts/stats";
 import { StatsKeyType } from "@/types/common";
 
-export const getDate = (date: string) => {
-  const newDate = new Date(date);
-  const month = newDate.getMonth() + 1;
-  const day = newDate.getDate();
+export const getDateKr = (date: string) => {
+  const dates = new Date(date);
+  const year = dates.getFullYear();
+  const month = dates.getMonth() + 1;
+  const day = dates.getDate() - 1;
 
-  return `${month}월 ${day}일`;
-};
-
-export const getDatePicker = () => {
-  const today = new Date();
-
-  const year = today.getFullYear();
-  const month = today.getMonth() + 1;
-  const day = today.getDay();
-
-  return `${year}-${month}-${day}`;
+  return year + "년 " + month + "월 " + day + "일";
 };
 
 export const getStatsChangedKr = (stats: StatsKeyType, type?: "detail") => {
