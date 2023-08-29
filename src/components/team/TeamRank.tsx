@@ -10,13 +10,13 @@ import {
   Typography,
 } from "@mui/material";
 
-import Image from "next/image";
 import { useTeamRank } from "@/hooks/standing";
 import { useRouter } from "next/router";
 import { TeamPageQueryType } from "@/types/rotuerQuery";
 import Loading from "../Loading";
 import { ConferenceStandingResponseType } from "@/types/teams";
 import { getWinPercentage } from "@/utils/getPercentage";
+import TeamLogo from "../TeamLogo";
 
 const TeamRank = () => {
   const { query } = useRouter();
@@ -66,9 +66,9 @@ const TeamRank = () => {
 
   return (
     <Paper className="p-5 flex items-center">
-      <Image
+      <TeamLogo
         className="mr-5"
-        src={conferenceStanding[0].team.logo}
+        code={conferenceStanding[0].team.code}
         width={70}
         height={70}
         alt="tema-logo"

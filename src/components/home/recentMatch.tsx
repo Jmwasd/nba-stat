@@ -14,13 +14,18 @@ import { useState } from "react";
 import Title from "../Title";
 import Link from "next/link";
 import { useRecentMatch } from "@/hooks/game";
-
-const today = new Date();
+import Loading from "../Loading";
+import { getDateKr } from "@/utils/formatter";
+import IM from "@/assets/teamLogo/76ers.png";
+import TeamLogo from "../TeamLogo";
 
 const RecentMatch = () => {
-  const [datePickerValue, setDatePickerValue] = useState(dayjs(today));
+  const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(
+    null
+  );
 
   const parsingDate = () => {
+    if (!datePickerValue) return null;
     const year = datePickerValue.year();
     let month = "" + (datePickerValue.month() + 1);
     let day = "" + datePickerValue.date();
@@ -42,11 +47,7 @@ const RecentMatch = () => {
   };
 
   if (isLoading) {
-    return (
-      <Box className="flex justify-center items-center h-[150px] pb-7">
-        <CircularProgress />
-      </Box>
-    );
+    return <Loading height="h-[150px]" />;
   }
 
   return (
@@ -70,7 +71,7 @@ const RecentMatch = () => {
       ) : (
         <Grid container spacing={2}>
           {recentMatchResponse.map((item, idx) => (
-            <Grid item xs={3} key={item.id + idx}>
+            <Grid item xs={3} key={item.id}>
               <Link
                 href={{
                   pathname: `/game/${item.id}`,
@@ -83,15 +84,16 @@ const RecentMatch = () => {
                 }}
               >
                 <Card>
-                  <CardActionArea className="flex p-5">
+                  <CardActionArea className="flex p-5 flex-col">
+                    <Typography>{getDateKr(item.date.start)}</Typography>
                     <Box className="flex min-w-full">
                       <Box className="w-1/4">
-                        <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
-                          <Image
-                            src={item.teams.home.logo}
+                        <Box className="relative my-0 mx-auto">
+                          <TeamLogo
+                            code={item.teams.home.code}
                             alt="team-logo"
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            width={70}
+                            height={70}
                           />
                         </Box>
                         <Typography className="text-xl text-center">
@@ -108,11 +110,11 @@ const RecentMatch = () => {
                       </Box>
                       <Box className="w-1/4">
                         <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
-                          <Image
-                            src={item.teams.visitors.logo}
-                            alt="team-logo"
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          <TeamLogo
+                            code={item.teams.visitors.code}
+                            alt="qwef"
+                            width={70}
+                            height={70}
                           />
                         </Box>
                         <Typography className="text-xl text-center">

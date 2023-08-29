@@ -21,6 +21,39 @@ export type StatsKeyType =
   | "pos"
   | "min";
 
+export type TeamCodeType =
+  | "DEN"
+  | "MIL"
+  | "BOS"
+  | "PHI"
+  | "MIN"
+  | "OKC"
+  | "UTA"
+  | "POR"
+  | "SAC"
+  | "PHX"
+  | "LAC"
+  | "GSW"
+  | "LAL"
+  | "MEM"
+  | "NOP"
+  | "DAL"
+  | "HOU"
+  | "SAS"
+  | "NYK"
+  | "BKN"
+  | "TOR"
+  | "MIL"
+  | "CLE"
+  | "CHI"
+  | "IND"
+  | "DET"
+  | "ATL"
+  | "MIA"
+  | "WAS"
+  | "ORL"
+  | "CHA";
+
 export interface PlayerNameType {
   id: number;
   firstname: string;
@@ -31,7 +64,7 @@ export interface TeamType {
   id: number;
   name: string;
   nickname: string;
-  code: string;
+  code: TeamCodeType;
   logo: string;
 }
 
