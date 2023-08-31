@@ -20,6 +20,7 @@ import { usePlayerStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 import { PlayerStatsType } from "@/types/stats";
 import usePlayerInfo from "@/store/playerDetailStats";
+import Error from "../Error";
 
 const TABLE_CELL: ("start" | "bench")[] = ["start", "bench"];
 
@@ -80,68 +81,68 @@ const PlayerStat = () => {
     );
   }
 
-  if (!playerStats) {
-    return <Box>go to 404 page</Box>;
-  }
-
   return (
     <Box className="pt-3">
       <Title text="선수 통계" />
-      <Paper className="p-5">
-        <Tabs value={tabValue} onChange={handleTab}>
-          <Tab label={homeTeamName} value="home" />
-          <Tab label={visitorTeamName} value="visitor" />
-        </Tabs>
-        <TableContainer className="p-4">
-          {TABLE_CELL.map((el) => {
-            return (
-              <Table key={el} sx={{ minWidth: 1000 }}>
-                <TableHead className="bg-slate-200">
-                  <TableRow>
-                    <TableCell className="min-w-[220px]">
-                      {changeKr(el)}
-                    </TableCell>
-                    {PLAYER_STATS.map((el) => (
-                      <TableCell key={el} align="center">
-                        {el}
+      {!playerStats ? (
+        <Error text="Error" height="h-40" />
+      ) : (
+        <Paper className="p-5">
+          <Tabs value={tabValue} onChange={handleTab}>
+            <Tab label={homeTeamName} value="home" />
+            <Tab label={visitorTeamName} value="visitor" />
+          </Tabs>
+          <TableContainer className="p-4">
+            {TABLE_CELL.map((el) => {
+              return (
+                <Table key={el} sx={{ minWidth: 1000 }}>
+                  <TableHead className="bg-slate-200">
+                    <TableRow>
+                      <TableCell className="min-w-[220px]">
+                        {changeKr(el)}
                       </TableCell>
-                    ))}
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {getDividedLineUp(playerStats, el).map((el) => {
-                    return (
-                      <TableRow
-                        hover
-                        key={el.player.id}
-                        className="cursor-pointer"
-                        onClick={() => handlePlayerModal(el)}
-                      >
-                        <TableCell className="flex">
-                          {el.player.firstname + el.player.lastname} &nbsp;
-                          <Typography variant="caption" align="center">
-                            {el.pos}
-                          </Typography>
+                      {PLAYER_STATS.map((el) => (
+                        <TableCell key={el} align="center">
+                          {el}
                         </TableCell>
-                        <TableCell align="center">{el.points}</TableCell>
-                        <TableCell align="center">{el.min + "분"}</TableCell>
-                        <TableCell align="center">{el.fgp}</TableCell>
-                        <TableCell align="center">{el.ftp}</TableCell>
-                        <TableCell align="center">{el.totReb}</TableCell>
-                        <TableCell align="center">{el.assists}</TableCell>
-                        <TableCell align="center">{el.pFouls}</TableCell>
-                        <TableCell align="center">{el.steals}</TableCell>
-                        <TableCell align="center">{el.turnovers}</TableCell>
-                        <TableCell align="center">{el.blocks}</TableCell>
-                      </TableRow>
-                    );
-                  })}
-                </TableBody>
-              </Table>
-            );
-          })}
-        </TableContainer>
-      </Paper>
+                      ))}
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {getDividedLineUp(playerStats, el).map((el) => {
+                      return (
+                        <TableRow
+                          hover
+                          key={el.player.id}
+                          className="cursor-pointer"
+                          onClick={() => handlePlayerModal(el)}
+                        >
+                          <TableCell className="flex">
+                            {el.player.firstname + el.player.lastname} &nbsp;
+                            <Typography variant="caption" align="center">
+                              {el.pos}
+                            </Typography>
+                          </TableCell>
+                          <TableCell align="center">{el.points}</TableCell>
+                          <TableCell align="center">{el.min + "분"}</TableCell>
+                          <TableCell align="center">{el.fgp}</TableCell>
+                          <TableCell align="center">{el.ftp}</TableCell>
+                          <TableCell align="center">{el.totReb}</TableCell>
+                          <TableCell align="center">{el.assists}</TableCell>
+                          <TableCell align="center">{el.pFouls}</TableCell>
+                          <TableCell align="center">{el.steals}</TableCell>
+                          <TableCell align="center">{el.turnovers}</TableCell>
+                          <TableCell align="center">{el.blocks}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              );
+            })}
+          </TableContainer>
+        </Paper>
+      )}
     </Box>
   );
 };

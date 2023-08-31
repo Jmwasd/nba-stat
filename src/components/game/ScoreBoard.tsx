@@ -17,19 +17,20 @@ import { useGameStats } from "@/hooks/stats";
 import { GamePageQueryType } from "@/types/rotuerQuery";
 import TeamLogo from "../TeamLogo";
 import Image from "next/image";
+import Error from "../Error";
 
 const ScoreBoard = () => {
   const router = useRouter();
-  const queryUnit = router.query as GamePageQueryType;
+  const gamePageQuery = router.query as GamePageQueryType;
 
-  const { data: gameStats, isLoading } = useGameStats(queryUnit.id);
+  const { data: gameStats, isLoading } = useGameStats(gamePageQuery.id);
 
   const getLineScore = () => {
     if (gameStats) {
-      const homeLineScore = queryUnit.homeLineScore
+      const homeLineScore = gamePageQuery.homeLineScore
         .concat(gameStats[0].team.logo)
         .reverse();
-      const visitorLineScore = queryUnit.visitorLineScore
+      const visitorLineScore = gamePageQuery.visitorLineScore
         .concat(gameStats[1].team.logo)
         .reverse();
 
@@ -63,10 +64,9 @@ const ScoreBoard = () => {
     );
   }
 
-  if (!gameStatsResponse) {
-    return <Box>데이터가 없습니다.</Box>;
-  }
-  return (
+  return !gameStatsResponse ? (
+    <Error text="Error" height="h-40" />
+  ) : (
     <Paper className="flex items-center justify-center">
       <Box className="flex p-5">
         <Box className="flex items-center w-2/5">

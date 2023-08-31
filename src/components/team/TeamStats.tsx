@@ -17,6 +17,7 @@ import { useTeamStats } from "@/hooks/teams";
 import { StatsKeyType } from "@/types/common";
 import { TeamStatsType } from "@/types/stats";
 import Loading from "../Loading";
+import Error from "../Error";
 
 interface TableType extends TeamStatsType {
   [key: string]: string | number;
@@ -24,20 +25,12 @@ interface TableType extends TeamStatsType {
 
 const TeamStats = () => {
   const { query } = useRouter();
-  const queryUnit = query as TeamPageQueryType;
+  const teamPageQuery = query as TeamPageQueryType;
 
-  const { data: teamStats, isLoading } = useTeamStats(queryUnit.id);
+  const { data: teamStats, isLoading } = useTeamStats(teamPageQuery.id);
 
-  if (isLoading) {
-    return <Loading height="h-[220px]" />;
-  }
-
-  if (!teamStats) {
-    return <Box>go to 404 page</Box>;
-  }
-
-  const getTableHeadAndBody = () => {
-    const data: TableType = teamStats[0];
+  const getTableHeadAndBody = (stats: TeamStatsType[]) => {
+    const data: TableType = stats[0];
     return Object.keys(data)
       .filter((el) => (getStatsChangedKr(el as StatsKeyType) ? true : false))
       .map((el) => {
@@ -47,37 +40,46 @@ const TeamStats = () => {
         };
       });
   };
+
+  if (isLoading) {
+    return <Loading height="h-[220px]" />;
+  }
+
   return (
     <Box className="w-[100%]">
       <Title text="팀 통계" />
-      <Paper className="p-5">
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                {getTableHeadAndBody().map((el) => {
-                  return (
-                    <TableCell align="center" key={el.tableBody}>
-                      {el.tableHead}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                {getTableHeadAndBody().map((el) => {
-                  return (
-                    <TableCell align="center" key={el.tableBody}>
-                      {el.tableBody}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Paper>
+      {!teamStats ? (
+        <Error text="Error" height="h-20" />
+      ) : (
+        <Paper className="p-5">
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  {getTableHeadAndBody(teamStats).map((el) => {
+                    return (
+                      <TableCell align="center" key={el.tableBody}>
+                        {el.tableHead}
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  {getTableHeadAndBody(teamStats).map((el) => {
+                    return (
+                      <TableCell align="center" key={el.tableBody}>
+                        {el.tableBody}
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
+      )}
     </Box>
   );
 };
