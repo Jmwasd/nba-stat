@@ -19,6 +19,7 @@ import { useConferenceStanding } from "@/hooks/standing";
 import { getWinPercentage } from "@/utils/getPercentage";
 import { ConferenceType } from "@/types/common";
 import TeamLogo from "../TeamLogo";
+import Error from "../Error";
 
 interface Props {
   conferenceName: ConferenceType;
@@ -45,69 +46,73 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
       </Box>
     );
 
-  if (!conferenceStanding) return <Box>데이터가 없습니다.</Box>;
-
   return (
     <Box className="w-[49.5%]">
       <Title text={title} align="center" />
-      <TableContainer component={Paper}>
-        <Table className="w-full">
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              {CONFERENCE_STANDING.map((el) => (
-                <TableCell key={el}>{el}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {conferenceStanding.map((el, idx) => {
-              return (
-                <TableRow
-                  hover
-                  className="cursor-pointer"
-                  onClick={(e) => clickTableRow(e, el.team.id)}
-                  key={el.team.id}
-                >
-                  <TableCell>{idx + 1}</TableCell>
-                  <TableCell>
-                    <Box className="flex items-center">
-                      <TeamLogo
-                        code={el.team.code}
-                        alt="team-logo"
-                        width={20}
-                        height={20}
-                      />
-                      <span style={{ marginLeft: "5px" }}>{el.team.name}</span>
-                    </Box>
-                  </TableCell>
-                  <TableCell>{el.win.away + el.win.home}</TableCell>
-                  <TableCell>{el.loss.away + el.loss.home}</TableCell>
-                  <TableCell>
-                    0.
-                    {getWinPercentage(
-                      el.win.away + el.win.home,
-                      el.loss.away + el.loss.home
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    {el.win.home}-{el.loss.home}
-                  </TableCell>
-                  <TableCell>
-                    {el.win.away}-{el.loss.away}
-                  </TableCell>
-                  <TableCell>
-                    {el.streak} {el.winStreak ? "W" : "L"}
-                  </TableCell>
-                  <TableCell>
-                    {el.win.lastTen}-{el.loss.lastTen}
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      {!conferenceStanding ? (
+        <Error text="Error" height="h-[80vh]" />
+      ) : (
+        <TableContainer component={Paper}>
+          <Table className="w-full">
+            <TableHead>
+              <TableRow>
+                <TableCell />
+                {CONFERENCE_STANDING.map((el) => (
+                  <TableCell key={el}>{el}</TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {conferenceStanding.map((el, idx) => {
+                return (
+                  <TableRow
+                    hover
+                    className="cursor-pointer"
+                    onClick={(e) => clickTableRow(e, el.team.id)}
+                    key={el.team.id}
+                  >
+                    <TableCell>{idx + 1}</TableCell>
+                    <TableCell>
+                      <Box className="flex items-center">
+                        <TeamLogo
+                          code={el.team.code}
+                          alt="team-logo"
+                          width={20}
+                          height={20}
+                        />
+                        <span style={{ marginLeft: "5px" }}>
+                          {el.team.name}
+                        </span>
+                      </Box>
+                    </TableCell>
+                    <TableCell>{el.win.away + el.win.home}</TableCell>
+                    <TableCell>{el.loss.away + el.loss.home}</TableCell>
+                    <TableCell>
+                      0.
+                      {getWinPercentage(
+                        el.win.away + el.win.home,
+                        el.loss.away + el.loss.home
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      {el.win.home}-{el.loss.home}
+                    </TableCell>
+                    <TableCell>
+                      {el.win.away}-{el.loss.away}
+                    </TableCell>
+                    <TableCell>
+                      {el.streak} {el.winStreak ? "W" : "L"}
+                    </TableCell>
+                    <TableCell>
+                      {el.win.lastTen}-{el.loss.lastTen}
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
     </Box>
   );
 };

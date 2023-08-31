@@ -1,23 +1,15 @@
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CircularProgress,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardActionArea, Grid, Typography } from "@mui/material";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
-import Image from "next/image";
 import { useState } from "react";
 import Title from "../Title";
 import Link from "next/link";
 import { useRecentMatch } from "@/hooks/game";
 import Loading from "../Loading";
 import { getDateKr } from "@/utils/formatter";
-import IM from "@/assets/teamLogo/76ers.png";
 import TeamLogo from "../TeamLogo";
+import Error from "../Error";
 
 const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(
@@ -46,6 +38,11 @@ const RecentMatch = () => {
     mutate();
   };
 
+  const refreshRecentMatch = () => {
+    setDatePickerValue(null);
+    mutate();
+  };
+
   if (isLoading) {
     return <Loading height="h-[150px]" />;
   }
@@ -57,17 +54,26 @@ const RecentMatch = () => {
           text="경기결과"
           className="flex items-center relative left-[47.5%] pb-0"
         />
-        <DatePicker
-          value={datePickerValue}
-          onChange={(value) => changeDate(value)}
-        />
+        <Box className="flex items-center relative bottom-2 ">
+          {datePickerValue && (
+            <AutorenewIcon
+              fontSize="large"
+              color="inherit"
+              className="mr-2 transition hover:rotate-180 cursor-pointer"
+              onClick={() => refreshRecentMatch()}
+            />
+          )}
+          <DatePicker
+            value={datePickerValue}
+            onChange={(value) => changeDate(value)}
+          />
+        </Box>
       </Box>
       {!recentMatchResponse ? (
-        <Paper className="p-3 flex h-20 items-center justify-center">
-          <Typography>
-            일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요.
-          </Typography>
-        </Paper>
+        <Error
+          text="일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요"
+          height="h-20"
+        />
       ) : (
         <Grid container spacing={2}>
           {recentMatchResponse.map((item, idx) => (

@@ -17,6 +17,7 @@ import Loading from "../Loading";
 import { ConferenceStandingResponseType } from "@/types/teams";
 import { getWinPercentage } from "@/utils/getPercentage";
 import TeamLogo from "../TeamLogo";
+import Error from "../Error";
 
 const TeamRank = () => {
   const { query } = useRouter();
@@ -60,11 +61,9 @@ const TeamRank = () => {
     return <Loading height="h-[200px]" />;
   }
 
-  if (!conferenceStanding) {
-    return <Box>go to 404 page</Box>;
-  }
-
-  return (
+  return !conferenceStanding ? (
+    <Error text="Error" height="h-40" />
+  ) : (
     <Paper className="p-5 flex items-center">
       <TeamLogo
         className="mr-5"
