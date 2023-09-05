@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
-import TeamRank from "@/components/team/TeamRank";
-import TeamStats from "@/components/team/TeamStats";
-import TeamSchedule from "@/components/team/TeamSchedule";
-import TeamPlayer from "@/components/team/TeamPlayer";
-import PlayerDetailStats from "@/components/PlayerDetailStats";
-import usePlayerInfo from "@/store/playerDetailStats";
+import { Box } from '@mui/material';
+import TeamRank from '@/components/team/TeamRank';
+import TeamStats from '@/components/team/TeamStats';
+import TeamSchedule from '@/components/team/TeamSchedule';
+import TeamPlayer from '@/components/team/TeamPlayer';
+import PlayerDetailStats from '@/components/PlayerDetailStats';
+import usePlayerInfo from '@/store/playerDetailStats';
 
 const TeamStatistics = () => {
   const open = usePlayerInfo((state) => state.open);

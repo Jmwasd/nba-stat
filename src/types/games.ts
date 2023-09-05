@@ -1,4 +1,4 @@
-import { DateType, ScoresType, TeamType } from "./common";
+import { DateType, ScoresType, TeamType } from './common';
 
 export interface TeamScheduleType {
   id: number;

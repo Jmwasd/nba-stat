@@ -1,4 +1,4 @@
-import { PlayerNameType } from "./common";
+import { PlayerNameType } from './common';
 
 export interface PlayerPerTeamType extends PlayerNameType {
   birth: {

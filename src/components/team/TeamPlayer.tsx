@@ -7,17 +7,17 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from "@mui/material";
-import Title from "../Title";
+} from '@mui/material';
 
-import { TEAM_PLAYER } from "@/consts/table";
-import { useTeamPlayer } from "@/hooks/teams";
-import { useRouter } from "next/router";
-import { TeamPageQueryType } from "@/types/rotuerQuery";
-import Loading from "../Loading";
-import usePlayerInfo from "@/store/playerDetailStats";
-import { PlayerPerTeamType } from "@/types/players";
-import Error from "../Error";
+import { TEAM_PLAYER } from '@/consts/table';
+import { useTeamPlayer } from '@/hooks/teams';
+import { useRouter } from 'next/router';
+import { TeamPageQueryType } from '@/types/rotuerQuery';
+import usePlayerInfo from '@/store/playerDetailStats';
+import { PlayerPerTeamType } from '@/types/players';
+import Loading from '../Loading';
+import Title from '../Title';
+import Error from '../Error';
 
 const TeamPlayer = () => {
   const { query } = useRouter();
@@ -62,25 +62,19 @@ const TeamPlayer = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {playerPerTeam.map((el) => {
-                  return (
-                    <TableRow
-                      hover
-                      key={el.id}
-                      className="cursor-pointer"
-                      onClick={() => handlePlayerModal(el)}
-                    >
-                      <TableCell align="center">
-                        {el.firstname + el.lastname}
-                      </TableCell>
-                      <TableCell align="center">{el.birth.date}</TableCell>
-                      <TableCell align="center">{el.nba.start}</TableCell>
-                      <TableCell align="center">
-                        {el.leagues.standard.jersey}
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
+                {playerPerTeam.map((el) => (
+                  <TableRow
+                    hover
+                    key={el.id}
+                    className="cursor-pointer"
+                    onClick={() => handlePlayerModal(el)}
+                  >
+                    <TableCell align="center">{el.firstname + el.lastname}</TableCell>
+                    <TableCell align="center">{el.birth.date}</TableCell>
+                    <TableCell align="center">{el.nba.start}</TableCell>
+                    <TableCell align="center">{el.leagues.standard.jersey}</TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </TableContainer>

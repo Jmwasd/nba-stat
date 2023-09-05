@@ -8,16 +8,16 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 
-import { useTeamRank } from "@/hooks/standing";
-import { useRouter } from "next/router";
-import { TeamPageQueryType } from "@/types/rotuerQuery";
-import Loading from "../Loading";
-import { ConferenceStandingResponseType } from "@/types/teams";
-import { getWinPercentage } from "@/utils/getPercentage";
-import TeamLogo from "../TeamLogo";
-import Error from "../Error";
+import { useTeamRank } from '@/hooks/standing';
+import { useRouter } from 'next/router';
+import { TeamPageQueryType } from '@/types/rotuerQuery';
+import { ConferenceStandingResponseType } from '@/types/teams';
+import getWinPercentage from '@/utils/getPercentage';
+import Loading from '../Loading';
+import TeamLogo from '../TeamLogo';
+import Error from '../Error';
 
 const TeamRank = () => {
   const { query } = useRouter();
@@ -31,28 +31,28 @@ const TeamRank = () => {
     const winPercentage = getWinPercentage(win, loss);
 
     return [
-      { head: "랭킹", body: data.conference.rank },
+      { head: '랭킹', body: data.conference.rank },
       {
-        head: "승",
+        head: '승',
         body: win,
       },
-      { head: "패", body: loss },
-      { head: "승률", body: winPercentage },
+      { head: '패', body: loss },
+      { head: '승률', body: winPercentage },
       {
-        head: "홈",
-        body: data.win.home + "-" + data.win.home,
+        head: '홈',
+        body: `${data.win.home}-${data.win.home}`,
       },
       {
-        head: "원정",
-        body: data.win.away + "-" + data.win.away,
+        head: '원정',
+        body: `${data.win.away}-${data.win.away}`,
       },
       {
-        head: "최근 10경기",
-        body: data.streak + (data.winStreak ? "W" : "L"),
+        head: '최근 10경기',
+        body: data.streak + (data.winStreak ? 'W' : 'L'),
       },
       {
-        head: "연속",
-        body: data.win.lastTen + "-" + data.loss.lastTen,
+        head: '연속',
+        body: `${data.win.lastTen}-${data.loss.lastTen}`,
       },
     ];
   };
@@ -78,24 +78,20 @@ const TeamRank = () => {
           <Table>
             <TableHead>
               <TableRow>
-                {getTableInfo(conferenceStanding[0]).map((el) => {
-                  return (
-                    <TableCell key={el.head} align="center">
-                      {el.head}
-                    </TableCell>
-                  );
-                })}
+                {getTableInfo(conferenceStanding[0]).map((el) => (
+                  <TableCell key={el.head} align="center">
+                    {el.head}
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow>
-                {getTableInfo(conferenceStanding[0]).map((el, idx) => {
-                  return (
-                    <TableCell key={el.head + el.body} align="center">
-                      {el.body}
-                    </TableCell>
-                  );
-                })}
+                {getTableInfo(conferenceStanding[0]).map((el) => (
+                  <TableCell key={el.head + el.body} align="center">
+                    {el.body}
+                  </TableCell>
+                ))}
               </TableRow>
             </TableBody>
           </Table>
