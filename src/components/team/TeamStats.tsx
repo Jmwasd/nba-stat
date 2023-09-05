@@ -7,17 +7,17 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from "@mui/material";
-import Title from "../Title";
+} from '@mui/material';
 
-import { getStatsChangedKr } from "@/utils/formatter";
-import { useRouter } from "next/router";
-import { TeamPageQueryType } from "@/types/rotuerQuery";
-import { useTeamStats } from "@/hooks/teams";
-import { StatsKeyType } from "@/types/common";
-import { TeamStatsType } from "@/types/stats";
-import Loading from "../Loading";
-import Error from "../Error";
+import { getStatsChangedKr } from '@/utils/formatter';
+import { useRouter } from 'next/router';
+import { TeamPageQueryType } from '@/types/rotuerQuery';
+import { useTeamStats } from '@/hooks/teams';
+import { StatsKeyType } from '@/types/common';
+import { TeamStatsType } from '@/types/stats';
+import Title from '../Title';
+import Loading from '../Loading';
+import Error from '../Error';
 
 interface TableType extends TeamStatsType {
   [key: string]: string | number;
@@ -32,13 +32,11 @@ const TeamStats = () => {
   const getTableHeadAndBody = (stats: TeamStatsType[]) => {
     const data: TableType = stats[0];
     return Object.keys(data)
-      .filter((el) => (getStatsChangedKr(el as StatsKeyType) ? true : false))
-      .map((el) => {
-        return {
-          tableHead: getStatsChangedKr(el as StatsKeyType),
-          tableBody: data[el],
-        };
-      });
+      .filter((el) => !!getStatsChangedKr(el as StatsKeyType))
+      .map((el) => ({
+        tableHead: getStatsChangedKr(el as StatsKeyType),
+        tableBody: data[el],
+      }));
   };
 
   if (isLoading) {
@@ -56,24 +54,20 @@ const TeamStats = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  {getTableHeadAndBody(teamStats).map((el) => {
-                    return (
-                      <TableCell align="center" key={el.tableBody}>
-                        {el.tableHead}
-                      </TableCell>
-                    );
-                  })}
+                  {getTableHeadAndBody(teamStats).map((el) => (
+                    <TableCell align="center" key={el.tableBody}>
+                      {el.tableHead}
+                    </TableCell>
+                  ))}
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
-                  {getTableHeadAndBody(teamStats).map((el) => {
-                    return (
-                      <TableCell align="center" key={el.tableBody}>
-                        {el.tableBody}
-                      </TableCell>
-                    );
-                  })}
+                  {getTableHeadAndBody(teamStats).map((el) => (
+                    <TableCell align="center" key={el.tableBody}>
+                      {el.tableBody}
+                    </TableCell>
+                  ))}
                 </TableRow>
               </TableBody>
             </Table>

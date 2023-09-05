@@ -1,3 +1,25 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals", 
+    "airbnb", 
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/function-component-definition":[
+        1, 
+        { 
+          "namedComponents": [
+            "arrow-function"
+          ] 
+        }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "object-curly-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak":"off",
+    "react/jsx-one-expression-per-line": "off"
+  }
 }

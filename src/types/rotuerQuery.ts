@@ -1,4 +1,4 @@
-import { ParsedUrlQuery } from "querystring";
+import { ParsedUrlQuery } from 'querystring';
 
 export interface GamePageQueryType extends ParsedUrlQuery {
   homeLineScore: string[];

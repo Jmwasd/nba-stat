@@ -1,58 +1,58 @@
 export type StatsKeyType =
-  | "game"
-  | "fgp"
-  | "ftp"
-  | "tpp"
-  | "totReb"
-  | "assists"
-  | "pFouls"
-  | "steals"
-  | "turnovers"
-  | "blocks"
-  | "fgm"
-  | "fga"
-  | "ftm"
-  | "fta"
-  | "tpm"
-  | "tpa"
-  | "offReb"
-  | "defReb"
-  | "points"
-  | "pos"
-  | "min";
+  | 'game'
+  | 'fgp'
+  | 'ftp'
+  | 'tpp'
+  | 'totReb'
+  | 'assists'
+  | 'pFouls'
+  | 'steals'
+  | 'turnovers'
+  | 'blocks'
+  | 'fgm'
+  | 'fga'
+  | 'ftm'
+  | 'fta'
+  | 'tpm'
+  | 'tpa'
+  | 'offReb'
+  | 'defReb'
+  | 'points'
+  | 'pos'
+  | 'min';
 
 export type TeamCodeType =
-  | "DEN"
-  | "MIL"
-  | "BOS"
-  | "PHI"
-  | "MIN"
-  | "OKC"
-  | "UTA"
-  | "POR"
-  | "SAC"
-  | "PHX"
-  | "LAC"
-  | "GSW"
-  | "LAL"
-  | "MEM"
-  | "NOP"
-  | "DAL"
-  | "HOU"
-  | "SAS"
-  | "NYK"
-  | "BKN"
-  | "TOR"
-  | "MIL"
-  | "CLE"
-  | "CHI"
-  | "IND"
-  | "DET"
-  | "ATL"
-  | "MIA"
-  | "WAS"
-  | "ORL"
-  | "CHA";
+  | 'DEN'
+  | 'MIL'
+  | 'BOS'
+  | 'PHI'
+  | 'MIN'
+  | 'OKC'
+  | 'UTA'
+  | 'POR'
+  | 'SAC'
+  | 'PHX'
+  | 'LAC'
+  | 'GSW'
+  | 'LAL'
+  | 'MEM'
+  | 'NOP'
+  | 'DAL'
+  | 'HOU'
+  | 'SAS'
+  | 'NYK'
+  | 'BKN'
+  | 'TOR'
+  | 'MIL'
+  | 'CLE'
+  | 'CHI'
+  | 'IND'
+  | 'DET'
+  | 'ATL'
+  | 'MIA'
+  | 'WAS'
+  | 'ORL'
+  | 'CHA';
 
 export interface PlayerNameType {
   id: number;
@@ -85,4 +85,4 @@ export interface ScoresType {
   points: number;
 }
 
-export type ConferenceType = "east" | "west";
+export type ConferenceType = 'east' | 'west';

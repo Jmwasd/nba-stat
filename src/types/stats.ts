@@ -1,4 +1,4 @@
-import { PlayerNameType, StatsKeyType, TeamType } from "./common";
+import { PlayerNameType, StatsKeyType, TeamType } from './common';
 
 export type StatsType = {
   [key in StatsKeyType]: number | string;

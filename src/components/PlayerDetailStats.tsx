@@ -1,4 +1,6 @@
-import Modal from "@mui/material/Modal";
+/* eslint-disable no-param-reassign */
+/* eslint-disable react/require-default-props */
+import Modal from '@mui/material/Modal';
 import {
   Box,
   CircularProgress,
@@ -9,13 +11,20 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from "@mui/material";
-import { usePlayerDetailStats } from "@/hooks/stats";
-import usePlayerInfo from "@/store/playerDetailStats";
-import { PLAYER_DETAIL_STATS } from "@/consts/table";
-import { PlayerStatsType } from "@/types/stats";
-import { StatsKeyType } from "@/types/common";
-import { useSearchPlayer } from "@/hooks/search";
+} from '@mui/material';
+import { usePlayerDetailStats } from '@/hooks/stats';
+import usePlayerInfo from '@/store/playerDetailStats';
+import { PLAYER_DETAIL_STATS } from '@/consts/table';
+import { PlayerStatsType } from '@/types/stats';
+import { StatsKeyType } from '@/types/common';
+import useSearchPlayer from '@/hooks/search';
+
+const SubTitle = ({ text, lastIdx }: { text: string | number; lastIdx?: boolean }) => (
+  <Box className="flex items-center">
+    <Typography className="text-gray-600">{text}</Typography>
+    {lastIdx ? null : <Box className="h-[11px] w-[2px] bg-gray-400 mx-[5px] mb-[1px]" />}
+  </Box>
+);
 
 const PlayerDetailStats = () => {
   const open = usePlayerInfo((state) => state.open);
@@ -24,28 +33,26 @@ const PlayerDetailStats = () => {
     state.playerInfo,
   ]);
 
-  const { data: playerDetailStats, isLoading: isLoadingPlayerDetailStats } =
-    usePlayerDetailStats(playerInfo.id);
+  const { data: playerDetailStats, isLoading: isLoadingPlayerDetailStats } = usePlayerDetailStats(
+    playerInfo.id,
+  );
 
-  const { data: playerPhysical, isLoading: isLoadingPlayerPhysical } =
-    useSearchPlayer(playerInfo.id);
+  const { data: playerPhysical, isLoading: isLoadingPlayerPhysical } = useSearchPlayer(
+    playerInfo.id,
+  );
 
-  const getFullName = (firstname: string, lastname: string) =>
-    firstname + lastname;
+  const getFullName = (firstname: string, lastname: string) => firstname + lastname;
 
   const filterStats = (stats: PlayerStatsType[]) => {
     const removedSemi = stats.map((el) => {
-      if (typeof el.min === "string") {
-        el.min = String(el.min).replace(/\:.*$/, "");
-        return el;
-      } else {
+      if (typeof el.min === 'string') {
+        el.min = String(el.min).replace(/:.*$/, '');
         return el;
       }
+      return el;
     });
 
-    const filteredZeroTime = removedSemi.filter((el) =>
-      el.min === "0:00" ? false : true
-    );
+    const filteredZeroTime = removedSemi.filter((el) => el.min !== '0:00');
 
     return filteredZeroTime;
   };
@@ -53,21 +60,16 @@ const PlayerDetailStats = () => {
   const getAvgStats = (statsType: StatsKeyType, stats: PlayerStatsType[]) => {
     const filteredStats = filterStats(stats);
     const avg = (
-      filteredStats.reduce((acc, cur) => acc + Number(cur[statsType]), 0) /
-      filteredStats.length
+      filteredStats.reduce((acc, cur) => acc + Number(cur[statsType]), 0) / filteredStats.length
     ).toFixed(1);
 
     return avg;
   };
 
   const getTableInfo = () => {
-    const statsKey = Object.keys(PLAYER_DETAIL_STATS) as Array<
-      keyof typeof PLAYER_DETAIL_STATS
-    >;
+    const statsKey = Object.keys(PLAYER_DETAIL_STATS) as Array<keyof typeof PLAYER_DETAIL_STATS>;
 
-    const tableHead = statsKey.map((el) => {
-      return PLAYER_DETAIL_STATS[el];
-    });
+    const tableHead = statsKey.map((el) => PLAYER_DETAIL_STATS[el]);
     const tableBody = statsKey;
     return {
       tableHead,
@@ -94,13 +96,13 @@ const PlayerDetailStats = () => {
           <Typography variant="h6" component="h2">
             {getFullName(
               playerDetailStats[0].player.firstname,
-              playerDetailStats[0].player.lastname
+              playerDetailStats[0].player.lastname,
             )}
           </Typography>
           <Box className="w-[4px] h-[4px] bg-black mx-[5px] rounded-md" />
           <SubTitle text={playerDetailStats[1].pos} />
-          <SubTitle text={playerPhysical[0].weight.kilograms + "kg"} />
-          <SubTitle text={playerPhysical[0].height.meters + "m"} lastIdx />
+          <SubTitle text={`${playerPhysical[0].weight.kilograms}kg`} />
+          <SubTitle text={`${playerPhysical[0].height.meters}m`} lastIdx />
         </Box>
         <TableContainer>
           <Table>
@@ -116,9 +118,7 @@ const PlayerDetailStats = () => {
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell align="center">
-                  {filterStats(playerDetailStats).length}
-                </TableCell>
+                <TableCell align="center">{filterStats(playerDetailStats).length}</TableCell>
                 {getTableInfo().tableBody.map((el) => (
                   <TableCell align="center" key={el}>
                     {getAvgStats(el, playerDetailStats)}
@@ -134,18 +134,3 @@ const PlayerDetailStats = () => {
 };
 
 export default PlayerDetailStats;
-
-const SubTitle = ({
-  text,
-  lastIdx,
-}: {
-  text: string | number;
-  lastIdx?: boolean;
-}) => (
-  <Box className="flex items-center">
-    <Typography className="text-gray-600">{text}</Typography>
-    {lastIdx ? null : (
-      <Box className="h-[11px] w-[2px] bg-gray-400 mx-[5px] mb-[1px]" />
-    )}
-  </Box>
-);

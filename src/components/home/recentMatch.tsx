@@ -1,37 +1,31 @@
-import { Box, Card, CardActionArea, Grid, Typography } from "@mui/material";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import dayjs from "dayjs";
-import { useState } from "react";
-import Title from "../Title";
-import Link from "next/link";
-import { useRecentMatch } from "@/hooks/game";
-import Loading from "../Loading";
-import { getDateKr } from "@/utils/formatter";
-import TeamLogo from "../TeamLogo";
-import Error from "../Error";
+import { Box, Card, CardActionArea, Grid, Typography } from '@mui/material';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import dayjs from 'dayjs';
+import { useState } from 'react';
+import Link from 'next/link';
+import useRecentMatch from '@/hooks/game';
+import { getDateKr } from '@/utils/formatter';
+import Loading from '../Loading';
+import Title from '../Title';
+import TeamLogo from '../TeamLogo';
+import Error from '../Error';
 
 const RecentMatch = () => {
-  const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(
-    null
-  );
+  const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(null);
 
   const parsingDate = () => {
     if (!datePickerValue) return null;
     const year = datePickerValue.year();
-    let month = "" + (datePickerValue.month() + 1);
-    let day = "" + datePickerValue.date();
-    if (month.length < 2) month = "0" + month;
-    if (day.length < 2) day = "0" + day;
+    let month = `${datePickerValue.month() + 1}`;
+    let day = `${datePickerValue.date()}`;
+    if (month.length < 2) month = `0${month}`;
+    if (day.length < 2) day = `0${day}`;
 
-    return year + "-" + month + "-" + day;
+    return `${year}-${month}-${day}`;
   };
 
-  const {
-    data: recentMatchResponse,
-    isLoading,
-    mutate,
-  } = useRecentMatch(parsingDate());
+  const { data: recentMatchResponse, isLoading, mutate } = useRecentMatch(parsingDate());
 
   const changeDate = (value: dayjs.Dayjs | null) => {
     if (value) setDatePickerValue(value);
@@ -50,10 +44,7 @@ const RecentMatch = () => {
   return (
     <Box className="pb-7">
       <Box className="flex pb-3">
-        <Title
-          text="경기결과"
-          className="flex items-center relative left-[47.5%] pb-0"
-        />
+        <Title text="경기결과" className="flex items-center relative left-[47.5%] pb-0" />
         <Box className="flex items-center relative bottom-2 ">
           {datePickerValue && (
             <AutorenewIcon
@@ -63,20 +54,14 @@ const RecentMatch = () => {
               onClick={() => refreshRecentMatch()}
             />
           )}
-          <DatePicker
-            value={datePickerValue}
-            onChange={(value) => changeDate(value)}
-          />
+          <DatePicker value={datePickerValue} onChange={(value) => changeDate(value)} />
         </Box>
       </Box>
       {!recentMatchResponse ? (
-        <Error
-          text="일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요"
-          height="h-20"
-        />
+        <Error text="일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요" height="h-20" />
       ) : (
         <Grid container spacing={2}>
-          {recentMatchResponse.map((item, idx) => (
+          {recentMatchResponse.map((item) => (
             <Grid item xs={3} key={item.id}>
               <Link
                 href={{

@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 export interface PlayerInfoType {
   id: number;
@@ -18,7 +18,7 @@ export type PlayerInfoAction = {
 const usePlayerInfo = create<PlayerInfoState & PlayerInfoAction>((set) => ({
   playerInfo: {
     id: 0,
-    pos: "",
+    pos: '',
   },
   open: false,
   openModal: () =>

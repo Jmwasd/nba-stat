@@ -1,4 +1,4 @@
-import { TeamType } from "./common";
+import { TeamType } from './common';
 
 export interface ConferenceStandingResponseType {
   league: string;
