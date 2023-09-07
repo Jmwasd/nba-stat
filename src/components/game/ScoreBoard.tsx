@@ -35,10 +35,10 @@ const ScoreBoard = () => {
   const getLineScore = () => {
     if (gameStatsResponse) {
       const homeLineScore = gamePageQuery.homeLineScore
-        .concat(gameStatsResponse.home.team.logo)
+        .concat(gameStatsResponse.home.team.code)
         .reverse();
       const visitorLineScore = gamePageQuery.visitorLineScore
-        .concat(gameStatsResponse.visitor.team.logo)
+        .concat(gameStatsResponse.visitor.team.code)
         .reverse();
 
       return {
