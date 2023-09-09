@@ -1,7 +1,7 @@
 interface ApiResponseType<T> {
   get: string;
   parameters: { [key: string]: string };
-  response: T;
+  response: Array<T>;
   results: number;
 }
 

@@ -1,54 +1,26 @@
-import { Box } from "@mui/material";
-import TeamRank from "@/components/team/TeamRank";
-import TeamStats from "@/components/team/TeamStats";
-import TeamSchedule from "@/components/team/TeamSchedule";
-import TeamPlayer from "@/components/team/TeamPlayer";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { instance } from "@/config/api";
-import ApiResponseType from "@/types/api";
-import { ConferenceStandingResponseType } from "@/types/teams";
-import { TeamScheduleType } from "@/types/games";
+import { Box } from '@mui/material';
+import TeamRank from '@/components/team/TeamRank';
+import TeamStats from '@/components/team/TeamStats';
+import TeamSchedule from '@/components/team/TeamSchedule';
+import TeamPlayer from '@/components/team/TeamPlayer';
+import PlayerDetailStats from '@/components/PlayerDetailStats';
+import usePlayerInfo from '@/store/playerDetailStats';
 
-const TeamStatistics = ({
-  teamStats,
-  teamSchedule,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const TeamStatistics = () => {
+  const open = usePlayerInfo((state) => state.open);
   return (
     <Box>
-      <TeamRank teamStats={teamStats} />
+      <TeamRank />
       <Box className="flex pt-3">
-        <TeamSchedule teamSchedule={teamSchedule} />
+        <TeamSchedule />
         <Box className="w-[80%]">
           <TeamStats />
           <TeamPlayer />
         </Box>
       </Box>
+      {open && <PlayerDetailStats />}
     </Box>
   );
 };
 
 export default TeamStatistics;
-
-interface StatisticsProps {
-  teamStats: ConferenceStandingResponseType;
-  teamSchedule: TeamScheduleType;
-}
-
-export const getServerSideProps: GetServerSideProps<StatisticsProps> = async ({
-  query,
-}) => {
-  const gameStatisticsResponse = await instance.get<
-    ApiResponseType<ConferenceStandingResponseType[]>
-  >(
-    `/standings?season=2022&conference=${query.conferenceName}&league=standard&team=${query.id}`
-  );
-  const gamePerTeamResponse = await instance.get<TeamScheduleType>(
-    `/games?league=standard&season=2022&team=${query.id}`
-  );
-  return {
-    props: {
-      teamStats: gameStatisticsResponse.data.response[0],
-      teamSchedule: gamePerTeamResponse.data,
-    },
-  };
-};

@@ -1,153 +1,130 @@
-import { Box, Card, CardActionArea, Typography } from "@mui/material";
-import Image from "next/image";
+import { Box, Card, CardActionArea, Typography } from '@mui/material';
 
-import Title from "../Title";
+import { TeamScheduleType } from '@/types/games';
+import { MouseEvent, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { TeamPageQueryType } from '@/types/rotuerQuery';
+import { useTeamSchedule } from '@/hooks/teams';
+import { getDateKr } from '@/utils/formatter';
+import Loading from '../Loading';
+import Title from '../Title';
+import TeamLogo from '../TeamLogo';
+import Error from '../Error';
 
-import teamScheduleData from "@/data/teamSchedule.json";
-import { TeamScheduleType } from "@/types/games";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
+const SLICE_COUNT = 10;
 
-interface PropsType {
-  teamSchedule: TeamScheduleType;
-}
+const WIN_OR_LOSE_COLOR = {
+  win: 'text-teal-500 inline',
+  lose: 'text-pink-500 inline',
+};
 
-type teamScheduleType = (typeof teamScheduleData.response)[0];
+const TeamSchedule = () => {
+  const router = useRouter();
+  const teamPageQuery = router.query as TeamPageQueryType;
 
-interface CardCountType {
-  current: number;
-  max: number;
-}
+  const { data, isLoading } = useTeamSchedule(teamPageQuery.id);
 
-interface TeamQueryType extends ParsedUrlQuery {
-  conferenceName: string;
-  id: string;
-}
+  const [cardCount, setCardCount] = useState<number>(SLICE_COUNT);
 
-const SLICE_COUNT = 12;
+  const teamSchedule = useMemo(() => data?.reverse(), [data]);
 
-const TeamSchedule = ({ teamSchedule }: PropsType) => {
-  const { query } = useRouter();
-  const queryUnit = query as TeamQueryType;
-
-  const [teamScheduleState, setTeamScheduleState] = useState<
-    Array<teamScheduleType>
-  >(teamSchedule.response.reverse().slice(0, SLICE_COUNT));
-
-  const [cardCount, setCardCount] = useState<CardCountType>({
-    current: SLICE_COUNT,
-    max: teamSchedule.response.length,
-  });
-
-  const getCardInfo = (stats: teamScheduleType) => {
-    const selectedTeam: "visitors" | "home" =
-      stats.teams.home.id === Number(queryUnit.id) ? "home" : "visitors";
-    const opponentTeam: "visitors" | "home" =
-      stats.teams.home.id !== Number(queryUnit.id) ? "home" : "visitors";
+  const getCardInfo = (stats: TeamScheduleType) => {
+    const selectedTeam: 'visitors' | 'home' =
+      stats.teams.home.id === Number(teamPageQuery.id) ? 'home' : 'visitors';
+    const opponentTeam: 'visitors' | 'home' =
+      stats.teams.home.id !== Number(teamPageQuery.id) ? 'home' : 'visitors';
     const winOrLose =
-      stats.scores[selectedTeam].points > stats.scores[opponentTeam].points
-        ? "W"
-        : "L";
+      stats.scores[selectedTeam].points > stats.scores[opponentTeam].points ? 'W' : 'L';
 
-    const point =
-      stats.scores[selectedTeam].points +
-      "-" +
-      stats.scores[opponentTeam].points;
+    const point = `${stats.scores[selectedTeam].points}-${stats.scores[opponentTeam].points}`;
 
     return {
       opponentTeamName: stats.teams[opponentTeam].nickname,
-      opponentTeamLogo: stats.teams[opponentTeam].logo,
+      opponentTeamLogo: stats.teams[opponentTeam].code,
       point,
       winOrLose,
     };
   };
 
-  const getDateKr = (date: string) => {
-    const dates = new Date(date);
-    const year = dates.getFullYear();
-    const month = dates.getMonth() + 1;
-    const day = dates.getDay();
-
-    return year + "년 " + month + "월 " + day + "일";
+  const clickCard = (e: MouseEvent<HTMLElement>, stats: TeamScheduleType) => {
+    e.preventDefault();
+    router.push({
+      pathname: `/game/${stats.id}`,
+      query: {
+        homeLineScore: stats.scores.home.linescore,
+        visitorLineScore: stats.scores.visitors.linescore,
+        homeTeamName: stats.teams.home.name,
+        visitorTeamName: stats.teams.visitors.name,
+      },
+    });
   };
 
   const LoadMore = () => {
-    const sliceCount = cardCount.current + 5;
-    setCardCount((prev) => ({
-      ...prev,
-      current: (prev.current += 5),
-    }));
-    const moreData = teamSchedule.response.slice(0, sliceCount);
-    setTeamScheduleState(moreData);
+    setCardCount((prev) => prev + 10);
   };
 
-  const hideMoreBtn = () => {
-    if (cardCount.current >= cardCount.max) {
-      return true;
-    }
-    return false;
-  };
+  if (isLoading) {
+    return <Loading height="h-[220px]" width="w-[250px]" />;
+  }
 
   return (
     <Box className="mr-7">
       <Title text="팀 일정" />
-      {teamScheduleState.map((el) => {
-        return (
-          <Card className="p-4 mb-3" key={el.id}>
-            <Typography className="text-sm mb-2">
-              {getDateKr(el.date.start)}
-            </Typography>
-            <Box className="flex justify-between min-w-[250px]">
-              <Box className="flex items-center mr-4">
-                <Typography className="mr-4">vs</Typography>
-                <Box className="relative w-[25px] h-[25px] mr-2">
-                  <Image
-                    src={getCardInfo(el).opponentTeamLogo}
-                    alt="team-logo"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+      {!teamSchedule ? (
+        <Error text="Error" height="h-20" width="w-[250px]" />
+      ) : (
+        <>
+          {teamSchedule.slice(0, cardCount).map((el) => (
+            <Card key={el.id} className="mb-3">
+              <CardActionArea className="p-4 cursor-pointer" onClick={(e) => clickCard(e, el)}>
+                <Typography className="text-sm mb-2">{getDateKr(el.date.start)}</Typography>
+                <Box className="flex justify-between min-w-[250px]">
+                  <Box className="flex items-center mr-4">
+                    <Typography className="mr-4">vs</Typography>
+                    <Box className="relative w-[25px] h-[25px] mr-2">
+                      <TeamLogo
+                        code={getCardInfo(el).opponentTeamLogo}
+                        alt="team-logo"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </Box>
+                    <Typography align="center" className="inline">
+                      {getCardInfo(el).opponentTeamName}
+                    </Typography>
+                  </Box>
+                  <Box className="flex items-center">
+                    <Typography
+                      variant="h6"
+                      className={
+                        getCardInfo(el).winOrLose === 'W'
+                          ? WIN_OR_LOSE_COLOR.win
+                          : WIN_OR_LOSE_COLOR.lose
+                      }
+                    >
+                      {getCardInfo(el).winOrLose}
+                    </Typography>
+                    <Typography align="center" className="ml-2 w-[60px]">
+                      {getCardInfo(el).point}
+                    </Typography>
+                  </Box>
                 </Box>
-                <Typography align="center" className="inline">
-                  {getCardInfo(el).opponentTeamName}
+              </CardActionArea>
+            </Card>
+          ))}
+          {teamSchedule.length > cardCount && (
+            <Card className="mb-3 min-w-[250px]">
+              <CardActionArea className="p-4" onClick={() => LoadMore()}>
+                <Typography align="center" className="text-sky-600">
+                  더보기
                 </Typography>
-              </Box>
-              <Box className="flex items-center">
-                <Typography
-                  variant="h6"
-                  className={
-                    getCardInfo(el).winOrLose === "W"
-                      ? getWinOrLoseColor.win
-                      : getWinOrLoseColor.lose
-                  }
-                >
-                  {getCardInfo(el).winOrLose}
-                </Typography>
-                <Typography align="center" className="ml-2 w-[60px]">
-                  {getCardInfo(el).point}
-                </Typography>
-              </Box>
-            </Box>
-          </Card>
-        );
-      })}
-      {!hideMoreBtn() && (
-        <Card className="mb-3 min-w-[250px]">
-          <CardActionArea className="p-4" onClick={() => LoadMore()}>
-            <Typography align="center" className="text-sky-600">
-              더보기
-            </Typography>
-          </CardActionArea>
-        </Card>
+              </CardActionArea>
+            </Card>
+          )}
+        </>
       )}
     </Box>
   );
 };
 
 export default TeamSchedule;
-
-const getWinOrLoseColor = {
-  win: "text-teal-500 inline",
-  lose: "text-pink-500 inline",
-};

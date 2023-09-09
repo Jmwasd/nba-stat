@@ -1,88 +1,90 @@
-import recentMatchData from "@/data/recentMatch.json";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import dayjs from "dayjs";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import Title from "../Title";
-import { instance } from "@/config/api";
-import Link from "next/link";
-
-const today = new Date();
+import { Box, Card, CardActionArea, Grid, Typography } from '@mui/material';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import dayjs from 'dayjs';
+import { useState } from 'react';
+import Link from 'next/link';
+import useRecentMatch from '@/hooks/game';
+import { getDateKr } from '@/utils/formatter';
+import Loading from '../Loading';
+import Title from '../Title';
+import TeamLogo from '../TeamLogo';
+import Error from '../Error';
 
 const RecentMatch = () => {
-  const [datePickerValue, setDatePickerValue] = useState(dayjs(today));
-  const [gameData, setGameData] = useState<
-    typeof recentMatchData.response | []
-  >([]);
-  const [isLoading, setLoading] = useState(false);
+  const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(null);
 
-  useEffect(() => {
-    setLoading(true);
+  const parsingDate = () => {
+    if (!datePickerValue) return null;
     const year = datePickerValue.year();
-    let month = "" + (datePickerValue.month() + 1);
-    let day = "" + datePickerValue.date();
-    if (month.length < 2) month = "0" + month;
-    if (day.length < 2) day = "0" + day;
+    let month = `${datePickerValue.month() + 1}`;
+    let day = `${datePickerValue.date()}`;
+    if (month.length < 2) month = `0${month}`;
+    if (day.length < 2) day = `0${day}`;
 
-    const date = year + "-" + month + "-" + day;
+    return `${year}-${month}-${day}`;
+  };
 
-    instance.get<typeof recentMatchData>(`/games?date=${date}`).then((data) => {
-      setGameData(data.data.response);
-      setLoading(false);
-    });
-  }, [datePickerValue]);
+  const { data: recentMatchResponse, isLoading, mutate } = useRecentMatch(parsingDate());
 
-  if (isLoading) return <Box>Loading...</Box>;
+  const changeDate = (value: dayjs.Dayjs | null) => {
+    if (value) setDatePickerValue(value);
+    mutate();
+  };
+
+  const refreshRecentMatch = () => {
+    setDatePickerValue(null);
+    mutate();
+  };
+
+  if (isLoading) {
+    return <Loading height="h-[150px]" />;
+  }
 
   return (
     <Box className="pb-7">
       <Box className="flex pb-3">
-        <Title
-          text="경기결과"
-          className="flex items-center relative left-[47.5%] pb-0"
-        />
-        <DatePicker
-          value={datePickerValue}
-          onChange={(value) => setDatePickerValue(dayjs(value))}
-        />
+        <Title text="경기결과" className="flex items-center relative left-[47.5%] pb-0" />
+        <Box className="flex items-center relative bottom-2 ">
+          {datePickerValue && (
+            <AutorenewIcon
+              fontSize="large"
+              color="inherit"
+              className="mr-2 transition hover:rotate-180 cursor-pointer"
+              onClick={() => refreshRecentMatch()}
+            />
+          )}
+          <DatePicker value={datePickerValue} onChange={(value) => changeDate(value)} />
+        </Box>
       </Box>
-      {gameData.length === 0 ? (
-        <Paper className="p-3 flex h-20 items-center justify-center">
-          <Typography>
-            일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요.
-          </Typography>
-        </Paper>
+      {!recentMatchResponse ? (
+        <Error text="일치하는 데이터가 없습니다. 다른 날짜를 선택해주세요" height="h-20" />
       ) : (
         <Grid container spacing={2}>
-          {gameData.map((item, idx) => (
-            <Grid item xs={3} key={item.id + idx}>
+          {recentMatchResponse.map((item) => (
+            <Grid item xs={3} key={item.id}>
               <Link
                 href={{
                   pathname: `/game/${item.id}`,
                   query: {
                     homeLineScore: item.scores.home.linescore,
                     visitorLineScore: item.scores.visitors.linescore,
+                    homeTeamName: item.teams.home.name,
+                    visitorTeamName: item.teams.visitors.name,
                   },
                 }}
               >
                 <Card>
-                  <CardActionArea className="flex p-5">
+                  <CardActionArea className="flex p-5 flex-col">
+                    <Typography>{getDateKr(item.date.start)}</Typography>
                     <Box className="flex min-w-full">
                       <Box className="w-1/4">
-                        <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
-                          <Image
-                            src={item.teams.home.logo}
+                        <Box className="relative my-0 mx-auto">
+                          <TeamLogo
+                            code={item.teams.home.code}
                             alt="team-logo"
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            width={70}
+                            height={70}
                           />
                         </Box>
                         <Typography className="text-xl text-center">
@@ -99,11 +101,11 @@ const RecentMatch = () => {
                       </Box>
                       <Box className="w-1/4">
                         <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
-                          <Image
-                            src={item.teams.visitors.logo}
-                            alt="team-logo"
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          <TeamLogo
+                            code={item.teams.visitors.code}
+                            alt="qwef"
+                            width={70}
+                            height={70}
                           />
                         </Box>
                         <Typography className="text-xl text-center">
