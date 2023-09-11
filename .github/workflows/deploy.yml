@@ -58,4 +58,4 @@ jobs:
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker stop nba-stat && docker rm nba-stat
-          docker run -d --name nba-stat -p 3000:3000 --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker run -d --name nba-stat -p 3000:3000 -e NEXT_PUBLIC_ENV_API_KEY=${{ secrets.API_KEY }} --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
