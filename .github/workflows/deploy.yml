@@ -29,8 +29,9 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: nba-stat
           IMAGE_TAG: nba-stat-image
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
-          docker build --build-arg NEXT_PUBLIC_ENV_API_KEY=${{ secrets.API_KEY }} -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build --build-arg NEXT_PUBLIC_ENV_API_KEY=$API_KEY -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
   deploy:
@@ -55,7 +56,8 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: nba-stat
           IMAGE_TAG: nba-stat-image
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker stop nba-stat && docker rm nba-stat
-          docker run -d --name nba-stat -p 3000:3000 -e NEXT_PUBLIC_ENV_API_KEY=${{ secrets.API_KEY }} --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker run -d --name nba-stat -p 3000:3000 --env NEXT_PUBLIC_ENV_API_KEY=$API_KEY --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
