@@ -44,7 +44,7 @@ const RecentMatch = () => {
   return (
     <Box className="pb-7">
       <Box className="flex pb-3">
-        <Title text="기결과" className="flex items-center relative left-[47.5%] pb-0" />
+        <Title text="경기결과" className="flex items-center relative left-[47.5%] pb-0" />
         <Box className="flex items-center relative bottom-2 ">
           {datePickerValue && (
             <AutorenewIcon
