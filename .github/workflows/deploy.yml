@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  NEXT_PUBLIC_ENV_API_KEY: ${{ secrets.API_KEY }}
+
 jobs:
   build:
     name: CI
@@ -12,6 +15,15 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+
+      - name: Check Node v
+        run: node -v
+
+      - name: Generate Environment Variables File
+        run: |
+          echo "NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY" >> .env.production
+        env:
+          NEXT_PUBLIC_ENV_API_KEY: ${{ secrets.API_KEY }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -30,7 +42,7 @@ jobs:
           ECR_REPOSITORY: nba-stat
           IMAGE_TAG: nba-stat-image
         run: |
-          docker build --build-arg NEXT_PUBLIC_ENV_API_KEY=${{ secrets.API_KEY }} -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build --build-arg NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
   deploy:
@@ -58,4 +70,4 @@ jobs:
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker stop nba-stat && docker rm nba-stat
-          docker run -d --name nba-stat -p 3000:3000 --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker run -d --name nba-stat -p 3000:3000 -e NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY --restart unless-stopped $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
