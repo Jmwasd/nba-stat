@@ -16,6 +16,15 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
+      - name: Check Node v
+        run: node -v
+
+      - name: Generate Environment Variables File
+        run: |
+          echo "NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY" >> .env.production
+        env:
+          NEXT_PUBLIC_ENV_API_KEY: ${{ secrets.API_KEY }}
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -33,8 +42,6 @@ jobs:
           ECR_REPOSITORY: nba-stat
           IMAGE_TAG: nba-stat-image
         run: |
-          echo "My value is ${{ secrets.API_KEY }}"
-          echo "My value is $NEXT_PUBLIC_ENV_API_KEY"
           docker build --build-arg NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
