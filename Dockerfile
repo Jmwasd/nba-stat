@@ -11,6 +11,12 @@ RUN npm ci
 COPY . .
 RUN rm -rf ./.next/cache
 
+# Create .env.production
+ARG NEXT_PUBLIC_ENV_API_KEY
+RUN touch .env.production
+RUN echo "NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY" >> .env.production
+RUN cat .env.production
+
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
@@ -27,7 +33,6 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/.env.local ./
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static

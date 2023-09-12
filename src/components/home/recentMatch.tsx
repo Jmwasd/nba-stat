@@ -41,8 +41,6 @@ const RecentMatch = () => {
     return <Loading height="h-[150px]" />;
   }
 
-  console.log(process.env.NEXT_PUBLIC_ENV_API_KEY);
-
   return (
     <Box className="pb-7">
       <Box className="flex pb-3">
