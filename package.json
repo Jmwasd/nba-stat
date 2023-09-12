@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "docker:build": "docker build -t nba-stats ./",
+    "docker:build": "docker build --build-arg NEXT_PUBLIC_ENV_API_KEY -t nba-stats ./",
     "docker:run": "docker run -p 3000:3000 nba-stats:latest",
     "dev": "next dev",
     "build": "next build",

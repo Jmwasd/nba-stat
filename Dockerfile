@@ -11,6 +11,12 @@ RUN npm ci
 COPY . .
 RUN rm -rf ./.next/cache
 
+# Create .env.production
+ARG NEXT_PUBLIC_ENV_API_KEY
+RUN touch .env.production
+RUN echo "NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY" >> .env.production
+RUN cat .env.production
+
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
