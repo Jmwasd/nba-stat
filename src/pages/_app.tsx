@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
@@ -16,9 +16,11 @@ const App = ({ Component, pageProps }: AppProps) => (
     }}
   >
     <HeadMeta />
-    <Container maxWidth={false} sx={{ bgcolor: '#edecec' }} className="py-5">
-      <Layout />
-      <Component {...pageProps} />
+    <Container maxWidth={false} sx={{ bgcolor: '#edecec' }}>
+      <Box className="w-[65%] mx-auto my-0 py-10 min-w-[1200px]">
+        <Layout />
+        <Component {...pageProps} />
+      </Box>
     </Container>
   </SWRConfig>
 );
