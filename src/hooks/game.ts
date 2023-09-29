@@ -7,9 +7,9 @@ const useRecentMatch = (date: string | null) => {
   const { data, isLoading, error, mutate } = useSWR<RecentMatchType[]>(url);
   if (data) {
     const { length } = data;
-    data.slice(length - 10);
+    data.slice(length - 12);
     return {
-      data: data.slice(length - 10).reverse(),
+      data: data.slice(length - 12).reverse(),
       isLoading,
       error,
       mutate,
