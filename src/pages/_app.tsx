@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 /* eslint-disable react/jsx-props-no-spreading */
 import { Box, Container } from '@mui/material';
 import '../styles/globals.css';
@@ -11,7 +10,7 @@ import { SWRConfig } from 'swr';
 
 const App = ({ Component, pageProps }: AppProps) => {
   if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-    require('../mocks');
+    import('../mocks');
   }
 
   return (

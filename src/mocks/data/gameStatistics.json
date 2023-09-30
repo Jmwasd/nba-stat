@@ -1,0 +1,88 @@
+{
+  "get": "games/statistics",
+  "parameters": {
+    "id": "10990"
+  },
+  "errors": [],
+  "results": 2,
+  "response": [
+    {
+      "team": {
+        "id": 9,
+        "name": "Denver Nuggets",
+        "nickname": "Nuggets",
+        "code": "DEN",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+      },
+      "statistics": [
+        {
+          "fastBreakPoints": null,
+          "pointsInPaint": null,
+          "biggestLead": null,
+          "secondChancePoints": null,
+          "pointsOffTurnovers": null,
+          "longestRun": null,
+          "points": 101,
+          "fgm": 37,
+          "fga": 90,
+          "fgp": "41.1",
+          "ftm": 17,
+          "fta": 23,
+          "ftp": "73.9",
+          "tpm": 10,
+          "tpa": 33,
+          "tpp": "30.3",
+          "offReb": 11,
+          "defReb": 32,
+          "totReb": 43,
+          "assists": 20,
+          "pFouls": 18,
+          "steals": 8,
+          "turnovers": 17,
+          "blocks": 6,
+          "plusMinus": "-11",
+          "min": "240:00"
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": 25,
+        "name": "Oklahoma City Thunder",
+        "nickname": "Thunder",
+        "code": "OKC",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+      },
+      "statistics": [
+        {
+          "fastBreakPoints": null,
+          "pointsInPaint": null,
+          "biggestLead": null,
+          "secondChancePoints": null,
+          "pointsOffTurnovers": null,
+          "longestRun": null,
+          "points": 112,
+          "fgm": 41,
+          "fga": 84,
+          "fgp": "73.9",
+          "ftm": 17,
+          "fta": 25,
+          "ftp": "68.0",
+          "tpm": 13,
+          "tpa": 35,
+          "tpp": "37.1",
+          "offReb": 13,
+          "defReb": 39,
+          "totReb": 52,
+          "assists": 25,
+          "pFouls": 23,
+          "steals": 9,
+          "turnovers": 21,
+          "blocks": 6,
+          "plusMinus": "11",
+          "min": "240:00"
+        }
+      ]
+    }
+  ]
+}
