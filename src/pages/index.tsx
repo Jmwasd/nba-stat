@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 const Home = () => (
   <LocalizationProvider dateAdapter={AdapterDayjs}>
     <RecentMatch />
-    <Box className="flex justify-between">
+    <Box>
       <ConferenceStanding title="서부 컨퍼런스 랭킹" conferenceName="west" />
       <ConferenceStanding title="동부 컨퍼런스 랭킹" conferenceName="east" />
     </Box>

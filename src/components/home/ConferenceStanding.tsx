@@ -39,25 +39,27 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
 
   if (isLoading) {
     return (
-      <Box className="flex justify-center w-[49.5%] items-center h-[70vh]">
+      <Box className="flex justify-center w-[100%] items-center h-[70vh]">
         <CircularProgress />
       </Box>
     );
   }
 
   return (
-    <Box className="w-[49.5%]">
+    <Box className="w-[100%] mt-5">
       <Title text={title} align="center" />
       {!conferenceStanding ? (
         <Error text="Error" height="h-[80vh]" />
       ) : (
         <TableContainer component={Paper}>
           <Table className="w-full">
-            <TableHead>
+            <TableHead className="bg-table-head">
               <TableRow>
                 <TableCell />
                 {CONFERENCE_STANDING.map((el) => (
-                  <TableCell key={el}>{el}</TableCell>
+                  <TableCell className="font-bold" key={el}>
+                    {el}
+                  </TableCell>
                 ))}
               </TableRow>
             </TableHead>

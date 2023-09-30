@@ -87,9 +87,9 @@ const RecentMatch = () => {
   }
 
   return (
-    <Box className="pb-7">
+    <Box>
       <Box className="flex pb-3">
-        <Title text="경기결과" className="flex items-center relative left-[47.5%] pb-0" />
+        <Title text="최근 경기결과" className="flex items-center relative left-[44%] pb-0" />
         <Box className="flex items-center relative bottom-2 ">
           {datePickerValue && (
             <AutorenewIcon
@@ -139,11 +139,11 @@ const RecentMatch = () => {
                                 code={el.teams.home.code}
                                 alt="team-logo"
                                 width={70}
-                                height={70}
-                                className="my-0 mx-auto"
+                                height="0"
+                                className="my-0 mx-auto h-[70px]"
                               />
                             </Box>
-                            <Typography className="text-xl text-center">
+                            <Typography className="text-xl text-center truncate">
                               {el.teams.home.nickname}
                             </Typography>
                           </Box>
@@ -156,15 +156,16 @@ const RecentMatch = () => {
                             </Typography>
                           </Box>
                           <Box className="w-1/4">
-                            <Box className="relative w-[70px] h-[70px] my-0 mx-auto">
+                            <Box className="relative my-0 mx-auto">
                               <TeamLogo
                                 code={el.teams.visitors.code}
                                 alt="qwef"
                                 width={70}
                                 height={70}
+                                className="my-0 mx-auto h-[70px]"
                               />
                             </Box>
-                            <Typography className="text-xl text-center">
+                            <Typography className="text-xl text-center truncate">
                               {el.teams.visitors.nickname}
                             </Typography>
                           </Box>

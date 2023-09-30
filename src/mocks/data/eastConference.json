@@ -1,0 +1,642 @@
+{
+  "get": "standings/",
+  "parameters": {
+    "league": "standard",
+    "conference": "east",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 15,
+  "response": [
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 2,
+        "name": "Boston Celtics",
+        "nickname": "Celtics",
+        "code": "BOS",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 2,
+        "win": 57,
+        "loss": 25
+      },
+      "division": {
+        "name": "atlantic",
+        "rank": 1,
+        "win": 57,
+        "loss": 25,
+        "gamesBehind": null
+      },
+      "win": {
+        "home": 32,
+        "away": 25,
+        "total": 57,
+        "percentage": "0.695",
+        "lastTen": 8
+      },
+      "loss": {
+        "home": 9,
+        "away": 16,
+        "total": 25,
+        "percentage": "0.305",
+        "lastTen": 2
+      },
+      "gamesBehind": null,
+      "streak": 3,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 27,
+        "name": "Philadelphia 76ers",
+        "nickname": "76ers",
+        "code": "PHI",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 3,
+        "win": 54,
+        "loss": 28
+      },
+      "division": {
+        "name": "atlantic",
+        "rank": 2,
+        "win": 54,
+        "loss": 28,
+        "gamesBehind": "3"
+      },
+      "win": {
+        "home": 29,
+        "away": 25,
+        "total": 54,
+        "percentage": "0.659",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 12,
+        "away": 16,
+        "total": 28,
+        "percentage": "0.341",
+        "lastTen": 5
+      },
+      "gamesBehind": "3",
+      "streak": 2,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 24,
+        "name": "New York Knicks",
+        "nickname": "Knicks",
+        "code": "NYK",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 5,
+        "win": 47,
+        "loss": 35
+      },
+      "division": {
+        "name": "atlantic",
+        "rank": 3,
+        "win": 47,
+        "loss": 35,
+        "gamesBehind": "10"
+      },
+      "win": {
+        "home": 23,
+        "away": 24,
+        "total": 47,
+        "percentage": "0.573",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 18,
+        "away": 17,
+        "total": 35,
+        "percentage": "0.427",
+        "lastTen": 5
+      },
+      "gamesBehind": "10",
+      "streak": 2,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 4,
+        "name": "Brooklyn Nets",
+        "nickname": "Nets",
+        "code": "BKN",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 6,
+        "win": 45,
+        "loss": 37
+      },
+      "division": {
+        "name": "atlantic",
+        "rank": 4,
+        "win": 45,
+        "loss": 37,
+        "gamesBehind": "12"
+      },
+      "win": {
+        "home": 23,
+        "away": 22,
+        "total": 45,
+        "percentage": "0.549",
+        "lastTen": 6
+      },
+      "loss": {
+        "home": 18,
+        "away": 19,
+        "total": 37,
+        "percentage": "0.451",
+        "lastTen": 4
+      },
+      "gamesBehind": "12",
+      "streak": 1,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 38,
+        "name": "Toronto Raptors",
+        "nickname": "Raptors",
+        "code": "TOR",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 9,
+        "win": 41,
+        "loss": 41
+      },
+      "division": {
+        "name": "atlantic",
+        "rank": 5,
+        "win": 41,
+        "loss": 41,
+        "gamesBehind": "16"
+      },
+      "win": {
+        "home": 27,
+        "away": 14,
+        "total": 41,
+        "percentage": "0.500",
+        "lastTen": 6
+      },
+      "loss": {
+        "home": 14,
+        "away": 27,
+        "total": 41,
+        "percentage": "0.500",
+        "lastTen": 4
+      },
+      "gamesBehind": "16",
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 21,
+        "name": "Milwaukee Bucks",
+        "nickname": "Bucks",
+        "code": "MIL",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 1,
+        "win": 58,
+        "loss": 24
+      },
+      "division": {
+        "name": "central",
+        "rank": 1,
+        "win": 58,
+        "loss": 24,
+        "gamesBehind": null
+      },
+      "win": {
+        "home": 32,
+        "away": 26,
+        "total": 58,
+        "percentage": "0.707",
+        "lastTen": 6
+      },
+      "loss": {
+        "home": 9,
+        "away": 15,
+        "total": 24,
+        "percentage": "0.293",
+        "lastTen": 4
+      },
+      "gamesBehind": null,
+      "streak": 2,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 7,
+        "name": "Cleveland Cavaliers",
+        "nickname": "Cavaliers",
+        "code": "CLE",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 4,
+        "win": 51,
+        "loss": 31
+      },
+      "division": {
+        "name": "central",
+        "rank": 2,
+        "win": 51,
+        "loss": 31,
+        "gamesBehind": "7"
+      },
+      "win": {
+        "home": 31,
+        "away": 20,
+        "total": 51,
+        "percentage": "0.622",
+        "lastTen": 7
+      },
+      "loss": {
+        "home": 10,
+        "away": 21,
+        "total": 31,
+        "percentage": "0.378",
+        "lastTen": 3
+      },
+      "gamesBehind": "7",
+      "streak": 1,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 6,
+        "name": "Chicago Bulls",
+        "nickname": "Bulls",
+        "code": "CHI",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 10,
+        "win": 40,
+        "loss": 42
+      },
+      "division": {
+        "name": "central",
+        "rank": 3,
+        "win": 40,
+        "loss": 42,
+        "gamesBehind": "18"
+      },
+      "win": {
+        "home": 22,
+        "away": 18,
+        "total": 40,
+        "percentage": "0.488",
+        "lastTen": 6
+      },
+      "loss": {
+        "home": 19,
+        "away": 23,
+        "total": 42,
+        "percentage": "0.512",
+        "lastTen": 4
+      },
+      "gamesBehind": "18",
+      "streak": 2,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 15,
+        "name": "Indiana Pacers",
+        "nickname": "Pacers",
+        "code": "IND",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 12,
+        "win": 35,
+        "loss": 47
+      },
+      "division": {
+        "name": "central",
+        "rank": 4,
+        "win": 35,
+        "loss": 47,
+        "gamesBehind": "23"
+      },
+      "win": {
+        "home": 20,
+        "away": 15,
+        "total": 35,
+        "percentage": "0.427",
+        "lastTen": 3
+      },
+      "loss": {
+        "home": 21,
+        "away": 26,
+        "total": 47,
+        "percentage": "0.573",
+        "lastTen": 7
+      },
+      "gamesBehind": "23",
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 10,
+        "name": "Detroit Pistons",
+        "nickname": "Pistons",
+        "code": "DET",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 15,
+        "win": 17,
+        "loss": 65
+      },
+      "division": {
+        "name": "central",
+        "rank": 5,
+        "win": 17,
+        "loss": 65,
+        "gamesBehind": "41"
+      },
+      "win": {
+        "home": 9,
+        "away": 8,
+        "total": 17,
+        "percentage": "0.207",
+        "lastTen": 1
+      },
+      "loss": {
+        "home": 32,
+        "away": 33,
+        "total": 65,
+        "percentage": "0.793",
+        "lastTen": 9
+      },
+      "gamesBehind": "41",
+      "streak": 1,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 1,
+        "name": "Atlanta Hawks",
+        "nickname": "Hawks",
+        "code": "ATL",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 8,
+        "win": 41,
+        "loss": 41
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 2,
+        "win": 41,
+        "loss": 41,
+        "gamesBehind": "3"
+      },
+      "win": {
+        "home": 24,
+        "away": 17,
+        "total": 41,
+        "percentage": "0.500",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 17,
+        "away": 24,
+        "total": 41,
+        "percentage": "0.500",
+        "lastTen": 5
+      },
+      "gamesBehind": "3",
+      "streak": 2,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 20,
+        "name": "Miami Heat",
+        "nickname": "Heat",
+        "code": "MIA",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 7,
+        "win": 44,
+        "loss": 38
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 1,
+        "win": 44,
+        "loss": 38,
+        "gamesBehind": null
+      },
+      "win": {
+        "home": 27,
+        "away": 17,
+        "total": 44,
+        "percentage": "0.537",
+        "lastTen": 6
+      },
+      "loss": {
+        "home": 14,
+        "away": 24,
+        "total": 38,
+        "percentage": "0.463",
+        "lastTen": 4
+      },
+      "gamesBehind": null,
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 41,
+        "name": "Washington Wizards",
+        "nickname": "Wizards",
+        "code": "WAS",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 11,
+        "win": 35,
+        "loss": 47
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 3,
+        "win": 35,
+        "loss": 47,
+        "gamesBehind": "9"
+      },
+      "win": {
+        "home": 19,
+        "away": 16,
+        "total": 35,
+        "percentage": "0.427",
+        "lastTen": 3
+      },
+      "loss": {
+        "home": 22,
+        "away": 25,
+        "total": 47,
+        "percentage": "0.573",
+        "lastTen": 7
+      },
+      "gamesBehind": "9",
+      "streak": 1,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 26,
+        "name": "Orlando Magic",
+        "nickname": "Magic",
+        "code": "ORL",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 13,
+        "win": 34,
+        "loss": 48
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 4,
+        "win": 34,
+        "loss": 48,
+        "gamesBehind": "10"
+      },
+      "win": {
+        "home": 20,
+        "away": 14,
+        "total": 34,
+        "percentage": "0.415",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 21,
+        "away": 27,
+        "total": 48,
+        "percentage": "0.585",
+        "lastTen": 5
+      },
+      "gamesBehind": "10",
+      "streak": 4,
+      "winStreak": false,
+      "tieBreakerPoints": null
+    },
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 5,
+        "name": "Charlotte Hornets",
+        "nickname": "Hornets",
+        "code": "CHA",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 14,
+        "win": 27,
+        "loss": 55
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 5,
+        "win": 27,
+        "loss": 55,
+        "gamesBehind": "17"
+      },
+      "win": {
+        "home": 13,
+        "away": 14,
+        "total": 27,
+        "percentage": "0.329",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 28,
+        "away": 27,
+        "total": 55,
+        "percentage": "0.671",
+        "lastTen": 5
+      },
+      "gamesBehind": "17",
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    }
+  ]
+}
