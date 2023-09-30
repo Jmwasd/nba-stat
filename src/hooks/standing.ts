@@ -6,7 +6,7 @@ import useSWR from 'swr';
 
 export const useConferenceStanding = (conference: ConferenceType) => {
   const { data, isLoading, error } = useSWR<ConferenceStandingResponseType[]>(
-    `${APIv2.standing}&conference=${conference}`,
+    `${APIv2.standing}?season=2022&league=standard&conference=${conference}`,
   );
 
   const getSortedRank = () =>
@@ -22,7 +22,7 @@ export const useConferenceStanding = (conference: ConferenceType) => {
 
 export const useTeamRank = (teamId: string) => {
   const { data, isLoading, error } = useSWR<ConferenceStandingResponseType[]>(
-    `${APIv2.standing}&team=${teamId}`,
+    `${APIv2.standing}?season=2022&league=standard&team=${teamId}`,
   );
 
   return { data, isLoading, error };
