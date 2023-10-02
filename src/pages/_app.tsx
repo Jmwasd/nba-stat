@@ -7,13 +7,10 @@ import Layout from '@/components/layout';
 import HeadMeta from '@/components/HeadMeta';
 import { fetcher } from '@/config/api';
 import { SWRConfig } from 'swr';
+import MSWConfig from '@/mocks/MSWcomponent';
 
-const App = ({ Component, pageProps }: AppProps) => {
-  if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-    import('../mocks');
-  }
-
-  return (
+const App = ({ Component, pageProps }: AppProps) => (
+  <MSWConfig>
     <SWRConfig
       value={{
         refreshInterval: 0,
@@ -28,7 +25,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         </Box>
       </Container>
     </SWRConfig>
-  );
-};
-
+  </MSWConfig>
+);
 export default App;
