@@ -13,7 +13,7 @@ import teamPlayerData from './data/teamPlayer.json';
 import teamScheduleData from './data/teamSchedule.json';
 import teamStatisticsData from './data/teamStatistics.json';
 
-const URL = 'https://api-nba-v1.p.rapidapi.com';
+const URL = 'http://localhost:3000';
 
 const handlers = [
   rest.get(`${URL}${APIv2.game}`, (req, _, ctx) => {

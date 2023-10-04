@@ -5,7 +5,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Layout from '@/components/layout';
 import HeadMeta from '@/components/HeadMeta';
-import { fetcher } from '@/config/api';
+import fetcher from '@/config/fetcher';
 import { SWRConfig } from 'swr';
 import MSWConfig from '@/mocks/MSWcomponent';
 
