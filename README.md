@@ -52,3 +52,17 @@ NBA-STATS은 실시간 NBA 기록 정보를 제공합니다. 날짜 검색을 �
 ## API
 
 https://rapidapi.com/api-sports/api/api-nba
+=======
+
+NEXT_PUBLIC_ENV_API_KEY: Rapid API에서 제공하는 [API_KEY](https://rapidapi.com/api-sports/api/api-nba/pricing)
+
+
+### Docker
+
+1. npm run docker:build <br/>
+2. npm run docker:run
+
+
+## API
+
+https://rapidapi.com/api-sports/api/api-nba
