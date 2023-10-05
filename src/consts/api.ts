@@ -1,11 +1,11 @@
 enum APIv2 {
-  standing = '/standings?season=2022&league=standard',
-  player = '/players?season=2022',
-  playerStats = '/players/statistics?season=2022',
-  gameStats = '/games/statistics',
-  game = '/games?season=2022&league=standard',
-  teamsStats = '/teams/statistics?season=2022',
-  searchPlayer = '/players',
+  standing = '/api/standings',
+  player = '/api/players',
+  playerStats = '/api/players/statistics',
+  gameStats = '/api/games/statistics',
+  game = '/api/games',
+  teamsStats = '/api/teams/statistics',
+  searchPlayer = '/api/players',
 }
 
 export default APIv2;

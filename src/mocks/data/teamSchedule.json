@@ -1,0 +1,6732 @@
+{
+  "get": "games/",
+  "parameters": {
+    "league": "standard",
+    "season": "2022",
+    "team": "9"
+  },
+  "errors": [],
+  "results": 96,
+  "response": [
+    {
+      "id": 10990,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-04T01:00:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "21", "39", "22"],
+          "points": 112
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "31", "30", "19"],
+          "points": 101
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11010,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-08T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "United Center",
+        "city": "Chicago",
+        "state": "IL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 6,
+          "name": "Chicago Bulls",
+          "nickname": "Bulls",
+          "code": "CHI",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "37", "25", "25"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "45", "33", "26"],
+          "points": 131
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11025,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-11T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "24", "22", "24"],
+          "points": 105
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "24", "24", "29"],
+          "points": 107
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11038,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-13T02:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Toyota Arena",
+        "city": "Ontario",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["37", "37", "26", "26"],
+          "points": 126
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "37", "34", "15"],
+          "points": 115
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11048,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-15T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Chase Center",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["", "", "", ""],
+          "points": 119
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["", "", "", ""],
+          "points": 112
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11061,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-20T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Vivint Arena",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "23", "27", "22"],
+          "points": 102
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["37", "38", "19", "29"],
+          "points": 123
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11075,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-22T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Chase Center",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["40", "30", "28", "30"],
+          "points": 128
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "18", "36", "35"],
+          "points": 123
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11084,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-23T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "26", "30", "32"],
+          "points": 117
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "27", "33", "34"],
+          "points": 122
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11100,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-25T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Moda Center",
+        "city": "Portland",
+        "state": "OR",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 29,
+          "name": "Portland Trail Blazers",
+          "nickname": "Trail Blazers",
+          "code": "POR",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "30", "25", "24"],
+          "points": 110
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "32", "44", "36"],
+          "points": 135
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11113,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-27T02:15:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "32", "17", "28"],
+          "points": 99
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "28", "32", "24"],
+          "points": 110
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11127,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-29T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "25", "28", "23"],
+          "points": 101
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "28", "26", "28"],
+          "points": 117
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11144,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-31T01:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "20", "34", "25"],
+          "points": 110
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "29", "38", "28"],
+          "points": 121
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11168,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-04T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Paycom Center",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["42", "29", "22", "29"],
+          "points": 122
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "28", "38", "15"],
+          "points": 110
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11187,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-06T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 31,
+          "name": "San Antonio Spurs",
+          "nickname": "Spurs",
+          "code": "SAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "24", "25", "25"],
+          "points": 101
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["40", "30", "29", "27"],
+          "points": 126
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11203,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-08T02:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "AT&T Center",
+        "city": "San Antonio",
+        "state": "TX",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 31,
+          "name": "San Antonio Spurs",
+          "nickname": "Spurs",
+          "code": "SAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "37", "29", "21"],
+          "points": 115
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "34", "27", "20"],
+          "points": 109
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11209,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-10T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Gainbridge Fieldhouse",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 15,
+          "name": "Indiana Pacers",
+          "nickname": "Pacers",
+          "code": "IND",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "21", "33", "33"],
+          "points": 122
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "43", "25", "24"],
+          "points": 119
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11225,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-12T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "TD Garden",
+        "city": "Boston",
+        "state": "MA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 2,
+          "name": "Boston Celtics",
+          "nickname": "Celtics",
+          "code": "BOS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "32", "34", "21"],
+          "points": 112
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["33", "33", "31", "34"],
+          "points": 131
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11245,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-14T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "United Center",
+        "city": "Chicago",
+        "state": "IL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 6,
+          "name": "Chicago Bulls",
+          "nickname": "Bulls",
+          "code": "CHI",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "30", "35", "29"],
+          "points": 126
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "27", "29", "27"],
+          "points": 103
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11268,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-17T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 24,
+          "name": "New York Knicks",
+          "nickname": "Knicks",
+          "code": "NYK",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "25", "25", "26"],
+          "points": 106
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "27", "30", "19"],
+          "points": 103
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11279,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-19T01:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "American Airlines Center",
+        "city": "Dallas",
+        "state": "TX",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 8,
+          "name": "Dallas Mavericks",
+          "nickname": "Mavericks",
+          "code": "DAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "28", "28", "16"],
+          "points": 99
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "44", "32", "22"],
+          "points": 127
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11295,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-21T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "American Airlines Center",
+        "city": "Dallas",
+        "state": "TX",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 8,
+          "name": "Dallas Mavericks",
+          "nickname": "Mavericks",
+          "code": "DAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "30", "24", "19"],
+          "points": 98
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "31", "18", "23"],
+          "points": 97
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11307,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-23T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 10,
+          "name": "Detroit Pistons",
+          "nickname": "Pistons",
+          "code": "DET",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "30", "25", "27"],
+          "points": 110
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "28", "24", "27"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11317,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-24T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Paycom Center",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["38", "31", "15", "36", "11"],
+          "points": 131
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "42", "34", "23", "6"],
+          "points": 126
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11334,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-26T03:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "33", "23", "27"],
+          "points": 114
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "26", "25", "27"],
+          "points": 104
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11354,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-11-29T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["39", "29", "23", "22"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["42", "28", "36", "23"],
+          "points": 129
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11369,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-01T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "23", "25", "28"],
+          "points": 100
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["44", "30", "22", "24"],
+          "points": 120
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11376,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-03T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "State Farm Arena",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 1,
+          "name": "Atlanta Hawks",
+          "nickname": "Hawks",
+          "code": "ATL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "21", "35", "28"],
+          "points": 109
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "32", "30", "27"],
+          "points": 117
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11393,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-04T20:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Smoothie King Center",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 23,
+          "name": "New Orleans Pelicans",
+          "nickname": "Pelicans",
+          "code": "NOP",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "29", "21", "25"],
+          "points": 106
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "32", "28", "34"],
+          "points": 121
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11411,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-07T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 8,
+          "name": "Dallas Mavericks",
+          "nickname": "Mavericks",
+          "code": "DAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["36", "28", "27", "25"],
+          "points": 116
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "29", "28", "29"],
+          "points": 115
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11425,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-09T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Moda Center",
+        "city": "Portland",
+        "state": "OR",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 29,
+          "name": "Portland Trail Blazers",
+          "nickname": "Trail Blazers",
+          "code": "POR",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "33", "26", "32"],
+          "points": 121
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["36", "28", "35", "21"],
+          "points": 120
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11442,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-11T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "26", "38", "20"],
+          "points": 110
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "33", "31", "23"],
+          "points": 115
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11471,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-15T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "36", "28", "33"],
+          "points": 128
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["38", "34", "30", "39"],
+          "points": 141
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11486,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-17T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "33", "23", "20"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["33", "31", "29", "33"],
+          "points": 126
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11499,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-19T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 5,
+          "name": "Charlotte Hornets",
+          "nickname": "Hornets",
+          "code": "CHA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "27", "28", "35"],
+          "points": 115
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "35", "39", "25"],
+          "points": 119
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11514,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-21T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["14", "26", "31", "20"],
+          "points": 91
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "20", "29", "21"],
+          "points": 105
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11538,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-24T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 29,
+          "name": "Portland Trail Blazers",
+          "nickname": "Trail Blazers",
+          "code": "POR",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "37", "16", "27"],
+          "points": 107
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "26", "35", "27"],
+          "points": 120
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11546,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-26T03:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "33", "27", "29", "12"],
+          "points": 125
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "23", "30", "32", "15"],
+          "points": 128
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11563,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-28T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Golden 1 Center",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 30,
+          "name": "Sacramento Kings",
+          "nickname": "Kings",
+          "code": "SAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "27", "32", "34"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "24", "27", "23"],
+          "points": 106
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11571,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-29T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Golden 1 Center",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 30,
+          "name": "Sacramento Kings",
+          "nickname": "Kings",
+          "code": "SAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["40", "35", "30", "21"],
+          "points": 126
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "38", "32", "33"],
+          "points": 127
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11584,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-12-31T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["19", "38", "33", "29"],
+          "points": 119
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "37", "25", "39"],
+          "points": 124
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11598,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-02T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 2,
+          "name": "Boston Celtics",
+          "nickname": "Celtics",
+          "code": "BOS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "26", "31", "26"],
+          "points": 111
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["37", "25", "36", "25"],
+          "points": 123
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11606,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-03T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Target Center",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "30", "32", "26"],
+          "points": 111
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "36", "31", "34"],
+          "points": 124
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11628,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-06T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["15", "17", "27", "32"],
+          "points": 91
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "34", "36", "20"],
+          "points": 122
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11637,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-07T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 7,
+          "name": "Cleveland Cavaliers",
+          "nickname": "Cavaliers",
+          "code": "CLE",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "30", "24", "26"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "36", "32", "27"],
+          "points": 121
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11658,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-10T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "25", "31", "30"],
+          "points": 109
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "33", "32", "28"],
+          "points": 122
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11673,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-12T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "26", "21", "22"],
+          "points": 97
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "36", "30", "26"],
+          "points": 126
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11688,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-14T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "25", "29", "29"],
+          "points": 115
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "24", "23", "22"],
+          "points": 103
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11751,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-23T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "25", "29", "20"],
+          "points": 101
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["18", "29", "27", "25"],
+          "points": 99
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11765,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-25T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Smoothie King Center",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 23,
+          "name": "New Orleans Pelicans",
+          "nickname": "Pelicans",
+          "code": "NOP",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "35", "20", "16"],
+          "points": 99
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "23", "27", "24"],
+          "points": 98
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11772,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-26T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Fiserv Forum",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 21,
+          "name": "Milwaukee Bucks",
+          "nickname": "Bucks",
+          "code": "MIL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "26", "20", "26"],
+          "points": 99
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "32", "23", "26"],
+          "points": 107
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11790,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-01-28T20:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Wells Fargo Center",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 27,
+          "name": "Philadelphia 76ers",
+          "nickname": "76ers",
+          "code": "PHI",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["38", "35", "26", "20"],
+          "points": 119
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "29", "38", "30"],
+          "points": 126
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11817,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-01T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 23,
+          "name": "New Orleans Pelicans",
+          "nickname": "Pelicans",
+          "code": "NOP",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "25", "24", "29"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "26", "36", "29"],
+          "points": 122
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11832,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-03T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "34", "22", "26"],
+          "points": 117
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "36", "35", "29"],
+          "points": 134
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11850,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-05T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 1,
+          "name": "Atlanta Hawks",
+          "nickname": "Hawks",
+          "code": "ATL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "22", "34", "22"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "35", "27", "31"],
+          "points": 128
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11855,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-06T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Target Center",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "22", "28", "27"],
+          "points": 98
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "31", "31", "34"],
+          "points": 128
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11869,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-08T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["19", "29", "27", "37"],
+          "points": 112
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["49", "30", "31", "36"],
+          "points": 146
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11880,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-10T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Amway Center",
+        "city": "Orlando",
+        "state": "FL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 26,
+          "name": "Orlando Magic",
+          "nickname": "Magic",
+          "code": "ORL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "29", "29", "20"],
+          "points": 104
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "36", "24", "26"],
+          "points": 115
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11896,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-12T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Spectrum Center",
+        "city": "Charlotte",
+        "state": "NC",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 5,
+          "name": "Charlotte Hornets",
+          "nickname": "Hornets",
+          "code": "CHA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "30", "37", "25"],
+          "points": 119
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "26", "23", "22"],
+          "points": 105
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11910,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-14T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Miami-Dade Arena",
+        "city": "Miami",
+        "state": "FL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "38", "24", "23"],
+          "points": 112
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["36", "26", "21", "25"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11930,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-16T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 8,
+          "name": "Dallas Mavericks",
+          "nickname": "Mavericks",
+          "code": "DAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "19", "30", "35"],
+          "points": 109
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "35", "31", "26"],
+          "points": 118
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11935,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-24T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Rocket Mortgage FieldHouse",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 7,
+          "name": "Cleveland Cavaliers",
+          "nickname": "Cavaliers",
+          "code": "CLE",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "25", "33", "26"],
+          "points": 115
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "31", "34", "18"],
+          "points": 109
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11956,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-26T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "FedExForum",
+        "city": "Memphis",
+        "state": "TN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "22", "20", "32"],
+          "points": 94
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "38", "28", "18"],
+          "points": 112
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11967,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-02-27T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "36", "30", "32", "4"],
+          "points": 124
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "31", "31", "23", "14"],
+          "points": 134
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 11975,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-01T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Toyota Center (Houston)",
+        "city": "Houston",
+        "state": "TX",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["41", "33", "32", "27"],
+          "points": 133
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "24", "30", "28"],
+          "points": 112
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12001,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-04T03:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "31", "22", "17"],
+          "points": 97
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "22", "30", "33"],
+          "points": 113
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12112,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-19T19:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Barclays Center",
+        "city": "Brooklyn",
+        "state": "NY",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 4,
+          "name": "Brooklyn Nets",
+          "nickname": "Nets",
+          "code": "BKN",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["33", "30", "28", "17"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "27", "23", "31"],
+          "points": 102
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12132,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-22T23:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Capital One Arena",
+        "city": "Washington",
+        "state": "DC",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "24", "39", "24"],
+          "points": 118
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "28", "16", "31"],
+          "points": 104
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12158,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-26T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 21,
+          "name": "Milwaukee Bucks",
+          "nickname": "Bucks",
+          "code": "MIL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["38", "28", "19", "21"],
+          "points": 106
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["37", "26", "34", "32"],
+          "points": 129
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12175,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-28T01:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 27,
+          "name": "Philadelphia 76ers",
+          "nickname": "76ers",
+          "code": "PHI",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["18", "39", "20", "34"],
+          "points": 111
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "36", "30", "25"],
+          "points": 116
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12196,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-03-31T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 23,
+          "name": "New Orleans Pelicans",
+          "nickname": "Pelicans",
+          "code": "NOP",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "29", "32", "25"],
+          "points": 107
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["17", "23", "30", "18"],
+          "points": 88
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12209,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-01T02:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "20", "34", "19"],
+          "points": 93
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "28", "24", "16"],
+          "points": 100
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12224,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-03T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["36", "25", "26", "23"],
+          "points": 110
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "32", "31", "23"],
+          "points": 112
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12232,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-05T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Toyota Center (Houston)",
+        "city": "Houston",
+        "state": "TX",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "29", "26", "18"],
+          "points": 103
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "25", "30", "38"],
+          "points": 124
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12250,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-07T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "30", "31", "29"],
+          "points": 115
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "29", "33", "30"],
+          "points": 119
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12262,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-08T19:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Vivint Arena",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["19", "36", "40", "19"],
+          "points": 114
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "26", "31", "29"],
+          "points": 118
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12276,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-09T19:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 30,
+          "name": "Sacramento Kings",
+          "nickname": "Kings",
+          "code": "SAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["43", "24", "14", "14"],
+          "points": 95
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "33", "24", "26"],
+          "points": 109
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12416,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-17T02:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "21", "14", "22"],
+          "points": 80
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "29", "32", "22"],
+          "points": 109
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12418,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-20T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "27", "40", "24"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "33", "23", "35"],
+          "points": 122
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12419,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-22T01:43:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Target Center",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "33", "33", "26"],
+          "points": 120
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "27", "33", "23"],
+          "points": 111
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12421,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-24T01:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Target Center",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "30", "22", "22", "12"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "25", "32", "16", "18"],
+          "points": 114
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12423,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-26T01:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "18", "30", "32"],
+          "points": 109
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "26", "29", "35"],
+          "points": 112
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12429,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-04-30T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "19", "30", "26"],
+          "points": 107
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "37", "26", "31"],
+          "points": 125
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12430,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-02T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "21", "31", "14"],
+          "points": 87
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["18", "22", "30", "27"],
+          "points": 97
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12431,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-06T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["31", "21", "36", "26"],
+          "points": 114
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "38", "23", "31"],
+          "points": 121
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12432,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-08T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "27", "31", "32"],
+          "points": 124
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "31", "35", "31"],
+          "points": 129
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12433,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-10T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "25", "25", "28"],
+          "points": 102
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["35", "17", "39", "27"],
+          "points": 118
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12434,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-12T02:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["44", "37", "22", "22"],
+          "points": 125
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "25", "25", "24"],
+          "points": 100
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12457,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-17T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "29", "38", "34"],
+          "points": 126
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["37", "35", "34", "26"],
+          "points": 132
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12458,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-19T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "26", "26", "24"],
+          "points": 103
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "21", "28", "32"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12459,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-21T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["32", "26", "26", "35"],
+          "points": 119
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "35", "27", "26"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12460,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-05-23T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["28", "30", "36", "19"],
+          "points": 113
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["34", "39", "16", "22"],
+          "points": 111
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12471,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-06-02T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "22", "21", "30"],
+          "points": 93
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["29", "30", "25", "20"],
+          "points": 104
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12472,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-06-05T00:00:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "25", "24", "36"],
+          "points": 111
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["23", "34", "26", "25"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12473,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-06-08T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Kaseya Center",
+        "city": "Miami",
+        "state": "FL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "29", "29", "27"],
+          "points": 109
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "24", "20", "26"],
+          "points": 94
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12474,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-06-10T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Kaseya Center",
+        "city": "Miami",
+        "state": "FL",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        },
+        "home": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["20", "35", "31", "22"],
+          "points": 108
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "30", "22", "22"],
+          "points": 95
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 12475,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2023-06-13T00:30:00.000Z",
+        "end": null,
+        "duration": null
+      },
+      "stage": 3,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": null
+      },
+      "teams": {
+        "visitors": {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["24", "27", "20", "18"],
+          "points": 89
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "22", "26", "24"],
+          "points": 94
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    }
+  ]
+}

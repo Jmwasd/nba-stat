@@ -9,12 +9,16 @@ export const useGameStats = (id: string) => {
 };
 
 export const usePlayerStats = (id: string) => {
-  const { data, isLoading, error } = useSWR<PlayerStatsType[]>(`${APIv2.playerStats}&game=${id}`);
+  const { data, isLoading, error } = useSWR<PlayerStatsType[]>(
+    `${APIv2.playerStats}?season=2022&game=${id}`,
+  );
   return { data, isLoading, error };
 };
 
 export const usePlayerDetailStats = (id: number) => {
-  const { data, isLoading, error } = useSWR<PlayerStatsType[]>(`${APIv2.playerStats}&id=${id}`);
+  const { data, isLoading, error } = useSWR<PlayerStatsType[]>(
+    `${APIv2.playerStats}?season=2022&id=${id}`,
+  );
 
   return { data, isLoading, error };
 };

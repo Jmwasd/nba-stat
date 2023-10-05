@@ -31,6 +31,8 @@ import Heat from '@/assets/teamLogo/Heat.png';
 import Wizards from '@/assets/teamLogo/Wizards.png';
 import Magic from '@/assets/teamLogo/Magic.png';
 import Hornets from '@/assets/teamLogo/Hornets.png';
+import ERS2 from '@/assets/teamLogo/36ers.png';
+import Maccabi from '@/assets/teamLogo/Maccabi.png';
 
 const TEAM_CODE: { [key in TeamCodeType]: StaticImageData } = {
   DEN: Nuggets,
@@ -63,6 +65,8 @@ const TEAM_CODE: { [key in TeamCodeType]: StaticImageData } = {
   WAS: Wizards,
   ORL: Magic,
   CHA: Hornets,
+  ADL: ERS2,
+  MRA: Maccabi,
 };
 
 export default TEAM_CODE;

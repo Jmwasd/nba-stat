@@ -53,12 +53,12 @@ const GameRecord = () => {
             <Box className="flex items-center">
               <TeamLogo code={gameStats[0].team.code} alt="team-logo" width={30} height={30} />
               <Typography variant="h5" className="pl-3 font-bold">
-                {gamePageQuery.homeTeamName}
+                {gameStats[0].team.name}
               </Typography>
             </Box>
             <Box className="flex items-center">
               <Typography variant="h5" className="pr-3 font-bold">
-                {gamePageQuery.visitorTeamName}
+                {gameStats[1].team.name}
               </Typography>
               <TeamLogo code={gameStats[1].team.code} width={30} height={30} alt="team-logo" />
             </Box>

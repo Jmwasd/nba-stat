@@ -96,7 +96,7 @@ const PlayerStat = () => {
           <TableContainer className="p-4">
             {TABLE_CELL.map((lineUp) => (
               <Table key={lineUp} sx={{ minWidth: 1000 }}>
-                <TableHead className="bg-slate-200">
+                <TableHead className="bg-table-head">
                   <TableRow>
                     <TableCell className="min-w-[220px]">{changeKr(lineUp)}</TableCell>
                     {PLAYER_STATS.map((el) => (

@@ -1,0 +1,54 @@
+{
+  "get": "standings/",
+  "parameters": {
+    "league": "standard",
+    "season": "2022",
+    "team": "9"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "league": "standard",
+      "season": 2022,
+      "team": {
+        "id": 9,
+        "name": "Denver Nuggets",
+        "nickname": "Nuggets",
+        "code": "DEN",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+      },
+      "conference": {
+        "name": "west",
+        "rank": 1,
+        "win": 53,
+        "loss": 29
+      },
+      "division": {
+        "name": "northwest",
+        "rank": 1,
+        "win": 53,
+        "loss": 29,
+        "gamesBehind": null
+      },
+      "win": {
+        "home": 34,
+        "away": 19,
+        "total": 53,
+        "percentage": "0.646",
+        "lastTen": 5
+      },
+      "loss": {
+        "home": 7,
+        "away": 22,
+        "total": 29,
+        "percentage": "0.354",
+        "lastTen": 5
+      },
+      "gamesBehind": null,
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    }
+  ]
+}

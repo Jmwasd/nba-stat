@@ -52,7 +52,9 @@ export type TeamCodeType =
   | 'MIA'
   | 'WAS'
   | 'ORL'
-  | 'CHA';
+  | 'CHA'
+  | 'ADL'
+  | 'MRA';
 
 export interface PlayerNameType {
   id: number;

@@ -1,0 +1,921 @@
+{
+  "get": "games/",
+  "parameters": {
+    "league": "standard",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 1240,
+  "response": [
+    {
+      "id": 10980,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-09-30T10:00:00.000Z",
+        "end": "2022-09-30T12:34:00.000Z",
+        "duration": "2:18"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Saitama Super Arena",
+        "city": "Tokyo",
+        "state": null,
+        "country": "Japan"
+      },
+      "teams": {
+        "visitors": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        },
+        "home": {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["16", "25", "28", "27"],
+          "points": 96
+        },
+        "home": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["12", "25", "27", "23"],
+          "points": 87
+        }
+      },
+      "officials": ["James Williams", "Gediminas Petraitis", "JB DeRosa"],
+      "timesTied": 4,
+      "leadChanges": 5,
+      "nugget": null
+    },
+    {
+      "id": 10981,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-01T02:00:00.000Z",
+        "end": "2022-10-01T04:41:00.000Z",
+        "duration": "2:25"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Climate Pledge Arena",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 165,
+          "name": "Ra'anana Maccabi Ra'anana",
+          "nickname": "Maccabi Ra'anana",
+          "code": "MRA",
+          "logo": ""
+        },
+        "home": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["16", "14", "29", "22"],
+          "points": 81
+        },
+        "home": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["37", "28", "29", "27"],
+          "points": 121
+        }
+      },
+      "officials": ["Tony Brothers", "Kevin Cutler", "John Butler"],
+      "timesTied": 2,
+      "leadChanges": 0,
+      "nugget": null
+    },
+    {
+      "id": 10982,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-02T00:00:00.000Z",
+        "end": "2022-10-02T02:39:00.000Z",
+        "duration": "2:20"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Fiserv Forum",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+        },
+        "home": {
+          "id": 21,
+          "name": "Milwaukee Bucks",
+          "nickname": "Bucks",
+          "code": "MIL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["18", "27", "21", "41"],
+          "points": 107
+        },
+        "home": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["16", "32", "28", "26"],
+          "points": 102
+        }
+      },
+      "officials": ["James Capers", "Lauren Holtkamp", "Brent Haskkill"],
+      "timesTied": 9,
+      "leadChanges": 5,
+      "nugget": null
+    },
+    {
+      "id": 10983,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-02T05:00:00.000Z",
+        "end": "2022-10-02T07:28:00.000Z",
+        "duration": "2:14"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Saitama Super Arena",
+        "city": "Tokyo",
+        "state": null,
+        "country": "Japan"
+      },
+      "teams": {
+        "visitors": {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+        },
+        "home": {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "code": "GSW",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 2,
+          "series": {
+            "win": 0,
+            "loss": 2
+          },
+          "linescore": ["25", "31", "29", "10"],
+          "points": 95
+        },
+        "home": {
+          "win": 2,
+          "loss": 0,
+          "series": {
+            "win": 2,
+            "loss": 0
+          },
+          "linescore": ["26", "28", "20", "30"],
+          "points": 104
+        }
+      },
+      "officials": ["James Williams", "Gediminas Petraitis", "JB DeRosa"],
+      "timesTied": 6,
+      "leadChanges": 2,
+      "nugget": null
+    },
+    {
+      "id": 10984,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-02T17:00:00.000Z",
+        "end": "2022-10-02T19:24:00.000Z",
+        "duration": "2:11"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "TD Garden",
+        "city": "Boston",
+        "state": "MA",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 5,
+          "name": "Charlotte Hornets",
+          "nickname": "Hornets",
+          "code": "CHA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+        },
+        "home": {
+          "id": 2,
+          "name": "Boston Celtics",
+          "nickname": "Celtics",
+          "code": "BOS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["24", "22", "31", "16"],
+          "points": 93
+        },
+        "home": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["29", "39", "39", "27"],
+          "points": 134
+        }
+      },
+      "officials": ["Sean Corbin", "Brandon Adair", "Tyler Mirkovich"],
+      "timesTied": 6,
+      "leadChanges": 5,
+      "nugget": null
+    },
+    {
+      "id": 10985,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-02T22:00:00.000Z",
+        "end": "2022-10-03T00:27:00.000Z",
+        "duration": "2:10"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Rogers Place",
+        "city": "Edmonton",
+        "state": "AB",
+        "country": "Canada"
+      },
+      "teams": {
+        "visitors": {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+        },
+        "home": {
+          "id": 38,
+          "name": "Toronto Raptors",
+          "nickname": "Raptors",
+          "code": "TOR",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["22", "27", "15", "18"],
+          "points": 82
+        },
+        "home": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["22", "28", "32", "32"],
+          "points": 114
+        }
+      },
+      "officials": ["Marc Davis", "Dedric Taylor", "Matt Kallio"],
+      "timesTied": 4,
+      "leadChanges": 17,
+      "nugget": null
+    },
+    {
+      "id": 10986,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-02T23:00:00.000Z",
+        "end": "2022-10-03T01:24:00.000Z",
+        "duration": "2:13"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Toyota Center (Houston)",
+        "city": "Houston",
+        "state": "TX",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 31,
+          "name": "San Antonio Spurs",
+          "nickname": "Spurs",
+          "code": "SAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
+        },
+        "home": {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["17", "20", "30", "29"],
+          "points": 96
+        },
+        "home": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["30", "32", "35", "37"],
+          "points": 134
+        }
+      },
+      "officials": ["Tony Brothers", "Derrick Collins", "Sha'Rae Mitchell"],
+      "timesTied": 2,
+      "leadChanges": 1,
+      "nugget": null
+    },
+    {
+      "id": 10987,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-03T02:00:00.000Z",
+        "end": "2022-10-03T04:30:00.000Z",
+        "duration": "2:15"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Footprint Center",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 90,
+          "name": "Adelaide 36ers",
+          "nickname": "36ers",
+          "code": "ADL",
+          "logo": ""
+        },
+        "home": {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 1,
+          "loss": 0,
+          "series": {
+            "win": 1,
+            "loss": 0
+          },
+          "linescore": ["33", "38", "25", "38"],
+          "points": 134
+        },
+        "home": {
+          "win": 0,
+          "loss": 1,
+          "series": {
+            "win": 0,
+            "loss": 1
+          },
+          "linescore": ["28", "31", "31", "34"],
+          "points": 124
+        }
+      },
+      "officials": ["Bill Kennedy", "Justin Van Duyne", "Dannica Mosher"],
+      "timesTied": 1,
+      "leadChanges": 7,
+      "nugget": null
+    },
+    {
+      "id": 10988,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-03T23:30:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Barclays Center",
+        "city": "Brooklyn",
+        "state": "NY",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 27,
+          "name": "Philadelphia 76ers",
+          "nickname": "76ers",
+          "code": "PHI",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+        },
+        "home": {
+          "id": 4,
+          "name": "Brooklyn Nets",
+          "nickname": "Nets",
+          "code": "BKN",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["42", "23", "36", "26"],
+          "points": 127
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["26", "36", "24", "22"],
+          "points": 108
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 10989,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-04T00:00:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "FedExForum",
+        "city": "Memphis",
+        "state": "TN",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 26,
+          "name": "Orlando Magic",
+          "nickname": "Magic",
+          "code": "ORL",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
+        },
+        "home": {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "21", "27", "28"],
+          "points": 97
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["25", "31", "30", "23"],
+          "points": 109
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 10990,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-04T01:00:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Ball Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+        },
+        "home": {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["30", "21", "39", "22"],
+          "points": 112
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "31", "30", "19"],
+          "points": 101
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 10991,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-04T02:30:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "crypto.com Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 30,
+          "name": "Sacramento Kings",
+          "nickname": "Kings",
+          "code": "SAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+        },
+        "home": {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["21", "20", "35", "29"],
+          "points": 105
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "19", "13", "16"],
+          "points": 75
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    },
+    {
+      "id": 10992,
+      "league": "standard",
+      "season": 2022,
+      "date": {
+        "start": "2022-10-04T02:30:00.000Z",
+        "end": null,
+        "duration": ":"
+      },
+      "stage": 1,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 0,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Climate Pledge Arena",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 29,
+          "name": "Portland Trail Blazers",
+          "nickname": "Trail Blazers",
+          "code": "POR",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+        },
+        "home": {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["22", "22", "34", "19"],
+          "points": 97
+        },
+        "home": {
+          "win": 0,
+          "loss": 0,
+          "series": {
+            "win": 0,
+            "loss": 0
+          },
+          "linescore": ["27", "25", "19", "31"],
+          "points": 102
+        }
+      },
+      "officials": [],
+      "timesTied": null,
+      "leadChanges": null,
+      "nugget": null
+    }
+  ]
+}

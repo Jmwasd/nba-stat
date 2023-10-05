@@ -6,6 +6,7 @@ on:
 
 env:
   NEXT_PUBLIC_ENV_API_KEY: ${{ secrets.API_KEY }}
+  NEXT_PUBLIC_ENV_API_URL: ${{ secrest.API_URL }}
 
 jobs:
   build:
@@ -22,8 +23,10 @@ jobs:
       - name: Generate Environment Variables File
         run: |
           echo "NEXT_PUBLIC_ENV_API_KEY=$NEXT_PUBLIC_ENV_API_KEY" >> .env.production
+          echo "NEXT_PUBLIC_ENV_API_URL=$NEXT_PUBLIC_ENV_API_URL" >> .env.production
         env:
           NEXT_PUBLIC_ENV_API_KEY: ${{ secrets.API_KEY }}
+          NEXT_PUBLIC_ENV_API_URL: ${{ secrets.API_URL }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
