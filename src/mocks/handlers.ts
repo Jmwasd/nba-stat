@@ -18,6 +18,11 @@ const URL = 'http://localhost:3000';
 const handlers = [
   rest.get(`${URL}${APIv2.game}`, (req, _, ctx) => {
     const isTeamSchedule = req.url.searchParams.get('team');
+    const isTeamScheduleDate = req.url.searchParams.get('date');
+
+    if (isTeamScheduleDate) {
+      return res(ctx.json(null));
+    }
 
     if (isTeamSchedule) {
       return res(ctx.json(teamScheduleData));

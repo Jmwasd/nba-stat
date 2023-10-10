@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import useRecentMatch from '@/hooks/game';
 import { getDateKr } from '@/utils/formatter';
@@ -15,19 +15,54 @@ import Title from '../Title';
 import TeamLogo from '../TeamLogo';
 import Error from '../Error';
 
-const cardSpace = {
-  0: 'ml-[30px]',
-  1: 'mx-[15px]',
-  2: 'mr-[30px]',
+const XL = 890;
+const MD = 730;
+
+const debounce = (fn: () => void, ms: number) => {
+  let timer: NodeJS.Timeout;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this);
+    }, ms);
+  };
 };
-
-type CardSpaceType = keyof typeof cardSpace;
-
-const SLIDE_DVIDED_NUMBER = 3;
 
 const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(null);
   const [slidesNumber, setSlidesNumber] = useState<number>(0);
+  const [slideDividedNumber, setSlideDividedNumber] = useState<number>(3);
+
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+
+  useEffect(() => {
+    const debouncedHandleResize = debounce(() => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }, 100);
+
+    window.addEventListener('resize', debouncedHandleResize);
+
+    if (dimensions.width < MD) {
+      setSlideDividedNumber(1);
+    }
+    if (dimensions.width < XL && dimensions.width > MD) {
+      setSlideDividedNumber(2);
+    }
+    if (dimensions.width > XL) {
+      setSlideDividedNumber(3);
+    }
+    setSlidesNumber(0);
+
+    return () => {
+      window.removeEventListener('resize', debouncedHandleResize);
+    };
+  }, [slideDividedNumber, dimensions.width]);
 
   const parsingDate = () => {
     if (!datePickerValue) return null;
@@ -57,30 +92,31 @@ const RecentMatch = () => {
     setSlidesNumber((number += direction));
   };
 
-  const getCardInfo = useCallback((data: RecentMatchType[]) => {
-    const newArray: RecentMatchType[][] = [];
-    let accumulate: RecentMatchType[] = [];
+  const getCardInfo = useCallback(
+    (data: RecentMatchType[]) => {
+      const newArray: RecentMatchType[][] = [];
+      let accumulate: RecentMatchType[] = [];
 
-    let count = 1;
+      let count = 1;
 
-    data.forEach((el, idx) => {
-      if (count % SLIDE_DVIDED_NUMBER === 0 && idx !== 0) {
+      data.forEach((el) => {
+        if (count % slideDividedNumber === 0) {
+          accumulate.push(el);
+          newArray.push(accumulate);
+          count = 1;
+          accumulate = [];
+          return el;
+        }
         accumulate.push(el);
-        newArray.push(accumulate);
-        count = 1;
-        accumulate = [];
+        count += 1;
+
         return el;
-      }
-      accumulate.push(el);
-      count += 1;
+      });
 
-      return el;
-    });
-
-    return newArray;
-  }, []);
-
-  const getCardspaceStyle = (idx: CardSpaceType) => cardSpace[idx];
+      return newArray;
+    },
+    [slideDividedNumber],
+  );
 
   if (isLoading) {
     return <Loading height="h-[150px]" />;
@@ -88,14 +124,14 @@ const RecentMatch = () => {
 
   return (
     <Box>
-      <Box className="flex pb-3">
-        <Title text="최근 경기결과" className="flex items-center relative left-[44%] pb-0" />
-        <Box className="flex items-center relative bottom-2 ">
+      <Box className="h-[60px] pb-3">
+        <Title text="최근 경기결과" className="text-center md:text-left" />
+        <Box className="relative bottom-[57px] text-right">
           {datePickerValue && (
             <AutorenewIcon
               fontSize="large"
               color="inherit"
-              className="mr-2 transition hover:rotate-180 cursor-pointer"
+              className="mt-3 transition hover:rotate-180 cursor-pointer"
               onClick={() => refreshRecentMatch()}
             />
           )}
@@ -116,8 +152,17 @@ const RecentMatch = () => {
                 transform: `translateX(-${slidesNumber * 100}%)`,
               }}
             >
-              {item.map((el, idx) => (
-                <Box key={el.id} className={`w-[100%] ${getCardspaceStyle(idx as CardSpaceType)}`}>
+              <Box className="flex justify-center items-center">
+                <ArrowBackIosNewIcon
+                  sx={{
+                    cursor: 'pointer',
+                    visibility: !slidesNumber ? 'hidden' : 'visible',
+                  }}
+                  onClick={() => handleSwipe(-1)}
+                />
+              </Box>
+              {item.map((el) => (
+                <Box key={el.id} className="w-full mx-[15px]">
                   <Link
                     href={{
                       pathname: `/game/${el.id}`,
@@ -175,26 +220,22 @@ const RecentMatch = () => {
                   </Link>
                 </Box>
               ))}
+              <Box className="flex justify-center items-center">
+                <ArrowForwardIosIcon
+                  sx={{
+                    cursor: 'pointer',
+                    visibility:
+                      slidesNumber >= getCardInfo(recentMatchResponse).length - 1
+                        ? 'hidden'
+                        : 'visible',
+                  }}
+                  onClick={() => handleSwipe(1)}
+                />
+              </Box>
             </Box>
           ))}
         </Box>
       )}
-      <Box className="relative bottom-[76px] flex justify-between">
-        <ArrowBackIosNewIcon
-          sx={{
-            cursor: 'pointer',
-            visibility: !slidesNumber ? 'hidden' : 'visible',
-          }}
-          onClick={() => handleSwipe(-1)}
-        />
-        <ArrowForwardIosIcon
-          sx={{
-            cursor: 'pointer',
-            visibility: slidesNumber === SLIDE_DVIDED_NUMBER ? 'hidden' : 'visible',
-          }}
-          onClick={() => handleSwipe(1)}
-        />
-      </Box>
     </Box>
   );
 };

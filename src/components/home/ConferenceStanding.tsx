@@ -8,6 +8,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from '@mui/material';
 import { CONFERENCE_STANDING } from '@/consts/table';
 import { useRouter } from 'next/router';
@@ -46,18 +47,17 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
   }
 
   return (
-    <Box className="w-[100%] mt-5">
+    <Box className="mt-5">
       <Title text={title} align="center" />
       {!conferenceStanding ? (
         <Error text="Error" height="h-[80vh]" />
       ) : (
         <TableContainer component={Paper}>
-          <Table className="w-full">
-            <TableHead className="bg-table-head">
+          <Table>
+            <TableHead className="bg-table-head whitespace-nowrap">
               <TableRow>
-                <TableCell />
-                {CONFERENCE_STANDING.map((el) => (
-                  <TableCell className="font-bold" key={el}>
+                {CONFERENCE_STANDING.map((el, idx) => (
+                  <TableCell className="font-bold" key={el} align={!idx ? 'left' : 'center'}>
                     {el}
                   </TableCell>
                 ))}
@@ -71,9 +71,9 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                   onClick={(e) => clickTableRow(e, el.team.id)}
                   key={el.team.id}
                 >
-                  <TableCell>{idx + 1}</TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     <Box className="flex items-center">
+                      <Typography className="mr-3">{idx + 1}</Typography>
                       <TeamLogo code={el.team.code} alt="team-logo" width={20} height={20} />
                       <span
                         style={{
@@ -84,22 +84,22 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                       </span>
                     </Box>
                   </TableCell>
-                  <TableCell>{el.win.away + el.win.home}</TableCell>
-                  <TableCell>{el.loss.away + el.loss.home}</TableCell>
-                  <TableCell>
+                  <TableCell align="center">{el.win.away + el.win.home}</TableCell>
+                  <TableCell align="center">{el.loss.away + el.loss.home}</TableCell>
+                  <TableCell align="center">
                     0.
                     {getWinPercentage(el.win.away + el.win.home, el.loss.away + el.loss.home)}
                   </TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     {el.win.home}-{el.loss.home}
                   </TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     {el.win.away}-{el.loss.away}
                   </TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     {el.streak} {el.winStreak ? 'W' : 'L'}
                   </TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     {el.win.lastTen}-{el.loss.lastTen}
                   </TableCell>
                 </TableRow>
