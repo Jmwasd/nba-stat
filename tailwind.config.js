@@ -11,6 +11,10 @@ module.exports = {
       backgroundColor: {
         'table-head': '#e3e5e9',
       },
+      screens: {
+        xl: { max: '1240px' },
+        md: { max: '760px' },
+      },
     },
   },
   plugins: [],

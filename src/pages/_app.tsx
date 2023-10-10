@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => (
     >
       <HeadMeta />
       <Container maxWidth={false} sx={{ bgcolor: '#edecec' }}>
-        <Box className="w-[65%] mx-auto my-0 py-10 min-w-[1200px]">
+        <Box className="w-[65%] mx-auto my-0 py-10 min-w-[1200px] xl:min-w-full bg-[#edecec]">
           <Layout />
           <Component {...pageProps} />
         </Box>
