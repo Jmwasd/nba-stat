@@ -1,7 +1,8 @@
 import { DETAIL_STATS, STATS } from '@/consts/stats';
 import { StatsKeyType } from '@/types/common';
+import { RecentMatchType } from '@/types/games';
 
-export const getDateKr = (date: string) => {
+export const getDateKr = (date: string | Date) => {
   const dates = new Date(date);
   const year = dates.getFullYear();
   const month = dates.getMonth() + 1;
@@ -16,4 +17,10 @@ export const getStatsChangedKr = (stats: StatsKeyType, type?: 'detail') => {
   }
 
   return STATS[stats];
+};
+
+export const getRecentMatchData = (data: RecentMatchType[]) => {
+  const recentMatchData = data.filter((el) => !!el.scores.home.points);
+
+  return recentMatchData.reverse().slice(0, 12);
 };

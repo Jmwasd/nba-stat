@@ -5,11 +5,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import Link from 'next/link';
-import useRecentMatch from '@/hooks/game';
+import useRecentMatch from '@/queries/game';
 import { getDateKr } from '@/utils/formatter';
 import { RecentMatchType } from '@/types/games';
+import UseMediaQuery from '@/hooks/useMediaQuery';
 import Loading from '../Loading';
 import Title from '../Title';
 import TeamLogo from '../TeamLogo';
@@ -18,51 +19,10 @@ import Error from '../Error';
 const XL = 890;
 const MD = 730;
 
-const debounce = (fn: () => void, ms: number) => {
-  let timer: NodeJS.Timeout;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      fn.apply(this);
-    }, ms);
-  };
-};
-
 const RecentMatch = () => {
   const [datePickerValue, setDatePickerValue] = useState<dayjs.Dayjs | null>(null);
   const [slidesNumber, setSlidesNumber] = useState<number>(0);
   const [slideDividedNumber, setSlideDividedNumber] = useState<number>(3);
-
-  const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
-  });
-
-  useEffect(() => {
-    const debouncedHandleResize = debounce(() => {
-      setDimensions({
-        height: window.innerHeight,
-        width: window.innerWidth,
-      });
-    }, 100);
-
-    window.addEventListener('resize', debouncedHandleResize);
-
-    if (dimensions.width < MD) {
-      setSlideDividedNumber(1);
-    }
-    if (dimensions.width < XL && dimensions.width > MD) {
-      setSlideDividedNumber(2);
-    }
-    if (dimensions.width > XL) {
-      setSlideDividedNumber(3);
-    }
-    setSlidesNumber(0);
-
-    return () => {
-      window.removeEventListener('resize', debouncedHandleResize);
-    };
-  }, [slideDividedNumber, dimensions.width]);
 
   const parsingDate = () => {
     if (!datePickerValue) return null;
@@ -76,6 +36,20 @@ const RecentMatch = () => {
   };
 
   const { data: recentMatchResponse, isLoading, mutate } = useRecentMatch(parsingDate());
+
+  const mediaQueryCallback = (width: number) => {
+    if (width < MD) {
+      setSlideDividedNumber(1);
+    }
+    if (width < XL && width > MD) {
+      setSlideDividedNumber(2);
+    }
+    if (width > XL) {
+      setSlideDividedNumber(3);
+    }
+  };
+
+  UseMediaQuery({ callback: mediaQueryCallback });
 
   const changeDate = (value: dayjs.Dayjs | null) => {
     if (value) setDatePickerValue(value);

@@ -13,7 +13,7 @@ import {
 import { CONFERENCE_STANDING } from '@/consts/table';
 import { useRouter } from 'next/router';
 import { MouseEvent } from 'react';
-import { useConferenceStanding } from '@/hooks/standing';
+import { useConferenceStanding } from '@/queries/standing';
 
 import getWinPercentage from '@/utils/getPercentage';
 import { ConferenceType } from '@/types/common';
@@ -87,7 +87,6 @@ const ConferenceStanding = ({ conferenceName, title }: Props) => {
                   <TableCell align="center">{el.win.away + el.win.home}</TableCell>
                   <TableCell align="center">{el.loss.away + el.loss.home}</TableCell>
                   <TableCell align="center">
-                    0.
                     {getWinPercentage(el.win.away + el.win.home, el.loss.away + el.loss.home)}
                   </TableCell>
                   <TableCell align="center">

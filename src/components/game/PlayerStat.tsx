@@ -15,7 +15,7 @@ import {
 import { useState } from 'react';
 import { PLAYER_STATS } from '@/consts/table';
 import { useRouter } from 'next/router';
-import { usePlayerStats } from '@/hooks/stats';
+import { usePlayerStats } from '@/queries/stats';
 import { GamePageQueryType } from '@/types/rotuerQuery';
 import { PlayerStatsType } from '@/types/stats';
 import usePlayerInfo from '@/store/playerDetailStats';

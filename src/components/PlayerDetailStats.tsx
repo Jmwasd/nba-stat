@@ -12,12 +12,12 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import { usePlayerDetailStats } from '@/hooks/stats';
+import { usePlayerDetailStats } from '@/queries/stats';
 import usePlayerInfo from '@/store/playerDetailStats';
 import { PLAYER_DETAIL_STATS } from '@/consts/table';
 import { PlayerStatsType } from '@/types/stats';
 import { StatsKeyType } from '@/types/common';
-import useSearchPlayer from '@/hooks/search';
+import useSearchPlayer from '@/queries/search';
 
 const SubTitle = ({ text, lastIdx }: { text: string | number; lastIdx?: boolean }) => (
   <Box className="flex items-center">

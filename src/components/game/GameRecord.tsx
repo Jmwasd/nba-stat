@@ -1,5 +1,5 @@
 import { Box, CircularProgress, List, Paper, Typography } from '@mui/material';
-import { useGameStats } from '@/hooks/stats';
+import { useGameStats } from '@/queries/stats';
 import { useRouter } from 'next/router';
 import { GamePageQueryType } from '@/types/rotuerQuery';
 import { GameStatsType } from '@/types/stats';

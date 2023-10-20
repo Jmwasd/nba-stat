@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useTeamRank } from '@/hooks/standing';
+import { useTeamRank } from '@/queries/standing';
 import { useRouter } from 'next/router';
 import { TeamPageQueryType } from '@/types/rotuerQuery';
 import { ConferenceStandingResponseType } from '@/types/teams';
