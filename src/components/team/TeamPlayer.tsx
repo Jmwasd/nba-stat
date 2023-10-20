@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 
 import { TEAM_PLAYER } from '@/consts/table';
-import { useTeamPlayer } from '@/hooks/teams';
+import { useTeamPlayer } from '@/queries/teams';
 import { useRouter } from 'next/router';
 import { TeamPageQueryType } from '@/types/rotuerQuery';
 import usePlayerInfo from '@/store/playerDetailStats';

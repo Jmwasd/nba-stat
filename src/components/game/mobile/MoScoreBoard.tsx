@@ -1,3 +1,9 @@
+import Error from '@/components/Error';
+import ScoreBoardTableCell from '@/components/ScoreBoardTableCell';
+import TeamLogo from '@/components/TeamLogo';
+import { QUATER } from '@/consts/table';
+import { useGameStats } from '@/queries/stats';
+import { GamePageQueryType } from '@/types/rotuerQuery';
 import {
   Box,
   CircularProgress,
@@ -9,16 +15,10 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import { QUATER } from '@/consts/table';
 import { useRouter } from 'next/router';
 import { MouseEvent, useMemo } from 'react';
-import { useGameStats } from '@/queries/stats';
-import { GamePageQueryType } from '@/types/rotuerQuery';
-import TeamLogo from '../TeamLogo';
-import Error from '../Error';
-import ScoreBoardTableCell from '../ScoreBoardTableCell';
 
-const ScoreBoard = () => {
+const MoScoreBoard = () => {
   const router = useRouter();
   const gamePageQuery = router.query as GamePageQueryType;
 
@@ -144,4 +144,4 @@ const ScoreBoard = () => {
   );
 };
 
-export default ScoreBoard;
+export default MoScoreBoard;

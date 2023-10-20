@@ -4,7 +4,7 @@ import { TeamScheduleType } from '@/types/games';
 import { MouseEvent, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TeamPageQueryType } from '@/types/rotuerQuery';
-import { useTeamSchedule } from '@/hooks/teams';
+import { useTeamSchedule } from '@/queries/teams';
 import { getDateKr } from '@/utils/formatter';
 import Loading from '../Loading';
 import Title from '../Title';

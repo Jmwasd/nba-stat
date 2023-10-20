@@ -12,7 +12,7 @@ import {
 import { getStatsChangedKr } from '@/utils/formatter';
 import { useRouter } from 'next/router';
 import { TeamPageQueryType } from '@/types/rotuerQuery';
-import { useTeamStats } from '@/hooks/teams';
+import { useTeamStats } from '@/queries/teams';
 import { StatsKeyType } from '@/types/common';
 import { TeamStatsType } from '@/types/stats';
 import Title from '../Title';
