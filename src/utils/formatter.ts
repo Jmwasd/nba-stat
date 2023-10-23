@@ -19,8 +19,18 @@ export const getStatsChangedKr = (stats: StatsKeyType, type?: 'detail') => {
   return STATS[stats];
 };
 
-export const getRecentMatchData = (data: RecentMatchType[]) => {
+export const getRecentMatchData = (data: RecentMatchType[], date: string | null) => {
+  if (date) {
+    return data.reverse().slice(0, 12);
+  }
   const recentMatchData = data.filter((el) => !!el.scores.home.points);
 
   return recentMatchData.reverse().slice(0, 12);
+};
+
+export const getHourKr = (date: string | Date) => {
+  const dates = new Date(date);
+  const hour = dates.toLocaleTimeString('ko-kr');
+
+  return hour.slice(0, -3);
 };
