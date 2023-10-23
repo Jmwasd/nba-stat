@@ -11,7 +11,7 @@ const useRecentMatch = (date: string | null) => {
 
   if (data) {
     return {
-      data: getRecentMatchData(data),
+      data: getRecentMatchData(data, date),
       isLoading,
       error,
       mutate,

@@ -8,7 +8,7 @@ import dayjs from 'dayjs';
 import { useCallback, useState } from 'react';
 import Link from 'next/link';
 import useRecentMatch from '@/queries/game';
-import { getDateKr } from '@/utils/formatter';
+import { getDateKr, getHourKr } from '@/utils/formatter';
 import { RecentMatchType } from '@/types/games';
 import UseMediaQuery from '@/hooks/useMediaQuery';
 import Loading from '../Loading';
@@ -52,13 +52,9 @@ const RecentMatch = () => {
   UseMediaQuery({ callback: mediaQueryCallback });
 
   const changeDate = (value: dayjs.Dayjs | null) => {
-    if (value) setDatePickerValue(value);
+    setDatePickerValue(value);
     mutate();
-  };
-
-  const refreshRecentMatch = () => {
-    setDatePickerValue(null);
-    mutate();
+    setSlidesNumber(0);
   };
 
   const handleSwipe = (direction: 1 | -1) => {
@@ -106,7 +102,7 @@ const RecentMatch = () => {
               fontSize="large"
               color="inherit"
               className="mt-3 transition hover:rotate-180 cursor-pointer"
-              onClick={() => refreshRecentMatch()}
+              onClick={() => changeDate(null)}
             />
           )}
           <DatePicker value={datePickerValue} onChange={(value) => changeDate(value)} />
@@ -166,13 +162,22 @@ const RecentMatch = () => {
                               {el.teams.home.nickname}
                             </Typography>
                           </Box>
+
                           <Box className="w-2/4">
-                            <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
-                              {el.scores.home.points}
-                            </Typography>
-                            <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
-                              {el.scores.visitors.points}
-                            </Typography>
+                            {el.scores.home.points && el.scores.visitors.points ? (
+                              <>
+                                <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
+                                  {el.scores.home.points}
+                                </Typography>
+                                <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
+                                  {el.scores.visitors.points}
+                                </Typography>
+                              </>
+                            ) : (
+                              <Typography className="text-2xl text-center relative top-[28%]">
+                                {getHourKr(el.date.start)}
+                              </Typography>
+                            )}
                           </Box>
                           <Box className="w-1/4">
                             <Box className="relative my-0 mx-auto">
