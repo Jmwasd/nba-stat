@@ -26,6 +26,11 @@ NBA-STATS은 실시간 NBA 기록 정보를 제공합니다. 날짜 검색을 �
 ```
 ![ezgif com-video-to-gif (1)](https://github.com/Jmwasd/nba-stat/assets/66477332/bfd5157e-6c03-43c4-9197-efd503a3a7aa)
 
+```
+팀 일정 및 상세 데이터를 볼 수 있습니다.
+```
+![ezgif com-video-to-gif (2)](https://github.com/Jmwasd/nba-stat/assets/66477332/7188628b-71be-420f-9f2d-b37234738e74)
+
 ## 프로젝트 설치 및 실행 방법
 
 ### Manual
