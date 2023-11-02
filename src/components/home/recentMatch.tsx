@@ -169,9 +169,17 @@ const RecentMatch = () => {
                                 <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
                                   {el.scores.home.points}
                                 </Typography>
+
                                 <Typography className="text-2xl min-w-1/2 inline-block text-center relative top-1/3">
                                   {el.scores.visitors.points}
                                 </Typography>
+                                {el.status.long === 'In Play' && (
+                                  <Box className="flex justify-center mt-[4px]">
+                                    <Typography className="text-[12px] p-[3px] bg-red-500">
+                                      LIVE
+                                    </Typography>
+                                  </Box>
+                                )}
                               </>
                             ) : (
                               <Typography className="text-2xl text-center relative top-[28%]">

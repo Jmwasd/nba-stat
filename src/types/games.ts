@@ -33,4 +33,10 @@ export interface RecentMatchType {
     };
   };
   date: DateType;
+  status: {
+    clock: null | string;
+    halftime: boolean;
+    short: number;
+    long: 'In Play' | 'Finished';
+  };
 }
