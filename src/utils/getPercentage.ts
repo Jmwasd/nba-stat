@@ -1,8 +1,8 @@
 const getWinPercentage = (win: number, loss: number) => {
   const sum = win + loss;
-  const percentage = ((win / sum) * 1000).toFixed();
+  const percentage = Number(((win / sum) * 1000).toFixed()) / 1000;
 
-  return Number(percentage);
+  return percentage;
 };
 
 export default getWinPercentage;

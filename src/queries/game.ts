@@ -1,16 +1,17 @@
 import APIv2 from '@/consts/api';
 import { RecentMatchType } from '@/types/games';
+import { getRecentMatchData } from '@/utils/formatter';
 import useSWR from 'swr';
 
 const useRecentMatch = (date: string | null) => {
   const url = !date
-    ? `${APIv2.game}?season=2022&league=standard`
-    : `${APIv2.game}?season=2022&league=standard&date=${date}`;
+    ? `${APIv2.game}?season=2023&league=standard`
+    : `${APIv2.game}?season=2023&league=standard&date=${date}`;
   const { data, isLoading, error, mutate } = useSWR<RecentMatchType[]>(url);
+
   if (data) {
-    const { length } = data;
     return {
-      data: data.slice(length - 12).reverse(),
+      data: getRecentMatchData(data, date),
       isLoading,
       error,
       mutate,

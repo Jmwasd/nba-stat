@@ -4,8 +4,8 @@ import { TeamScheduleType } from '@/types/games';
 import { MouseEvent, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TeamPageQueryType } from '@/types/rotuerQuery';
-import { useTeamSchedule } from '@/hooks/teams';
-import { getDateKr } from '@/utils/formatter';
+import { useTeamSchedule } from '@/queries/teams';
+import { getDateKr, getHourKr } from '@/utils/formatter';
 import Loading from '../Loading';
 import Title from '../Title';
 import TeamLogo from '../TeamLogo';
@@ -37,6 +37,15 @@ const TeamSchedule = () => {
       stats.scores[selectedTeam].points > stats.scores[opponentTeam].points ? 'W' : 'L';
 
     const point = `${stats.scores[selectedTeam].points}-${stats.scores[opponentTeam].points}`;
+
+    if (!stats.scores[selectedTeam].points && !stats.scores[opponentTeam].points) {
+      return {
+        opponentTeamName: stats.teams[opponentTeam].nickname,
+        opponentTeamLogo: stats.teams[opponentTeam].code,
+        point: getHourKr(stats.date.start),
+        winOrLose: null,
+      };
+    }
 
     return {
       opponentTeamName: stats.teams[opponentTeam].nickname,
@@ -104,7 +113,7 @@ const TeamSchedule = () => {
                     >
                       {getCardInfo(el).winOrLose}
                     </Typography>
-                    <Typography align="center" className="ml-2 w-[60px]">
+                    <Typography align="center" className="w-[75px]">
                       {getCardInfo(el).point}
                     </Typography>
                   </Box>
