@@ -4,23 +4,36 @@
 
 NBA-STATS은 실시간 NBA 기록 정보를 제공합니다. 날짜 검색을 통해 경기 결과를 확인할 수 있으며 상세 데이터를 제공합니다. 또한 팀 순위, 팀 기록, 선수 개인 기록을 확인할 수 있습니다.
 
-[NBA-STATS](https://nbastatsgames.com)
+[NBA-STATS 링크](https://nbastatsgames.com)
 
-## 사옹기술
+## 사용기술
 
 - NextJS
-- Tailwind
+- TailwindCSS
 - SWR
 - Material UI
 - MSW
 - Zustand
 
-## 기능
+## 프로젝트 화면 및 소개
 
-- 최근 NBA 경기 결과
-- NBA Conference 랭킹
-- 선수 통산 개인 기록 정보
-- 팀 일정 및 기록
+```
+최근 경기 결과와 원하는 날짜를 선택하여 경기 일정을 확인할 수 있습니다.
+```
+
+![ezgif com-video-to-gif](https://github.com/Jmwasd/nba-stat/assets/66477332/dff3f859-5e90-46e0-92b2-666f15d0ac4e)
+
+```
+경기 결과를 반영한 라인 스코어, 경기 기록, 선발 및 벤치 라인업 정보를 확인할 수 있습니다.
+```
+
+![ezgif com-video-to-gif (1)](https://github.com/Jmwasd/nba-stat/assets/66477332/bfd5157e-6c03-43c4-9197-efd503a3a7aa)
+
+```
+팀 일정 및 상세 데이터를 볼 수 있습니다.
+```
+
+![ezgif com-video-to-gif (2)](https://github.com/Jmwasd/nba-stat/assets/66477332/7188628b-71be-420f-9f2d-b37234738e74)
 
 ## 프로젝트 설치 및 실행 방법
 
@@ -51,18 +64,4 @@ NBA-STATS은 실시간 NBA 기록 정보를 제공합니다. 날짜 검색을 �
 
 ## API
 
-https://rapidapi.com/api-sports/api/api-nba
-=======
-
-NEXT_PUBLIC_ENV_API_KEY: Rapid API에서 제공하는 [API_KEY](https://rapidapi.com/api-sports/api/api-nba/pricing)
-
-
-### Docker
-
-1. npm run docker:build <br/>
-2. npm run docker:run
-
-
-## API
-
-https://rapidapi.com/api-sports/api/api-nba
+# https://rapidapi.com/api-sports/api/api-nba
